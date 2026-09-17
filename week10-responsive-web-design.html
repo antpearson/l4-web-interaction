@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Interaction Week 10 - Responsive Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-10/banner.webp"
+        alt="Week 10 - Responsive Web Design"
+        class="hero-image"
+      />
+      <h1>Web Interaction - Week 10<br />Responsive Web Design</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          This week we'll learn how to make websites that look great on
+          <strong>any device</strong> - from mobile phones to large desktop
+          monitors. We'll explore the <strong>mobile-first</strong> approach and
+          essential responsive design techniques.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>3-Hour Session Structure</h2>
+
+        <div class="subsection">
+          <h3>🕐 First Half: Responsive Web Design (80 mins)</h3>
+          <ul>
+            <li>Introduction to Responsive Web Design</li>
+            <li>Mobile-First Design Strategy</li>
+            <li>Viewport Meta Tag</li>
+            <li>CSS Media Queries</li>
+            <li>Fluid Layouts and Flexible Units</li>
+            <li>Responsive Images and Breakpoints</li>
+            <li>Building a Mobile-First Layout Example</li>
+            <li>Testing Responsive Designs</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>☕ Break (15 mins)</h3>
+        </div>
+
+        <div class="subsection">
+          <h3>🎨 Second Half: Figma Design Work & Feedback (85 mins)</h3>
+          <ul>
+            <li>Continue working on Silverlake Figma designs</li>
+            <li>One-to-one feedback sessions on design work</li>
+            <li>Refine mobile, tablet, and desktop layouts</li>
+            <li>Prepare designs for implementation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>In this tutorial</h2>
+        <ul>
+          <li>What is Responsive Web Design?</li>
+          <li>Why Mobile-First Design?</li>
+          <li>The Viewport Meta Tag</li>
+          <li>CSS Media Queries</li>
+          <li>Fluid Layouts and Flexible Units</li>
+          <li>Responsive Images</li>
+          <li>Common Breakpoints</li>
+          <li>Building a Mobile-First Layout</li>
+          <li>Testing Your Responsive Design</li>
+        </ul>
+      </section>
+
+      <!-- Silverlake Progress -->
+      <section id="silverlake-progress">
+        <h2>Silverlake Task - Where You Should Aim to Be</h2>
+
+        <div class="subsection">
+          <p>
+            There's quite a bit to do in these last few weeks so to keep things
+            on track I've put together a quick diagram on where I think you need
+            to be. This week you should be focusing on
+            <strong>wireframing &amp; site design</strong>.
+          </p>
+
+          <div
+            style="
+              display: flex;
+              gap: 20px;
+              margin: 30px 0;
+              flex-wrap: wrap;
+              justify-content: center;
+            "
+          >
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                1. Research
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Competitor analysis of 3 other websites
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                2. Initial Planning
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Mindmaps, decide on theme, moodboards, decide on pages,
+                structure diagram
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                3. Wire-frames
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Sketch out how each of your 4 pages will look on mobile, tablet
+                and desktop (12 sketches in all)
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                4. Design
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Use Figma to create finished designs. Export graphics out.
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e1bee7;
+                  color: #6a1b9a;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                5. Build
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                The easy bit :-P Build your pages!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What is Responsive Web Design -->
+      <section id="what-is-rwd">
+        <h2>What is Responsive Web Design?</h2>
+
+        <div class="subsection">
+          <div style="text-align: center; margin: 30px 0">
+            <img
+              src="img/week-10/devices.jpg"
+              alt="Various devices showing responsive design"
+              style="
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </div>
+
+          <p>
+            <strong>Responsive Web Design (RWD)</strong> is an approach to web
+            design that makes web pages render well on a variety of devices and
+            window sizes. Rather than creating separate websites for different
+            devices, responsive design uses flexible layouts, images, and CSS
+            media queries to adapt the presentation.
+          </p>
+
+          <div class="info-box">
+            <h3>The Three Pillars of Responsive Design</h3>
+            <ol>
+              <li>
+                <strong>Fluid Grids</strong> - Using relative units (%, em, rem,
+                vw) instead of fixed pixels
+              </li>
+              <li>
+                <strong>Flexible Images</strong> - Images that scale within
+                their containing elements
+              </li>
+              <li>
+                <strong>Media Queries</strong> - CSS rules that apply styles
+                based on device characteristics
+              </li>
+            </ol>
+          </div>
+
+          <p>
+            The term "Responsive Web Design" was coined by
+            <strong>Ethan Marcotte</strong> in 2010. Before this, developers
+            often created completely separate mobile websites (m.example.com) or
+            relied on user-agent detection to serve different content.
+          </p>
+        </div>
+      </section>
+
+      <!-- Why Mobile-First -->
+      <section id="mobile-first">
+        <h2>Why Mobile-First Design?</h2>
+
+        <div class="subsection">
+          <p>
+            <strong>Mobile-first</strong> is a design strategy where you start
+            by designing for the smallest screen first, then progressively
+            enhance the design for larger screens. This approach has become the
+            industry standard for several important reasons:
+          </p>
+
+          <div
+            style="
+              background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+              border-left: 5px solid #ff6b35;
+              padding: 30px;
+              border-radius: 8px;
+              margin: 30px 0;
+            "
+          >
+            <h3 style="color: white; margin-top: 0; font-size: 1.5em">
+              Benefits of Mobile-First
+            </h3>
+            <ul style="color: white; line-height: 1.8; font-size: 1.05em">
+              <li style="margin-bottom: 12px">
+                <strong>Over 60% of web traffic</strong> now comes from mobile
+                devices
+              </li>
+              <li style="margin-bottom: 12px">
+                <strong>Forces prioritisation</strong> - Limited space means you
+                focus on essential content first
+              </li>
+              <li style="margin-bottom: 12px">
+                <strong>Better performance</strong> - Mobile styles are simpler
+                and load faster
+              </li>
+              <li style="margin-bottom: 12px">
+                <strong>Progressive enhancement</strong> - You add complexity as
+                screen size increases
+              </li>
+              <li style="margin-bottom: 12px">
+                <strong>Google's mobile-first indexing</strong> - Google
+                primarily uses mobile version for ranking
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            To implement mobile-first design, we'll use a key technique called
+            <strong>media queries</strong>. But before we dive into how to apply
+            mobile-first principles with media queries, let's first understand
+            two essential tools: the viewport meta tag and CSS media queries
+            themselves.
+          </p>
+        </div>
+      </section>
+
+      <!-- Viewport Meta Tag -->
+      <section id="viewport">
+        <h2>The Viewport Meta Tag</h2>
+
+        <div class="subsection">
+          <p>
+            Before any responsive CSS will work correctly, you
+            <strong>must</strong> include the viewport meta tag in your HTML
+            <code>&lt;head&gt;</code>:
+          </p>
+
+          <div class="code-block">
+            <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+          </div>
+
+          <div class="important-note">
+            <h3>Why is this essential?</h3>
+            <p>
+              Without this tag, mobile browsers will render your page at a
+              typical desktop width (usually 980px) and then shrink it down to
+              fit the screen. This makes text tiny and unreadable, and your
+              media queries won't work as expected.
+            </p>
+          </div>
+
+          <div style="text-align: center; margin: 30px 0">
+            <img
+              src="img/week-10/meta-tag.png"
+              alt="Comparison showing a website with and without the viewport meta tag"
+              style="
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              "
+            />
+            <p style="margin-top: 10px; font-style: italic; color: #666">
+              Without the viewport meta tag, mobile browsers render pages at
+              desktop width and scale them down, making text unreadable
+            </p>
+          </div>
+
+          <h3>What each part means:</h3>
+          <ul>
+            <li>
+              <code>width=device-width</code> - Sets the viewport width to match
+              the device's screen width
+            </li>
+            <li>
+              <code>initial-scale=1.0</code> - Sets the initial zoom level to
+              100% (no zoom)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CSS Media Queries -->
+      <section id="media-queries">
+        <h2>CSS Media Queries</h2>
+
+        <div class="subsection">
+          <p>
+            <strong>Media queries</strong> are the foundation of responsive
+            design. They allow you to apply CSS rules only when certain
+            conditions are met, such as screen width, height, orientation, or
+            even print vs screen.
+          </p>
+
+          <h3>Basic Syntax</h3>
+
+          <div class="code-block">
+            <pre><code>@media (condition) {
+  /* CSS rules go here */
+}</code></pre>
+          </div>
+
+          <h3>Common Media Query Examples</h3>
+
+          <div class="code-block">
+            <h4>Minimum Width (Mobile-First)</h4>
+            <pre><code>/* Styles for screens 768px and wider */
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+    width: 250px;
+  }
+}</code></pre>
+          </div>
+
+          <div class="code-block">
+            <h4>Screen Orientation</h4>
+            <pre><code>/* Styles for landscape orientation */
+@media (orientation: landscape) {
+  .hero-image {
+    height: 50vh;
+  }
+}
+
+/* Styles for portrait orientation */
+@media (orientation: portrait) {
+  .hero-image {
+    height: 30vh;
+  }
+}</code></pre>
+          </div>
+
+          <div class="code-block">
+            <h4>Combining Conditions</h4>
+            <pre><code>/* Screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Tablets in landscape OR desktops */
+@media (min-width: 768px) and (orientation: landscape),
+       (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+}</code></pre>
+          </div>
+
+          <div class="exercise-link" style="display: block; cursor: default">
+            <span class="exercise-icon-large">📝</span>
+            <div class="exercise-content">
+              <h3 style="color: #0369a1; margin-bottom: 15px">
+                Exercise 1 - Writing your first media queries
+              </h3>
+              <p>
+                Now it's time to put media queries into practice! Follow the
+                instructions below to complete this exercise.
+              </p>
+
+              <div
+                style="
+                  background: #f0f9ff;
+                  border-left: 4px solid #0369a1;
+                  padding: 20px;
+                  border-radius: 5px;
+                  margin: 20px 0;
+                "
+              >
+                <h4 style="color: #0369a1; margin-top: 0">
+                  📂 Getting Started:
+                </h4>
+                <ol style="line-height: 1.8; margin-bottom: 0">
+                  <li>
+                    Locate the <strong>week10-rwd-exercises.zip</strong> file in
+                    today's tutorial folder
+                  </li>
+                  <li>Unzip the file to extract the exercise files</li>
+                  <li>
+                    Open <strong>exercise1-media-query-intro.html</strong> in
+                    your browser
+                  </li>
+                  <li>Open the corresponding CSS file in your code editor</li>
+                </ol>
+              </div>
+
+              <p>
+                <strong>Tip:</strong> Read through the HTML and CSS comments
+                carefully - they'll guide you through creating your first
+                responsive layout using media queries!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile-First vs Desktop-First -->
+      <section id="mobile-first">
+        <h2>Mobile-First vs Desktop-First</h2>
+
+        <div class="subsection">
+          <p>
+            Now that you understand media queries, let's look at how we apply
+            them differently depending on whether we're using a mobile-first or
+            desktop-first approach.
+          </p>
+
+          <p>The key difference is in how you write your CSS media queries:</p>
+
+          <div class="code-block">
+            <h4>Desktop-First Approach (NOT recommended)</h4>
+            <pre><code>/* Base styles for desktop */
+.container {
+  width: 1200px;
+  display: flex;
+}
+
+/* Then override for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    display: block;
+  }
+}</code></pre>
+          </div>
+
+          <div class="code-block">
+            <h4>Mobile-First Approach (Recommended)</h4>
+            <pre><code>/* Base styles for mobile */
+.container {
+  width: 100%;
+  display: block;
+}
+
+/* Then enhance for larger screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    display: flex;
+  }
+}</code></pre>
+          </div>
+
+          <p>
+            Notice the difference: mobile-first uses
+            <code>min-width</code> (styles apply when screen is
+            <em>at least</em> this wide), while desktop-first uses
+            <code>max-width</code> (styles apply when screen is
+            <em>at most</em> this wide).
+          </p>
+
+          <div class="important-note">
+            <h3>Why This Matters</h3>
+            <p>
+              With mobile-first, your base CSS is simpler and loads faster on
+              mobile devices. You only add the complexity needed for larger
+              screens when the device can handle it. This approach aligns
+              perfectly with progressive enhancement and improves performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fluid Layouts -->
+      <section id="fluid-layouts">
+        <h2>Fluid Layouts and Flexible Units</h2>
+
+        <div class="subsection">
+          <p>
+            A key principle of responsive design is using
+            <strong>relative units</strong> instead of fixed pixel values. This
+            allows elements to scale proportionally with the viewport.
+          </p>
+
+          <h3>CSS Units for Responsive Design</h3>
+
+          <table style="width: 100%; border-collapse: collapse; margin: 20px 0">
+            <thead>
+              <tr style="background: #f5f5f5">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Unit
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Description
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Best Used For
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  <code>%</code>
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Percentage of parent element
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Widths, margins, padding
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  <code>em</code>
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Relative to parent's font size
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Typography, component spacing
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  <code>rem</code>
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Relative to root (html) font size
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Font sizes, consistent spacing
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  <code>vw</code>
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  1% of viewport width
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Full-width elements, hero sections
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  <code>vh</code>
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  1% of viewport height
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Full-height sections, modals
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="code-block">
+            <h4>Example: Fluid Container</h4>
+            <pre><code>.container {
+  width: 90%;           /* 90% of parent width */
+  max-width: 1200px;    /* But never wider than 1200px */
+  margin: 0 auto;       /* Centered horizontally */
+  padding: 1rem;        /* Consistent padding based on root font */
+}
+
+.hero {
+  min-height: 50vh;     /* At least half the viewport height */
+  padding: 2rem 5%;     /* Responsive padding */
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);  /* Responsive font size */
+}</code></pre>
+          </div>
+
+          <div class="info-box">
+            <h3>The clamp() Function</h3>
+            <p>
+              <code>clamp(min, preferred, max)</code> is incredibly useful for
+              responsive typography. It sets a preferred value that scales with
+              the viewport, but won't go below the minimum or above the maximum.
+            </p>
+            <pre><code>/* Font will scale between 16px and 24px based on viewport */
+font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Images -->
+      <section id="responsive-images">
+        <h2>Responsive Images</h2>
+
+        <div class="subsection">
+          <p>
+            Images need special consideration in responsive design. A large
+            image that looks great on desktop can slow down mobile devices and
+            waste bandwidth.
+          </p>
+
+          <h3>Basic Responsive Image</h3>
+
+          <div class="code-block">
+            <pre><code>img {
+  max-width: 100%;    /* Never wider than container */
+  height: auto;       /* Maintain aspect ratio */
+  display: block;     /* Remove inline spacing */
+}</code></pre>
+          </div>
+
+          <p>
+            This simple CSS rule should be applied to all images on your site.
+          </p>
+
+          <h3>The Picture Element</h3>
+
+          <p>
+            For more control, use the <code>&lt;picture&gt;</code> element to
+            serve different images based on screen size:
+          </p>
+
+          <div class="code-block">
+            <pre><code>&lt;picture&gt;
+  &lt;!-- Large screens get the full image --&gt;
+  &lt;source media="(min-width: 1024px)" srcset="hero-large.jpg"&gt;
+
+  &lt;!-- Medium screens get a cropped version --&gt;
+  &lt;source media="(min-width: 768px)" srcset="hero-medium.jpg"&gt;
+
+  &lt;!-- Mobile gets a portrait-oriented version --&gt;
+  &lt;img src="hero-small.jpg" alt="Hero image"&gt;
+&lt;/picture&gt;</code></pre>
+          </div>
+
+          <h3>Srcset for Resolution Switching</h3>
+
+          <p>
+            Use <code>srcset</code> to provide different image sizes for
+            different screen densities:
+          </p>
+
+          <div class="code-block">
+            <pre><code>&lt;img
+  src="photo-400.jpg"
+  srcset="photo-400.jpg 400w,
+          photo-800.jpg 800w,
+          photo-1200.jpg 1200w"
+  sizes="(max-width: 600px) 100vw,
+         (max-width: 1200px) 50vw,
+         600px"
+  alt="Responsive photo"&gt;</code></pre>
+          </div>
+
+          <div class="important-note">
+            <h3>Performance Tip</h3>
+            <p>
+              Always optimise your images! Use tools like
+              <a href="https://squoosh.app/" target="_blank">Squoosh</a> or
+              <a href="https://tinypng.com/" target="_blank">TinyPNG</a> to
+              compress images without visible quality loss. Consider using
+              modern formats like WebP which offer better compression.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Breakpoints -->
+      <section id="breakpoints">
+        <h2>Common Breakpoints</h2>
+
+        <div class="subsection">
+          <p>
+            <strong>Breakpoints</strong> are the viewport widths where your
+            layout changes. While there's no universal standard, here are
+            commonly used breakpoints:
+          </p>
+
+          <div class="code-block">
+            <h4>Typical Mobile-First Breakpoints</h4>
+            <pre><code>/* Base styles - Mobile (0px and up) */
+/* No media query needed - this is your default */
+
+/* Small tablets and large phones (576px and up) */
+@media (min-width: 576px) {
+  /* Styles for larger phones */
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+}
+
+/* Laptops and small desktops (992px and up) */
+@media (min-width: 992px) {
+  /* Desktop styles */
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  /* Large screen styles */
+}
+
+/* Extra large screens (1400px and up) */
+@media (min-width: 1400px) {
+  /* Extra large screen styles */
+}</code></pre>
+          </div>
+
+          <div class="important-note">
+            <h3>Important: Content-Based Breakpoints</h3>
+            <p>
+              <strong
+                >It is extremely rare to use all of the breakpoints listed
+                above.</strong
+              >
+              You should only add a breakpoint when your content is struggling
+              to look good. Don't just use these standard breakpoints blindly!
+              The best practice is to add breakpoints where your
+              <strong>content needs them</strong>. Resize your browser and add a
+              breakpoint when the layout starts to look broken or awkward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Building a Mobile-First Layout -->
+      <section id="mobile-first-layout">
+        <h2>Building a Mobile-First Layout</h2>
+
+        <div class="subsection">
+          <p>
+            Let's look at a simple example showing how mobile-first CSS works in
+            practice. We'll create a basic page with a header and content area
+            that adapts to different screen sizes.
+          </p>
+
+          <h3>The HTML</h3>
+
+          <div class="code-block">
+            <pre><code>&lt;header class="site-header"&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main class="content"&gt;
+  &lt;h2&gt;Welcome&lt;/h2&gt;
+  &lt;p&gt;This is a simple responsive layout.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+          </div>
+
+          <h3>The Mobile-First CSS</h3>
+
+          <div class="code-block">
+            <pre><code>/* Mobile styles (base - no media query needed) */
+.site-header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.site-header nav a {
+  display: block;
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .site-header h1 {
+    margin-bottom: 0;
+  }
+
+  .site-header nav a {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .content {
+    max-width: 1000px;
+    padding: 3rem;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
+}</code></pre>
+          </div>
+
+          <div class="info-box">
+            <h3>Key Takeaways</h3>
+            <ul>
+              <li>Base styles are for mobile - no media query needed</li>
+              <li>
+                Mobile navigation stacks vertically, desktop shows horizontally
+              </li>
+              <li>
+                Content width is constrained on larger screens for readability
+              </li>
+              <li>Spacing and font sizes increase as screen size grows</li>
+              <li>Flexbox is used on tablet and up for side-by-side layouts</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h3>💡 View the Completed Example</h3>
+            <p>
+              Want to see this example in action? Open
+              <strong>mobile-first-example.html</strong> from this week's
+              exercise folder in your browser. Resize your browser window to see
+              how the layout adapts at different screen sizes!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercise 2 -->
+      <section id="exercise2">
+        <div class="subsection">
+          <div class="exercise-link" style="display: block; cursor: default">
+            <span class="exercise-icon-large">📝</span>
+            <div class="exercise-content">
+              <h3 style="color: #0369a1; margin-bottom: 15px">
+                Exercise 2 - Build a Responsive Product Page
+              </h3>
+              <p>
+                Now it's time to put everything you've learned into practice! In
+                this exercise, you'll make a product page fully responsive by
+                completing three challenges.
+              </p>
+
+              <h4 style="color: #333; margin-top: 20px; margin-bottom: 10px">
+                What You'll Build:
+              </h4>
+              <ul style="line-height: 1.8; margin-bottom: 20px">
+                <li>
+                  <strong>Challenge 1:</strong> Product cards that stack on
+                  mobile, display 2 per row on tablet, and 3 per row on desktop
+                </li>
+                <li>
+                  <strong>Challenge 2:</strong> A newsletter form that stacks on
+                  mobile but sits side-by-side on larger screens
+                </li>
+                <li>
+                  <strong>Challenge 3:</strong> Feature boxes that stack on
+                  mobile but display in a row on desktop
+                </li>
+              </ul>
+
+              <div
+                style="
+                  background: #f0f9ff;
+                  border-left: 4px solid #0369a1;
+                  padding: 20px;
+                  border-radius: 5px;
+                  margin: 20px 0;
+                "
+              >
+                <h4 style="color: #0369a1; margin-top: 0">
+                  📂 Getting Started:
+                </h4>
+                <ol style="line-height: 1.8; margin-bottom: 0">
+                  <li>
+                    Open the following files in the exercise folder you unzipped
+                    before in VS Code
+                  </li>
+                  <li>
+                    Open <strong>exercise2-starter.html</strong> in your browser
+                  </li>
+                  <li>
+                    Open <strong>exercise2-starter.css</strong> in VS Code
+                  </li>
+                </ol>
+              </div>
+
+              <h4 style="color: #333; margin-top: 25px; margin-bottom: 10px">
+                Instructions:
+              </h4>
+              <ol style="line-height: 1.8; margin-bottom: 20px">
+                <li>
+                  Read the comments in both the HTML and CSS files carefully -
+                  they explain what each challenge requires
+                </li>
+                <li>
+                  All your work will be done in the CSS file in the "MEDIA
+                  QUERIES" section
+                </li>
+                <li>
+                  Start with Challenge 1 (product cards), then move to Challenge
+                  2 (newsletter), then Challenge 3 (features)
+                </li>
+                <li>
+                  Test your work by resizing your browser window to see the
+                  layout change at different screen sizes
+                </li>
+                <li>
+                  Use the helpful hints provided in the CSS comments if you get
+                  stuck
+                </li>
+              </ol>
+
+              <div
+                style="
+                  background: #fef3c7;
+                  border-left: 4px solid #f59e0b;
+                  padding: 20px;
+                  border-radius: 5px;
+                  margin: 20px 0;
+                "
+              >
+                <h4 style="color: #d97706; margin-top: 0">
+                  💡 Tips for Success:
+                </h4>
+                <ul style="line-height: 1.8; margin-bottom: 0">
+                  <li>
+                    Remember the mobile-first approach - the base styles are
+                    already mobile-friendly!
+                  </li>
+                  <li>
+                    Use <code>display: flex</code> and
+                    <code>flex-wrap: wrap</code> to create flexible layouts
+                  </li>
+                  <li>
+                    The <code>gap</code> property is perfect for spacing between
+                    flex items
+                  </li>
+                  <li>
+                    Use <code>calc()</code> to calculate widths accounting for
+                    gaps (e.g., <code>calc(50% - 10px)</code>)
+                  </li>
+                  <li>
+                    Test at each breakpoint: 768px (tablet) and 1024px (desktop)
+                  </li>
+                </ul>
+              </div>
+
+              <p style="margin-top: 20px">
+                <strong>Time to complete:</strong> 20-30 minutes<br />
+                <strong>Difficulty:</strong> Intermediate
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testing -->
+      <section id="testing">
+        <h2>Testing Your Responsive Design</h2>
+
+        <div class="subsection">
+          <p>
+            Testing is crucial to ensure your responsive design works across all
+            devices. Here are the essential testing methods:
+          </p>
+
+          <h3>1. Browser Developer Tools</h3>
+          <p>
+            All modern browsers have built-in responsive design testing tools:
+          </p>
+          <ul>
+            <li>
+              <strong>Chrome/Edge:</strong> Press F12, then click the device
+              toggle icon (or Ctrl+Shift+M)
+            </li>
+            <li>
+              <strong>Firefox:</strong> Press F12, then Ctrl+Shift+M for
+              Responsive Design Mode
+            </li>
+            <li>
+              <strong>Safari:</strong> Enable Developer menu in Preferences,
+              then Develop &gt; Enter Responsive Design Mode
+            </li>
+          </ul>
+
+          <div class="important-note">
+            <h3>Testing Tip</h3>
+            <p>
+              Don't just test at preset device sizes! Drag the browser window
+              slowly from narrow to wide and watch how your layout responds.
+              Look for awkward line breaks, overlapping elements, or content
+              that becomes too stretched or squashed.
+            </p>
+          </div>
+
+          <h3>2. Real Device Testing</h3>
+          <p>
+            Browser simulators are useful, but nothing beats testing on real
+            devices. If possible, test on:
+          </p>
+          <ul>
+            <li>An actual smartphone (both iOS and Android if possible)</li>
+            <li>A tablet</li>
+            <li>Different desktop screen sizes</li>
+          </ul>
+
+          <h3>3. Online Testing Tools</h3>
+          <ul>
+            <li>
+              <a href="https://responsivedesignchecker.com/" target="_blank"
+                >Responsive Design Checker</a
+              >
+              - Test your site at various screen sizes
+            </li>
+            <li>
+              <a href="https://www.browserstack.com/" target="_blank"
+                >BrowserStack</a
+              >
+              - Test on real devices in the cloud (free trial available)
+            </li>
+            <li>
+              <a
+                href="https://search.google.com/test/mobile-friendly"
+                target="_blank"
+                >Google Mobile-Friendly Test</a
+              >
+              - Check if Google considers your page mobile-friendly
+            </li>
+          </ul>
+
+          <h3>4. Common Issues to Check For</h3>
+
+          <div class="important-note">
+            <h3>Watch out for these problems:</h3>
+            <ul>
+              <li>
+                Horizontal scrolling on mobile (usually means something is too
+                wide)
+              </li>
+              <li>Text that's too small to read without zooming</li>
+              <li>
+                Buttons or links too close together (hard to tap on mobile)
+              </li>
+              <li>Images that overflow their containers</li>
+              <li>Fixed-width elements that don't scale</li>
+              <li>Navigation that doesn't work on touch screens</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Break Section -->
+      <section id="break">
+        <h2>☕ Break Time</h2>
+        <div class="subsection">
+          <div
+            style="
+              background: #fff9e6;
+              border-left: 5px solid #ffc107;
+              padding: 30px;
+              border-radius: 8px;
+              text-align: center;
+            "
+          >
+            <p style="font-size: 1.2em; color: #666; margin-bottom: 10px">
+              Take a 15 minute break
+            </p>
+            <p style="color: #666; margin: 0">
+              Grab a coffee, stretch your legs, and we'll reconvene to work on
+              your Figma designs!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Second Half: Figma Design Work -->
+      <section id="design-work">
+        <h2>Second Half: Figma Design Work & Feedback</h2>
+
+        <div class="subsection">
+          <div
+            class="important-note"
+            style="background: #e3f2fd; border-color: #2196f3"
+          >
+            <h3>Focus for Today's Session</h3>
+            <p>
+              Now that you've learned about responsive design principles,
+              continue working on your Silverlake Figma designs with
+              mobile-first thinking in mind. I'll be available for one-to-one
+              feedback sessions to help refine your designs.
+            </p>
+          </div>
+
+          <h3>What to Work On:</h3>
+          <ol>
+            <li>
+              <strong>Complete all three responsive layouts</strong> - Ensure
+              you have finished designs for mobile (375px), tablet (768px), and
+              desktop (1440px)
+            </li>
+            <li>
+              <strong>Review your mobile design first</strong> - This should be
+              the simplest, most essential version of your content
+            </li>
+            <li>
+              <strong>Check design consistency</strong> - Colors, fonts,
+              spacing, and components should be consistent across all three
+              layouts
+            </li>
+            <li>
+              <strong>Consider how layouts adapt</strong> - Think about how your
+              design transitions from mobile → tablet → desktop
+            </li>
+            <li>
+              <strong>Export assets</strong> - Start exporting logos, icons, and
+              images ready for implementation
+            </li>
+          </ol>
+
+          <h3>Before Next Week:</h3>
+          <ul>
+            <li>Finalize all three Figma designs (mobile, tablet, desktop)</li>
+            <li>Export all necessary graphics and assets</li>
+            <li>Take screenshots of your designs for your portfolio</li>
+            <li>Be ready to start building your website with HTML and CSS</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Additional Resources -->
+      <section id="resources">
+        <h2>Additional Resources</h2>
+
+        <div class="subsection">
+          <h3>Documentation</h3>
+          <ul>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+                target="_blank"
+                >MDN: Responsive Design</a
+              >
+              - Comprehensive guide from Mozilla
+            </li>
+            <li>
+              <a
+                href="https://web.dev/responsive-web-design-basics/"
+                target="_blank"
+                >Google Web.dev: Responsive Web Design Basics</a
+              >
+              - Google's guide to RWD
+            </li>
+            <li>
+              <a
+                href="https://css-tricks.com/a-complete-guide-to-css-media-queries/"
+                target="_blank"
+                >CSS-Tricks: Complete Guide to Media Queries</a
+              >
+              - In-depth media query reference
+            </li>
+          </ul>
+
+          <h3>Helpful Videos</h3>
+
+          <div class="video-container" style="margin: 20px 0">
+            <h4>Learn Responsive Web Design in 10 Minutes</h4>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ZYV6dYtz4HA"
+              title="Responsive Web Design Tutorial"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="max-width: 100%; border-radius: 8px"
+            ></iframe>
+          </div>
+
+          <div class="video-container" style="margin: 20px 0">
+            <h4>CSS Media Queries for Beginners</h4>
+            <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/yU7jJ3NbPdA"
+  title="CSS Media Queries Tutorial"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  referrerpolicy="strict-origin-when-cross-origin"
+></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Leeds Beckett University - Web Interaction Module</p>
+    </footer>
+  </body>
+</html>

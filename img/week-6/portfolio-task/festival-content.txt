@@ -1,0 +1,156 @@
+MUSIC FESTIVAL WEBSITE - CONTENT
+=====================================
+
+FESTIVAL NAME: SoundWave Festival 2025
+DATE: July 18-20, 2025
+LOCATION: Victoria Park, Leeds
+
+
+HERO SECTION TEXT:
+------------------
+Main Heading: SoundWave Festival 2025
+Subtitle: Three Days of Incredible Music
+Dates: July 18-20, 2025
+Call to Action: Get Your Tickets
+
+
+ARTIST LINEUP (use these for your cards):
+------------------------------------------
+
+1. The Electric Dreams
+   Time: Friday 9:00 PM
+   Stage: Main Stage
+   Genre: Electronic/Dance
+
+2. Sunset Boulevard
+   Time: Friday 7:00 PM
+   Stage: Indie Stage
+   Genre: Indie Rock
+
+3. Bass Drop Collective
+   Time: Saturday 10:00 PM
+   Stage: Main Stage
+   Genre: Drum & Bass
+
+4. Acoustic Waves
+   Time: Saturday 3:00 PM
+   Stage: Acoustic Tent
+   Genre: Folk/Acoustic
+
+5. The Rhythm Section
+   Time: Saturday 8:00 PM
+   Stage: Main Stage
+   Genre: Funk/Soul
+
+6. Digital Underground
+   Time: Sunday 9:00 PM
+   Stage: Electronic Stage
+   Genre: Techno
+
+7. Indie Hearts
+   Time: Sunday 6:00 PM
+   Stage: Indie Stage
+   Genre: Indie Pop
+
+8. Jazz Fusion Crew
+   Time: Sunday 4:00 PM
+   Stage: Jazz Lounge
+   Genre: Jazz Fusion
+
+9. Rock Legends Tribute
+   Time: Friday 8:00 PM
+   Stage: Main Stage
+   Genre: Classic Rock
+
+10. The Sound Architects
+    Time: Saturday 11:00 PM
+    Stage: Main Stage
+    Genre: Progressive House
+
+
+SIDEBAR INFORMATION SECTION:
+-----------------------------
+Title: Festival Information
+
+Location:
+Victoria Park, Leeds
+LS5 1AB
+
+Festival Dates:
+Friday, July 18 - Sunday, July 20, 2025
+
+Gates Open:
+12:00 PM daily
+
+Ticket Prices:
+- Day Ticket: £75
+- Weekend Pass: £180
+- VIP Weekend: £350
+
+Facilities:
+- 5 Music Stages
+- Food Court
+- Camping Available
+- Free Water Stations
+- First Aid
+- Cash Machines
+
+
+MAIN CONTENT SECTION:
+---------------------
+Title: About SoundWave Festival
+
+Welcome to SoundWave Festival 2025! Join us for three incredible days of music,
+community, and unforgettable experiences in the heart of Leeds.
+
+SoundWave Festival brings together the best in electronic, indie, rock, and
+alternative music across five amazing stages. From emerging local talent to
+internationally acclaimed headliners, our carefully curated lineup offers
+something for every music lover.
+
+Set in the beautiful Victoria Park, the festival combines world-class music
+with a friendly, inclusive atmosphere. With multiple food vendors, bars, art
+installations, and chill-out zones, SoundWave is more than just a music
+festival—it's a celebration of culture and creativity.
+
+Whether you're camping for the weekend or joining us for a day, SoundWave
+Festival promises an experience you'll never forget. Grab your friends, pack
+your festival spirit, and get ready to make memories that will last a lifetime!
+
+What to Bring:
+- Valid ID and ticket
+- Reusable water bottle
+- Sun cream and rain gear
+- Comfortable shoes
+- Positive vibes!
+
+Getting There:
+The festival is easily accessible by public transport. Free shuttle buses run
+from Leeds city centre every 30 minutes. Car parking is available but limited—
+we recommend using public transport or cycling.
+
+Sustainability:
+We're committed to reducing our environmental impact. Please use the recycling
+stations, avoid single-use plastics, and help us keep Victoria Park beautiful.
+
+
+FOOTER (Optional):
+------------------
+Follow us on social media:
+Instagram: @soundwavefest
+Twitter: @soundwavefest
+Facebook: /soundwavefestival
+
+Contact: info@soundwavefestival.co.uk
+
+© 2025 SoundWave Festival. All rights reserved.
+
+
+NOTES FOR STUDENTS:
+-------------------
+- You need to create at least 6 artist cards (more if you want!)
+- Use the sidebar info for your two-column layout
+- The main content goes in the wider column
+- Create a hero section with festival name and dates
+- You can add your own creative touches and additional content
+- Remember to make it responsive!

@@ -1,0 +1,336 @@
+/* ========================================
+   MUSIC FESTIVAL WEBSITE - STARTER CSS
+   Portfolio Task - Week 6
+   ======================================== */
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+/* TODO: Add your hero section styles here
+   Requirements:
+   - background-image with a festival/concert photo
+   - background-size: cover;
+   - background-position: center;
+   - min-height: 400px;
+   - Use flexbox to center content
+   - Add a semi-transparent overlay for readability
+*/
+
+.hero {
+  /* Add background image properties */
+  /* Add flexbox centering */
+  /* Add sizing */
+}
+
+/* Optional: Dark overlay for text readability */
+.hero::before {
+  /* Uncomment and add overlay styles */
+  /*
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  */
+}
+
+.hero-content {
+  /* Ensure content appears above overlay */
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  /* TODO: Add text-shadow for readability */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  /* TODO: Add text-shadow */
+}
+
+.hero-dates {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  /* TODO: Style the call-to-action button */
+  background: #ff6600;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* TODO: Add transition for hover effect */
+}
+
+.hero-button:hover {
+  /* TODO: Add hover styles */
+}
+
+/* ========================================
+   LINEUP SECTION
+   ======================================== */
+
+.lineup-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.lineup-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* TODO: Create flex container for artist cards
+   Requirements:
+   - display: flex;
+   - flex-wrap: wrap;
+   - gap: 20px;
+   - max-width: 1200px;
+   - center with margin
+*/
+
+.lineup-container {
+  /* Add flex properties here */
+}
+
+/* TODO: Style artist cards
+   Requirements:
+   - flex: 1 1 300px; (grow, shrink, min 300px width)
+   - background: white;
+   - padding: 20px;
+   - border-radius: 8px;
+   - box-shadow for depth
+   - transition for hover effect
+*/
+
+.artist-card {
+  /* Add card styles here */
+}
+
+.artist-card:hover {
+  /* TODO: Add hover effect (lift up, shadow change) */
+}
+
+.artist-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.artist-time {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 5px;
+}
+
+.artist-stage {
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.artist-genre {
+  color: #666;
+  font-style: italic;
+}
+
+/* ========================================
+   INFORMATION SECTION (Two-Column Layout)
+   ======================================== */
+
+/* TODO: Create two-column flex layout
+   Requirements:
+   - display: flex;
+   - gap: 30px;
+   - max-width: 1200px;
+   - center with margin
+   - padding
+*/
+
+.info-section {
+  /* Add flex layout here */
+  padding: 60px 20px;
+}
+
+/* TODO: Style sidebar
+   Requirements:
+   - flex: 0 0 250px; (fixed 250px width)
+   - background color
+   - padding
+   - border-radius
+*/
+
+.sidebar {
+  /* Add sidebar styles here */
+}
+
+.sidebar h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.info-block {
+  margin-bottom: 25px;
+}
+
+.info-block h3 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.info-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-block ul li {
+  padding: 5px 0;
+  color: #555;
+}
+
+/* TODO: Style main content area
+   Requirements:
+   - flex: 1; (takes remaining space)
+   - appropriate padding
+*/
+
+.main-content {
+  /* Add main content styles here */
+}
+
+.main-content h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.main-content h3 {
+  color: #e74c3c;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.main-content p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.main-content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ========================================
+   FOOTER (Optional)
+   ======================================== */
+
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+/* TODO: Use flexbox for footer layout (optional)
+   - Arrange footer sections horizontally
+   - Add gap between sections
+   - Center or space-between
+*/
+
+.footer-content {
+  /* Add flex layout for footer */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+  color: #ecf0f1;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* TODO: Add media queries for mobile
+   On screens smaller than 768px:
+   - Reduce hero text sizes
+   - Make cards full width
+   - Stack sidebar and main content vertically
+*/
+
+/*
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .lineup-container {
+    flex-direction: column;
+  }
+
+  .artist-card {
+    flex: 1 1 100%;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 1 1 100%;
+  }
+}
+*/
+
+/* ========================================
+   BONUS STYLING IDEAS
+   ======================================== */
+
+/* 1. Add background patterns to sections */
+/* 2. Create "featured" artist cards */
+/* 3. Add smooth scrolling */
+/* 4. Add CSS animations */
+/* 5. Style links with hover effects */

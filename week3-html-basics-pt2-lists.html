@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Interaction Week 3 - HTML Basics II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-3/week3-header.jpg"
+        alt="Web development folder structure and HTML organization"
+        class="hero-image"
+      />
+      <h1>Web Interaction Week 3 - HTML Basics II</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          Last week we covered CSS styling and links. This week we'll focus on
+          <strong>organizing our projects properly</strong>, diving deeper into
+          <strong>images and links</strong>, learning about
+          <strong>lists</strong>, and creating
+          <strong>animated banners</strong> in Photoshop.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>3-Hour Session Structure</h2>
+        <div class="subsection">
+          <h3>🕐 Part 1: Getting Organised & Images (45 mins)</h3>
+          <ul>
+            <li>Setting up folder structure</li>
+            <li>Naming conventions</li>
+            <li>Image types for the web</li>
+            <li>Image attributes (title, width, height)</li>
+            <li><strong>Exercise:</strong> Set up your project structure</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>🕑 Part 2: Lists (45 mins)</h3>
+          <ul>
+            <li>Unordered lists</li>
+            <li>Ordered lists</li>
+            <li>Definition lists</li>
+            <li><strong>Exercise:</strong> Practice with different list types</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>☕ Break (15 mins)</h3>
+        </div>
+
+        <div class="subsection">
+          <h3>🕒 Part 3: Animated Banners in Photoshop (45 mins)</h3>
+          <ul>
+            <li>Simple animated banner with single frames</li>
+            <li>Smoother animation using tweening</li>
+            <li>Exporting animated GIFs</li>
+            <li><strong>Practice:</strong> Create your own animated banner</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>📋 Portfolio Task (30 mins)</h3>
+          <ul>
+            <li>Planning your business page</li>
+            <li>Combining lists, images, and animated banners</li>
+            <li><strong>Portfolio:</strong> Create business page with all elements</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="folder-structure">
+        <h2>🕐 Part 1: Getting Organised</h2>
+
+        <div class="subsection">
+          <h3>Setting Up a Folder Structure</h3>
+          <p>
+            When beginning any web project you would create a folder for the
+            project on your computer. I would call it the name of the project.
+          </p>
+
+          <div class="important-note">
+            <h4>IMPORTANT! Naming Conventions</h4>
+            <p>
+              <strong>Don't use any spaces in your names</strong> (use a -
+              instead) and <strong>keep your names lower case</strong>. This is
+              the same for folder names and file names.
+            </p>
+          </div>
+
+          <p>
+            For the assignment hand-in you can think of it like you are building
+            a mini website with a few pages. So I would set up my folder
+            structure looking like this:
+          </p>
+
+          <figure>
+            <img
+              src="img/week-3/folder-structure.png"
+              alt="Folder structure showing root folder with about-me.html, images folder, and js folder"
+              class="content-image"
+            />
+            <figcaption>
+              Basic folder structure for your portfolio project
+            </figcaption>
+          </figure>
+
+          <p>
+            We will place all of our portfolio task HTML files into the root
+            folder (where the about-me.html file is) and also any CSS files. The
+            images for all 5 tasks will live in the
+            <strong>images</strong> folder. You probably won't need to bother
+            about the <strong>js</strong> folder this year but it's good
+            practice to create it.
+          </p>
+        </div>
+
+        <div class="exercise-link" style="display: block; cursor: default">
+          <span class="exercise-icon-large">📝</span>
+          <div class="exercise-content">
+            <h3 style="color: #0369a1; margin-bottom: 15px">Exercise 1</h3>
+            <ol style="margin-left: 20px">
+              <li>
+                Create a new HTML file and save it in your "skills-portfolio"
+                folder with the filename <strong>"index.html"</strong>
+              </li>
+              <li>Put in the template code that we covered in week 1.</li>
+              <li>
+                Add the text "All about me" inside the &lt;body&gt; element.
+              </li>
+              <li>
+                Using last week's tutorial content for reference, set up a link
+                to the page you created about yourself.
+              </li>
+              <li>
+                Set up a link back from the page all about yourself to
+                "index.html"
+              </li>
+              <li>Test they both work okay.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="exercise-link" style="display: block; cursor: default">
+          <span class="exercise-icon-large">📝</span>
+          <div class="exercise-content">
+            <h3 style="color: #0369a1; margin-bottom: 15px">Exercise 2</h3>
+            <p>
+              If your "About me" page is long enough you could try setting up a
+              link at the top of the page to jump down to a section that is
+              lower down the page. This would demonstrate that you know how to
+              create a link to content on the same page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="images-revisited">
+        <h2>Images... Revisited</h2>
+
+        <p>
+          Last class I introduced the basic image tag but there's a bit more to
+          cover with images...
+        </p>
+
+        <div class="subsection">
+          <h3>Image Types for the Web</h3>
+          <p>
+            There are 4 main different file formats that we tend to use for the
+            web. Which one you pick depends on the type of image. We are always
+            trying to strike a balance between
+            <strong>Low file size vs Visible quality</strong>.
+          </p>
+
+          <p>
+            Most images, especially JPEG, contain a lot more data than is needed
+            for a browser and are too often overly large and slow. You can
+            reduce the size of the image using photo editing software that
+            allows you to re-sample an image to reduce its pixel data and in
+            turn reducing image size. However, once you re-sample an image, do
+            not make change its size (height and width) to make it larger as it
+            will become pixelated and blurry.
+          </p>
+
+          <h4>JPEG (Joint Photographic Experts Group)</h4>
+          <p>
+            Images compress well and are the standard for photos. But they don't
+            support any sort of animation or transparency.
+          </p>
+
+          <h4>PNG (Portable Network Graphics)</h4>
+          <p>
+            Images support transparency and alpha channels. This makes them
+            useful for non-rectangular images that may need to overlay different
+            background colors or other elements on the page. To make PNG images,
+            a user would need graphics editing software (like GIMP, Photoshop,
+            or others).
+          </p>
+
+          <figure>
+            <img
+              src="img/week-3/pngs.jpg"
+              alt="Examples showing PNG transparency with non-rectangular images on different backgrounds"
+              class="content-image"
+            />
+            <figcaption>
+              PNG images support transparency - perfect for logos and
+              non-rectangular images
+            </figcaption>
+          </figure>
+
+          <h4>SVG (Scalable Vector Graphics)</h4>
+          <p>
+            Are defined mathematically and support animation. Also, since they
+            are defined mathematically they scale to any size without worrying
+            about pixels, resolution or image data. This makes SVG images an
+            excellent format to use, if possible. SVG is great for logos,
+            charts, graphs, maps, geometric shapes, and line based
+            illustrations. You can export them direct from Illustrator.
+          </p>
+
+          <h4>GIF (Graphics Interchange Format)</h4>
+          <p>
+            These are limited to 256 colours. One of the colours can be
+            transparent but if you make it so the edges tend to look jagged.
+            GIF's are great for any images with large areas of the same colour
+            (like cartoons or logos). The best thing about GIF's is that you can
+            animate them!
+          </p>
+
+          <figure>
+            <iframe
+              src="https://giphy.com/embed/3o7abKhOpu0NwenH3O"
+              width="480"
+              height="270"
+              frameborder="0"
+              class="giphy-embed"
+              allowfullscreen
+            ></iframe>
+            <figcaption>
+              Animated GIFs are perfect for adding movement and engagement to
+              your pages
+            </figcaption>
+          </figure>
+
+          <div class="side-note">
+            <h4>New Image Formats</h4>
+            <p>
+              There are new image formats appearing that compress images even
+              better. Google has been recommending its very own
+              <strong>WebP</strong> image format and Mozilla has been developing
+              the <strong>APNG</strong> (PNG images that animate) but so far
+              support in all browsers is not quite there yet.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Some More Attributes</h3>
+
+          <h4>The title Attribute</h4>
+          <p>
+            If you have a complicated image that could use a tooltip or
+            description, you will want to use the
+            <strong>title</strong> attribute. The <strong>alt</strong> attribute
+            is meant to be an alternate source of information while the
+            <strong>title</strong> attribute should provide additional
+            information about the image.
+          </p>
+
+          <pre><code class="code-example">&lt;img src="complex-diagram.jpg" alt="Network diagram" title="Company network infrastructure showing servers, routers, and client connections"&gt;</code></pre>
+
+          <h4>width and height</h4>
+          <p>
+            Strictly speaking we should add <strong>width</strong> and
+            <strong>height</strong> attributes to our images. The image will
+            display fine without them but sometimes you can use width and height
+            to resize the image in HTML. If you've ever read a web page and
+            suddenly an image loads in above and your text jumps down the screen
+            adding a width and height value will stop this from happening.
+          </p>
+
+          <p>
+            Many developers leave off width and height and let CSS control the
+            size of images but for the above reason of avoiding jumps as the
+            page loads it is best to add them in.
+          </p>
+
+          <p>
+            An image with these items added and a link to an image in a local
+            folder might look like this:
+          </p>
+
+          <pre><code class="code-example">&lt;img src="images/logo.png" alt="Company logo" title="Our brand" width="200" height="100"&gt;</code></pre>
+
+          <div class="side-note">
+            <h4>Cool Online Tool for Resizing Images</h4>
+            <p>
+              <a href="https://pixlr.com/x/" target="_blank">Pixlr</a> is a free
+              online tool for resizing and editing images. It's perfect for
+              preparing images for the web!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lists-section">
+        <h2>🕑 Part 2: Lists</h2>
+
+        <p>
+          HTML provides us a way of listing things. It does this by providing a
+          range of list elements. There are 3 types: unordered, ordered and
+          definition. Let's look at each of them.
+        </p>
+
+        <div class="subsection">
+          <h3>Unordered List</h3>
+          <p>
+            This is probably the most usual of the 3 types of list. We use this
+            when the order of the items is not important. By default a list of
+            this type is displayed in the browser with bullet-points. We can
+            change how these bullets are displayed using the type attribute but
+            later we will see how we can make lists look better using CSS.
+          </p>
+
+          <p>The <strong>&lt;li&gt;</strong> element is short for list item.</p>
+
+          <pre><code class="code-example">&lt;ul&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Butter&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <div class="output-example">
+            <ul>
+              <li>Milk</li>
+              <li>Bread</li>
+              <li>Eggs</li>
+              <li>Butter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Ordered List</h3>
+          <p>
+            When order is important we use an ordered list. This is what the
+            <strong>&lt;ol&gt;</strong> tag stands for.
+          </p>
+
+          <pre><code class="code-example">&lt;ol&gt;
+  &lt;li&gt;Heat the oven&lt;/li&gt;
+  &lt;li&gt;Mix ingredients&lt;/li&gt;
+  &lt;li&gt;Pour into tin&lt;/li&gt;
+  &lt;li&gt;Bake for 30 minutes&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+          <div class="output-example">
+            <ol>
+              <li>Heat the oven</li>
+              <li>Mix ingredients</li>
+              <li>Pour into tin</li>
+              <li>Bake for 30 minutes</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Definition List</h3>
+          <p>
+            This is the least used because many people are not sure how to use
+            it. It is quite simple. Choose this list for any items that have 2
+            parts to them. An example would be a dictionary - a list of words
+            with their associated meaning or a menu - a list of dish names with
+            their descriptions. The <strong>&lt;dt&gt;</strong> element is the
+            definition term. The <strong>&lt;dd&gt;</strong> element is the
+            definition description.
+          </p>
+
+          <pre><code class="code-example">&lt;dl&gt;
+  &lt;dt&gt;Coffee&lt;/dt&gt;
+  &lt;dd&gt;Hot beverage made from roasted beans&lt;/dd&gt;
+  
+  &lt;dt&gt;Tea&lt;/dt&gt;
+  &lt;dd&gt;Hot beverage made from dried leaves&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+          <div class="output-example">
+            <dl>
+              <dt>Coffee</dt>
+              <dd>Hot beverage made from roasted beans</dd>
+
+              <dt>Tea</dt>
+              <dd>Hot beverage made from dried leaves</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Exercise 3</h3>
+          <p>
+            Complete the following CodePen by adding some lists to the HTML.
+            Follow the instructions in the comments.
+          </p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/ebb7fe66eb2364cd70a2b68fc882981d"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">📝</span>
+            <span class="exercise-text">Exercise 3 - Practice with Lists</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="module-break">
+        <h2>☕ 15 Minute Break</h2>
+        <div class="side-note">
+          <h4>Stretch Time!</h4>
+          <p>
+            Take a break, grab a coffee, and get ready for Part 3 where we'll
+            learn how to create animated banners in Photoshop!
+          </p>
+        </div>
+      </section>
+
+      <section class="photoshop-animation">
+        <h2>🕒 Part 3: Using Photoshop to Create an Animated Banner</h2>
+
+        <p>
+          For this week's portfolio task you will need to create an animated
+          banner. Photoshop actually has some animation tools built into it that
+          we can use to do this. There is other software that professionals
+          might use to create animated banners but we can do it in Photoshop and
+          this reinforces the learning you are doing in your graphics module.
+          Watch the following videos to see how.
+        </p>
+
+        <div class="subsection">
+          <h3>Pt 1 - Simple Animated Banner with Single Frames</h3>
+          <p>
+            In the following 2 videos I have created a banner for a small cafe
+            that we have on campus called "Tiki". The first banner is simple
+            animation - just switching between static frames. The second has
+            movement and fades.
+          </p>
+
+          <p>
+            I'd like you to come up with a banner that advertises some aspect of
+            your business. Check out the following articles for how to make good
+            banner ads:
+          </p>
+
+          <ul>
+            <li>
+              <a
+                href="https://www.wix.com/blog/2021/02/banner-ads/"
+                target="_blank"
+                >Wix: Banner Ads Guide</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.wordstream.com/blog/ws/2018/07/30/design-principles"
+                target="_blank"
+                >WordStream: Design Principles</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bannerflow.com/examples/" target="_blank"
+                >Bannerflow: Examples</a
+              >
+            </li>
+          </ul>
+
+          <iframe
+            src="https://player.vimeo.com/video/467555315"
+            width="100%"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="subsection">
+          <h3>Pt 2 - Smoother Animation Using Tweening</h3>
+          <p>
+            Tweening allows you to create smooth transitions between frames,
+            making your animations look more professional.
+          </p>
+
+          <iframe
+            src="https://player.vimeo.com/video/467531460"
+            width="100%"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="portfolio-task">
+        <h2>📋 Portfolio Task</h2>
+
+        <p>
+          You are to create a single web page for a fictional business of your
+          choice. This will be the portfolio piece you are assessed on for weeks
+          3 and 4. You could do it for a cafe, a pet luxury spa, a tech repair
+          shop, an escape room, an online store that sells houseplants, you can
+          choose whatever you want.
+        </p>
+
+        <h3>Requirements:</h3>
+        <ol>
+          <li>
+            <strong>All 3 Types of Lists:</strong> You will need to include on
+            the web page all 3 types of lists we have covered. Think about the
+            business and what products they sell or services they offer. Which
+            of these could be represented in an unordered list? an ordered list?
+            a definition list? You can get creative with the content - for
+            instance if you were doing a cafe you could include recipes or
+            information on how to make the perfect cup of coffee.
+          </li>
+          <li>
+            <strong>Imagery:</strong> The page should contain some imagery - a
+            logo and an animated banner. Although it is possible to find logos
+            online you should use your new Photoshop skills from your Graphics
+            module to create an approximation yourself. Find some imagery online
+            or take some photos yourself that you can use on the page.
+          </li>
+          <li>
+            <strong>Content Markup:</strong> Mark up content using the heading
+            and paragraph elements you learnt in week 1 and of course validating
+            your page is a must!
+          </li>
+          <li>
+            <strong>Animated Banner:</strong> The page should contain an
+            animated banner to advertise something - this could be a product or
+            service that you company provides. Watch the videos I've put
+            together in today's tutorial content that go through how to do this.
+            It should be eye-catching with a clear
+            <strong>Call-To-Action (CTA)</strong> and key messages.
+          </li>
+          <li>
+            <strong>Navigation Links:</strong> You should create a link to this
+            page from your index.html file. You should create a link at the
+            bottom of the page to jump you back up to the top of the page and a
+            link to return you to the index page.
+          </li>
+          <li>
+            <strong>The emphasis is on your web skills </strong> so don't spend
+            all your time on a logo. A nicely styled page, an animated banner
+            and some lists is really what I'm looking for
+          </li>
+        </ol>
+
+        <h3>To Recap:</h3>
+        <ul>
+          <li>Single page featuring all 3 types of list</li>
+          <li>Create an Animated banner in Photoshop</li>
+          <li>
+            Add a couple of other photos just to bring the page to life a bit
+          </li>
+          <li>Add a link to the page from index.html and a link back</li>
+          <li>
+            Create a CSS file for your site and link it to your HTML. Change
+            colours and fonts to style your page how you like.
+          </li>
+        </ul>
+
+        <div class="quiz-question">
+          <strong>Self-Assessment:</strong> Does your page include all three
+          list types? Is your animated banner eye-catching with a clear CTA?
+          Have you validated your HTML?
+        </div>
+      </section>
+
+      <section class="next-week-preview">
+        <h2>Next Week Preview</h2>
+        <div class="subsection">
+          <h3>Week 4: HTML5 Semantic Elements, Embedded Content & Forms</h3>
+          <p>
+            Next week, we'll explore <strong>HTML5 semantic elements</strong>
+            for better page structure and accessibility, learn how to
+            <strong>embed videos, audio, and maps</strong> into your pages,
+            understand <strong>divs, spans, classes and IDs</strong> to prepare
+            for CSS styling, and master <strong>HTML forms</strong> for
+            collecting user information. This will be an essential week as we
+            bring together all the HTML fundamentals!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Web Interaction Week 3 - HTML Basics II Tutorial</p>
+    </footer>
+  </body>
+</html>

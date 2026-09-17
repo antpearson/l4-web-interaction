@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 440" width="1500" height="440">
+  <!-- Home Page -->
+  <rect x="620" y="30" width="260" height="90" fill="none" stroke="#000000" stroke-width="4"/>
+  <text x="750" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#000000">Home Page</text>
+
+  <!-- Vertical line from Home -->
+  <line x1="750" y1="120" x2="750" y2="160" stroke="#000000" stroke-width="3"/>
+
+  <!-- Horizontal line connecting main pages -->
+  <line x1="180" y1="160" x2="1320" y2="160" stroke="#000000" stroke-width="3"/>
+
+  <!-- Main Pages -->
+  <!-- Visit -->
+  <line x1="180" y1="160" x2="180" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="110" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="180" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Visit</text>
+
+  <!-- What's On -->
+  <line x1="370" y1="160" x2="370" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="300" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="370" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">What's On</text>
+
+  <!-- Shop -->
+  <line x1="560" y1="160" x2="560" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="490" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="560" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Shop</text>
+
+  <!-- About -->
+  <line x1="940" y1="160" x2="940" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="870" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="940" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">About</text>
+
+  <!-- Learning -->
+  <line x1="1130" y1="160" x2="1130" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="1060" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="1130" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Learning</text>
+
+  <!-- Support -->
+  <line x1="1320" y1="160" x2="1320" y2="195" stroke="#000000" stroke-width="3"/>
+  <rect x="1250" y="195" width="140" height="80" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="1320" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Support</text>
+
+  <!-- Visit Sub-pages -->
+  <line x1="180" y1="275" x2="180" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="180" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Getting here</text>
+
+  <line x1="180" y1="323" x2="180" y2="333" stroke="#999" stroke-width="2"/>
+  <text x="180" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Opening hours</text>
+
+  <line x1="180" y1="356" x2="180" y2="366" stroke="#999" stroke-width="2"/>
+  <text x="180" y="384" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Contact Info</text>
+
+  <!-- What's On Sub-pages -->
+  <line x1="370" y1="275" x2="370" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="370" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Exhibits</text>
+
+  <line x1="370" y1="323" x2="370" y2="333" stroke="#999" stroke-width="2"/>
+  <text x="370" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Music Events</text>
+
+  <!-- Shop Sub-pages -->
+  <line x1="560" y1="275" x2="560" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="560" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Store Pages</text>
+
+  <!-- About Sub-pages -->
+  <line x1="940" y1="275" x2="940" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="940" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Our History</text>
+
+  <line x1="940" y1="323" x2="940" y2="333" stroke="#999" stroke-width="2"/>
+  <text x="940" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">News</text>
+
+  <!-- Learning Sub-pages -->
+  <line x1="1130" y1="275" x2="1130" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="1130" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Teacher Resources</text>
+
+  <line x1="1130" y1="323" x2="1130" y2="333" stroke="#999" stroke-width="2"/>
+  <text x="1130" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Activity Sheets</text>
+
+  <!-- Support Sub-pages -->
+  <line x1="1320" y1="275" x2="1320" y2="300" stroke="#999" stroke-width="2"/>
+  <text x="1320" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Volunteering</text>
+
+  <line x1="1320" y1="323" x2="1320" y2="333" stroke="#999" stroke-width="2"/>
+  <text x="1320" y="351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Fundraising</text>
+
+  <line x1="1320" y1="356" x2="1320" y2="366" stroke="#999" stroke-width="2"/>
+  <text x="1320" y="384" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Donate</text>
+</svg>

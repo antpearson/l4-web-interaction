@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Authoring Week 1 - Introduction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-1/web-design-header.jpg"
+        alt="Web development folder structure and HTML organization"
+        class="hero-image"
+      />
+      <h1>Web Interaction Week 1 - Introduction</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          Welcome to the <strong>Web Interaction</strong> module. This is the
+          beginning of your journey into <strong>coding websites</strong> and
+          <strong>interactive content</strong>.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>3-Hour Session Structure</h2>
+        <div class="subsection">
+          <h3>🕐 Part 1: Foundation & First Steps (45 mins)</h3>
+          <ul>
+            <li>Understanding web development basics</li>
+            <li>Setting up your tools</li>
+            <li>Your first HTML document</li>
+            <li><strong>Hands-on:</strong> Create your first webpage</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>🕑 Part 2: Core HTML Elements (45 mins)</h3>
+          <ul>
+            <li>Headings and document structure</li>
+            <li>Paragraphs and text content</li>
+            <li><strong>Practice:</strong> Building a structured document</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>☕ Break (15 mins)</h3>
+        </div>
+
+        <div class="subsection">
+          <h3>🕒 Part 3: Text Formatting & Special Elements (45 mins)</h3>
+          <ul>
+            <li>Emphasis, strong, and text styling</li>
+            <li>Special text elements and formatting</li>
+            <li>Comments and organization</li>
+            <li><strong>Exercise:</strong> Rich content creation</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>🕓 Part 4: Images & Portfolio Task (30 mins)</h3>
+          <ul>
+            <li>Adding images to your page</li>
+            <li>Bringing it all together</li>
+            <li><strong>Portfolio:</strong> Personal webpage creation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-module">
+        <h2>About the Module</h2>
+
+        <div class="subsection">
+          <h3>The Interactive Theme</h3>
+
+          <p>
+            We have <strong>5 core themes</strong> on Content Creation.
+            <strong>Interactive</strong> is one of them. Your tutor will explain
+            how this module fits with the interactive modules that follow and
+            introduce the module. You will learn how the module will be assessed
+            by referencing the Module Handbook.
+          </p>
+        </div>
+      </section>
+
+      <section class="how-internet-works">
+        <h2>How the internet works</h2>
+        <p>
+          Take some time to watch the first 4 minutes of the following video.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/42aWAAqoUfI?si=AuUFr039-dVj3sHR"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <div class="questions">
+          <p>
+            Now that you've watched it can you answer the following questions?
+          </p>
+          <ol>
+            <li>In what year was the internet created?</li>
+            <li>Who invented the World Wide Web?</li>
+            <li>How proportion of the world are active internet users?</li>
+            <li>How do we link up the internet across continents?</li>
+            <li>
+              People refer to the "internet" and the "web" to mean the same
+              thing but there's a subtle difference. What is it?
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="url-section">
+        <h2>Web Page Addresses (URL's)</h2>
+        <p>
+          Every page on the internet has its own address known as a
+          <strong>URL</strong>. A URL is an abbreviation of
+          <strong>Universal Resource Locator</strong> but I don't expect you to
+          remember that.
+        </p>
+        <p>
+          Each <strong>URL</strong> can be broken down into certain
+          <strong>sections of information</strong> like so
+        </p>
+        <img
+          src="img/week-1/web-url.png"
+          alt="URL structure breakdown"
+          class="diagram-image"
+        />
+      </section>
+
+      <section class="holy-trinity">
+        <h2>The holy trinity - how we build the web.</h2>
+        <img
+          src="img/week-1/trinity.jpg"
+          alt="HTML, CSS, JavaScript trinity diagram"
+          class="large-diagram"
+        />
+
+        <p>
+          Most people have a vague idea that <strong>HTML</strong> is what is
+          used to build web pages. However it forms just one of the 3 components
+          that go together to build web pages and modern web applications. There
+          are another 2 languages that go hand-in-hand with HTML to create the
+          modern web experience. These are <strong>CSS</strong> and
+          <strong>JavaScript</strong>. Let's look at what they each do.
+        </p>
+
+        <div class="trinity-explanation">
+          <h3>HTML</h3>
+          <p>
+            <strong>HTML</strong> stands for
+            <strong>Hypertext Markup Language</strong>. An HTML file contains
+            all the content and dictates the structure of that content. If you
+            were writing a news website the HTML file would contain the
+            headings, the copy, the images and it would organise the content
+            into a logical structure.
+          </p>
+
+          <h3>CSS</h3>
+          <p>
+            <strong>CSS</strong> stands for
+            <strong>Cascading Style Sheets</strong>. We will cover the "cascade"
+            in a later tutorial but the key word to focus on here is "Style". It
+            takes the HTML and it presents it in a certain style. It's a bit
+            like if you chose a template in a Powerpoint presentation. It takes
+            content and might change the colours of headings, the fonts, the
+            background colour of the page. In modern web pages it is also used
+            to handle the layout of the page.
+          </p>
+
+          <h3>JavaScript</h3>
+          <p>
+            <strong>JavaScript</strong> adds interactivity to web pages. It acts
+            on inputs from the user, it allows multimedia to work, it makes web
+            pages less static and behave more like applications. We'll cover
+            JavaScript next year although we might do a little bit towards the
+            end of this module.
+          </p>
+        </div>
+      </section>
+
+      <section class="tools-setup">
+        <h2>Let's get tooled up.....</h2>
+        <p>
+          There are 2 things you need to do to be able to engage with the tasks
+          in this module.
+        </p>
+        <ol>
+          <li>
+            Create an account at Codepen.io (<a
+              href="https://codepen.io"
+              target="_blank"
+              >https://codepen.io</a
+            >)
+          </li>
+          <li>
+            Install a decent text editor for writing your code. I recommend
+            <strong>VS Code</strong> as it has become a bit of a standard in the
+            industry. (<a href="https://code.visualstudio.com/" target="_blank"
+              >https://code.visualstudio.com/</a
+            >)
+          </li>
+        </ol>
+        <p>
+          Watch the following video where I go over the function of each and
+          customisations that are worth making.
+        </p>
+        <iframe
+          src="https://player.vimeo.com/video/460379635"
+          width="640"
+          height="360"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section class="html-first-steps">
+        <h2>🕐 Part 1: HTML - Your first steps</h2>
+        <p>
+          Any type of document that we come across in our everyday lives, be it
+          a magazine, newspaper or bank statement has some kind of structure to
+          it. A newspaper article may have a headline, some text, a main
+          picture, and subheadings of various different weight for sections of
+          the article. Structure is important to convey meaning and help people
+          to navigate the document.
+        </p>
+
+        <figure>
+          <img
+            src="img/week-1/newspaper.jpg"
+            alt="Newspaper showing different heading weights"
+            class="content-image"
+          />
+          <figcaption>
+            A newspaper showing several weights of headings to denote their
+            relative importance
+          </figcaption>
+        </figure>
+
+        <p>
+          We can consider web pages to be just an electronic document that we
+          view in a browser. It is <strong>HTML</strong> that defines the
+          structure of a web page. It does this by marking-up pieces of content
+          with <strong>tags</strong>.
+        </p>
+
+        <div class="subsection">
+          <h3>Your First Complete HTML Document</h3>
+          <p>
+            Let's start by looking at what a complete HTML document looks like:
+          </p>
+
+          <pre><code class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph of content!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <div class="side-note">
+            <h4>Try This Now!</h4>
+            <p>
+              Copy this code into a new CodePen and see it in action. This is
+              the foundation that every webpage builds upon.
+            </p>
+          </div>
+
+          <p>
+            Don't worry about understanding every part yet - we'll break this
+            down piece by piece throughout the tutorial.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Documents and Markup</h3>
+          <p>
+            If we had a section of text that is a paragraph in our document we
+            can add Markup to say it is a paragraph. It would look like this
+          </p>
+          <code class="code-example"
+            >&lt;p&gt;This is my paragraph of text on my
+            website....&lt;/p&gt;</code
+          >
+
+          <p>
+            If we wanted a main heading we would Markup the heading text with
+            heading tags, e.g.
+          </p>
+          <code class="code-example"
+            >&lt;h1&gt;This is the main heading&lt;/h1&gt;</code
+          >
+
+          <p>
+            The third letter in HTML stands for Markup and all it is is looking
+            at your content, deciding what it is and adding some
+            <strong>tags</strong> to it so the browser knows what it is. The
+            browser will have some built-in styles to display your paragraph or
+            heading how it thinks but we generally use <strong>CSS</strong> to
+            display these items exactly as we want.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Tags</h3>
+          <p>
+            HTML uses <strong>tags</strong> to markup content. Most content is
+            marked up with an opening tag and a closing tag. This opening tag,
+            the content and then the closing tag is known as an
+            <strong>HTML element</strong>.
+          </p>
+          <p>
+            There are some HTML elements that don't have a closing tag though.
+            We will cover a handful of these below and more in the weeks to
+            come.
+          </p>
+
+          <img
+            src="img/week-1/opening-tag.png"
+            alt="HTML tag structure diagram"
+            class="diagram-image"
+          />
+          <img
+            src="img/week-1/closing-tag.png"
+            alt="HTML element examples"
+            class="diagram-image"
+          />
+        </div>
+
+        <div class="subsection">
+          <h3>Additional information</h3>
+          <p>
+            Occasionally some extra information is added to a tag to help
+            explain the content better. This information consists of a name and
+            value separated by an equals sign. An example of this is below.
+          </p>
+
+          <img
+            src="img/week-1/attribute.png"
+            alt="HTML attributes example"
+            class="diagram-image"
+          />
+          <img
+            src="img/week-1/imagef.jpg"
+            alt="HTML attributes structure"
+            class="diagram-image"
+          />
+
+          <div class="quiz-question">
+            <strong>Quick quiz question:</strong> How many elements can you see
+            in the code below?
+            <pre><code class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="html-elements">
+        <h2>🕑 Part 2: Core HTML Elements</h2>
+
+        <div class="subsection">
+          <h3>Headings</h3>
+          <p>
+            There are 6 levels of headings tags in HTML. They all start with the
+            character h and then have a number after them.
+          </p>
+
+          <pre><code class="code-example">&lt;h1&gt;Heading Level 1&lt;/h1&gt;
+&lt;h2&gt;Heading Level 2&lt;/h2&gt;
+&lt;h3&gt;Heading Level 3&lt;/h3&gt;
+&lt;h4&gt;Heading Level 4&lt;/h4&gt;
+&lt;h5&gt;Heading Level 5&lt;/h5&gt;
+&lt;h6&gt;Heading Level 6&lt;/h6&gt;</code></pre>
+
+          <div class="output-example">
+            <h1>Heading Level 1</h1>
+            <h2>Heading Level 2</h2>
+            <h3>Heading Level 3</h3>
+            <h4>Heading Level 4</h4>
+            <h5>Heading Level 5</h5>
+            <h6>Heading Level 6</h6>
+          </div>
+
+          <p>
+            <strong>&lt;h1&gt;</strong> should be used for the
+            <strong>most important heading</strong> on the page.
+            <strong>&lt;h6&gt;</strong> for the <strong>least</strong>.
+          </p>
+          <p>
+            All opening tags have a closing tag. Browsers have default behaviour
+            to display the lower numbers bigger and bolder than the higher
+            numbers. You can have multiple headings of the same number on the
+            same page but it is bad practice to have many &lt;h1&gt; tags - as a
+            rule a page will have one main heading.
+          </p>
+
+          <p>
+            <a href="https://codepen.io/antpearson/pen/dyMxWMN" target="_blank"
+              >Click to see example of how headings appear in the browser</a
+            >
+          </p>
+
+          <p>
+            Headings are extremely important for search engine rankings and also
+            in structuring the hierarchy of content.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Paragraphs</h3>
+          <p>
+            The p element is used to break up text into logical blocks and is
+            short for paragraph. All we need to do to write a paragraph is to
+            wrap text in an opening <strong>&lt;p&gt;</strong> tag and then end
+            it with a corresponding <strong>&lt;/p&gt;</strong> tag.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;This is my first paragraph of text.&lt;/p&gt;
+&lt;p&gt;This is my second paragraph of text.&lt;/p&gt;
+&lt;p&gt;This is my third paragraph of text.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>This is my first paragraph of text.</p>
+            <p>This is my second paragraph of text.</p>
+            <p>This is my third paragraph of text.</p>
+          </div>
+
+          <div class="side-note">
+            <h4>No capital letters</h4>
+            <p>
+              Now might be a good time to say that you should never use capital
+              letters in tag names. It won't break anything but it's bad form.
+              So no &lt;H2&gt;'s or &lt;P&gt;'s it's definitely &lt;h2&gt;'s and
+              &lt;p&gt;'s please!
+            </p>
+          </div>
+
+          <div class="quiz-question">
+            <strong>Quick Check:</strong> How many heading levels are available
+            in HTML, and which should be used for the most important heading?
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Line breaks</h3>
+          <p>
+            Text will keep being added to a single line unless a
+            &lt;p&gt;&lt;/p&gt; element is used or we use a
+            <strong>&lt;br&gt;</strong>
+            (line-break) tag.
+          </p>
+          <p>
+            The <strong>&lt;br&gt;</strong> element does not have a closing tag
+            associated with it. Elements such as this are called self-closing
+            elements. The difference between this and using a paragraph tag is
+            that with only one tag there is nothing to wrap the tag around. A
+            paragraph will add vertical white space above and below it. A
+            &lt;br&gt; tag will simply start a new line directly below.
+          </p>
+          <p>They are useful for writing items such as addresses.</p>
+
+          <p><strong>With line breaks:</strong></p>
+          <pre><code class="code-example">John Smith&lt;br&gt;
+123 Main Street&lt;br&gt;
+Anytown&lt;br&gt;
+AB1 2CD</code></pre>
+
+          <div class="output-example">
+            John Smith<br />
+            123 Main Street<br />
+            Anytown<br />
+            AB1 2CD
+          </div>
+
+          <p><strong>Without line breaks:</strong></p>
+          <pre><code class="code-example">John Smith
+123 Main Street
+Anytown
+AB1 2CD</code></pre>
+
+          <div class="output-example">
+            John Smith 123 Main Street Anytown AB1 2CD
+          </div>
+
+          <p>
+            <strong
+              >And this is an important point to remember! White space in your
+              code gets completely ignored by your browser.</strong
+            >
+          </p>
+          <p>How can we use this to our advantage?</p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/678353cb2ed370f52056d8ac7dc67ae6"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">📒</span>
+            <span class="exercise-text">Exercise 1 - Marking up content</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="module-break">
+        <h2>☕ 15 Minute Break</h2>
+        <div class="side-note">
+          <h4>Stretch Time!</h4>
+          <p>
+            Take a break, grab a coffee, and get ready for Part 3 where we'll
+            explore text formatting and special elements!
+          </p>
+        </div>
+      </section>
+
+      <section class="text-formatting">
+        <h2>🕒 Part 3: Text Formatting & Special Elements</h2>
+
+        <div class="subsection">
+          <h3>Emphasis and Strong elements</h3>
+          <p>
+            The em element is short for emphasis. If we wrap a
+            <strong>&lt;em&gt;</strong> and <strong>&lt;/em&gt;</strong> tag
+            around a phrase the default browser behaviour is to put the word in
+            <em>italics</em>.
+          </p>
+          <p>
+            If we wrap a <strong>&lt;strong&gt;</strong> and
+            <strong>&lt;/strong&gt;</strong> tag around a phrase the default
+            browser behaviour is to put the word in <strong>bold</strong>.
+          </p>
+          <p>
+            HTML also has bold <strong>&lt;b&gt;</strong> and italic
+            <strong>&lt;i&gt;</strong> tags but it is generally regarded to be
+            better to use <strong>&lt;strong&gt;</strong> and
+            <strong>&lt;em&gt;</strong>
+            as these imply meaning (semantics) rather than styling which is
+            traditionally the role of CSS.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;This text has &lt;em&gt;emphasis&lt;/em&gt; in it.&lt;/p&gt;
+&lt;p&gt;This text has &lt;strong&gt;strong&lt;/strong&gt; importance.&lt;/p&gt;
+&lt;p&gt;You can even &lt;em&gt;&lt;strong&gt;combine them&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>This text has <em>emphasis</em> in it.</p>
+            <p>This text has <strong>strong</strong> importance.</p>
+            <p>
+              You can even <em><strong>combine them</strong></em
+              >.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Underline and Strikethrough</h3>
+          <p>
+            Applying a u element around some text will <u>underline</u> it. You
+            can use this to show that some text is important or needs to be
+            remembered. It is another option to use along with strong or
+            emphasis.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;This text is &lt;u&gt;underlined&lt;/u&gt; for emphasis.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>This text is <u>underlined</u> for emphasis.</p>
+          </div>
+
+          <p>
+            Striking through text is where you want to show that the text was
+            previously valid but that it is no longer. It simply puts a
+            horizontal line through the centre of the text. We use the
+            <strong>s</strong> element to do this.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;The price was &lt;s&gt;£50&lt;/s&gt; but now it's £30.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>The price was <s>£50</s> but now it's £30.</p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Horizontal Rule</h3>
+          <p>
+            Horizontal rules are one way to separate groups of information and
+            break up a page. This is another empty element in that it only has
+            one tag. Using it just adds a horizontal line on the page.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;This is the first section.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is the second section.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>This is the first section.</p>
+            <hr />
+            <p>This is the second section.</p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Quotations and Block Quotes</h3>
+          <p>
+            There are two tags associated with quotations. The
+            <strong>blockquote</strong> is used for longer quotations and
+            whitespace is inserted around the quotation.
+          </p>
+          <p>
+            The <strong>q</strong> element is used for shorter quotations and
+            quotation marks are added to the quote.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;As Shakespeare said, &lt;q&gt;To be or not to be&lt;/q&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+
+          <div class="output-example">
+            <p>As Shakespeare said, <q>To be or not to be</q>.</p>
+
+            <blockquote>
+              <p>
+                The only way to do great work is to love what you do. If you
+                haven't found it yet, keep looking. Don't settle.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Abbreviations</h3>
+          <p>
+            The <strong>abbr</strong> element is used for abbreviations. You add
+            an attribute to the opening tag to say what the abbreviation is.
+          </p>
+          <p>
+            When you leave the cursor over the abbreviated word in the browser a
+            tooltip will appear with the full version of what it is short for.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;I study at &lt;abbr title="Leeds Beckett University"&gt;LBU&lt;/abbr&gt;.&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>I study at <abbr title="Leeds Beckett University">LBU</abbr>.</p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 10px">
+              <em>Hover over "LBU" to see the tooltip</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Superscript and Subscript</h3>
+          <p>
+            The superscript element <strong>sup</strong> is useful if you have
+            to write dates or mathematical formulas. The subscript element
+            <strong>sub</strong> is often used for footnotes or chemical formula
+            such as H<sub>2</sub>O.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;Today is the 4&lt;sup&gt;th&lt;/sup&gt; of July.&lt;/p&gt;
+&lt;p&gt;The chemical formula for water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
+&lt;p&gt;Einstein's famous equation: E=mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>Today is the 4<sup>th</sup> of July.</p>
+            <p>The chemical formula for water is H<sub>2</sub>O.</p>
+            <p>Einstein's famous equation: E=mc<sup>2</sup></p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Adding comments to our code</h3>
+          <p>
+            The comment tag is used to insert comments in the source code.
+            Comments are not displayed in the browsers.
+          </p>
+          <p>
+            You can use comments to explain your code, which can help you when
+            you edit the source code at a later date. This is especially useful
+            if you have a lot of code.
+          </p>
+          <p>A comment starts with a &lt;!-- and it ends with a --&gt;</p>
+
+          <pre><code class="code-example">&lt;!-- This is a comment and won't appear on the page --&gt;
+
+&lt;h1&gt;Welcome to my website&lt;/h1&gt;
+
+&lt;!-- TODO: Add more content here later --&gt;
+
+&lt;p&gt;This paragraph will appear on the page.&lt;/p&gt;
+
+&lt;!--
+  &lt;p&gt;This paragraph is commented out and hidden&lt;/p&gt;
+--&gt;</code></pre>
+
+          <div class="output-example">
+            <h1>Welcome to my website</h1>
+            <p>This paragraph will appear on the page.</p>
+          </div>
+
+          <p>
+            The sign of a really professional web developer is one who takes the
+            time to add in comments.
+          </p>
+          <p>
+            We can also use comments to hide sections of code in the browser if
+            you are still working on them.
+          </p>
+
+          <p>
+            <a href="https://codepen.io/antpearson/pen/KKMPeXb" target="_blank"
+              >Quick Exercise - comment out some code</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="images-section">
+        <h2>🕓 Part 4: Adding Images & Bringing It Together</h2>
+        <p>
+          Now you know how to mark-up text we can add some images. We do this in
+          HTML by using the <strong>&lt;img&gt;</strong> element. We will cover
+          images again next week in a bit more depth but for now we'll start by
+          looking at the element.
+        </p>
+
+        <div class="subsection">
+          <h3>The img element</h3>
+          <p>
+            Like the <strong>&lt;br&gt;</strong> and
+            <strong>&lt;hr&gt;</strong> tags, the image tag is another
+            self-closing element. It has no closing tag. It does have 2
+            attributes that it must be given though - these are the
+            <strong>src</strong> attribute and the
+            <strong>alt</strong> attribute.
+          </p>
+          <p>
+            The <strong>src</strong> attribute is the location of the image file
+            relative to the location of the HTML file. Your tutor will explain
+            what this means.
+          </p>
+          <p>
+            The <strong>alt</strong> attribute is a description of what the
+            image is. Typically this is what a screen-reader would read-out for
+            people with visual impairments. It is also used by search engines to
+            recognise the content of your images. An example of an image tag is
+            shown below
+          </p>
+
+          <img
+            src="img/week-1/adding-images.jpg"
+            alt="HTML img element example from Learning Web Design"
+            class="diagram-image"
+          />
+          <p class="image-credit">
+            (above image from Learning Web Design, Robbins (2012))
+          </p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/0aa787c5e457e17f082da06761a54527"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">📒</span>
+            <span class="exercise-text"
+              >Exercise 2 - Adding images to a page</span
+            >
+          </a>
+        </div>
+
+        <div class="subsection">
+          <h3>Troubleshooting Your HTML</h3>
+          <p>
+            When things don't work as expected, here's how to debug your HTML:
+          </p>
+
+          <div class="side-note">
+            <h4>Common HTML Mistakes</h4>
+            <p>
+              <strong>Missing closing tags:</strong> Every opening tag needs a
+              closing tag (except self-closing ones like &lt;br&gt; and
+              &lt;img&gt;)
+            </p>
+            <p>
+              <strong>Nested tags incorrectly:</strong> Tags should be closed in
+              the reverse order they were opened
+            </p>
+            <p>
+              <strong>Typos in tag names:</strong> &lt;pragraph&gt; won't work -
+              it should be &lt;paragraph&gt;
+            </p>
+          </div>
+
+          <p><strong>How to check your HTML:</strong></p>
+          <ul>
+            <li>
+              Use your browser's "View Source" (right-click → View Page Source)
+            </li>
+            <li>Check the browser's Developer Tools (F12 key)</li>
+            <li>
+              Use an HTML validator like
+              <a href="https://validator.w3.org/" target="_blank"
+                >W3C Markup Validator</a
+              >
+            </li>
+          </ul>
+
+          <div class="quiz-question">
+            <strong>Quick Debug Challenge:</strong> What's wrong with this
+            code?<br />
+            <code
+              >&lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;</code
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-task">
+        <h2>Portfolio Task: Your Personal Webpage</h2>
+
+        <div class="side-note">
+          <h4>Challenge Time!</h4>
+          <p>
+            Put everything you've learned today into practice by creating a
+            webpage all about you!
+          </p>
+        </div>
+
+        <h3>Requirements Checklist:</h3>
+        <ol>
+          <li>
+            <strong>Document Structure:</strong> Use the complete HTML document
+            template from Part 1
+          </li>
+          <li>
+            <strong>Headings:</strong> Include at least 3 different heading
+            levels (h1, h2, h3)
+          </li>
+          <li>
+            <strong>Content:</strong> Add paragraphs about yourself, hobbies,
+            interests, family, etc.
+          </li>
+          <li>
+            <strong>Formatting:</strong> Use emphasis, strong, and other text
+            formatting elements
+          </li>
+          <li>
+            <strong>Special Elements:</strong> Include some of the special
+            elements we covered (abbreviations, superscript, etc.)
+          </li>
+          <li>
+            <strong>Images:</strong> Add at least one image (we'll learn more
+            about this next week)
+          </li>
+        </ol>
+
+        <h3>Content Ideas:</h3>
+        <ul>
+          <li>Your background and where you come from</li>
+          <li>Your studies and career goals</li>
+          <li>Hobbies and interests</li>
+          <li>Favorite music, movies, or sports teams</li>
+          <li>Places you've visited or want to visit</li>
+          <li>Skills you're learning or want to learn</li>
+        </ul>
+
+        <h3>Getting Started:</h3>
+        <ol>
+          <li>Author your webpage using Visual Studio Code</li>
+          <li>Start with the complete HTML document structure</li>
+          <li>Add your content section by section</li>
+          <li>Test and validate your HTML as you go</li>
+          <li>Save your work and bring any questions to the next class</li>
+        </ol>
+
+        <div class="quiz-question">
+          <strong>Self-Assessment:</strong> Can you identify and explain the
+          purpose of each HTML element you've used in your webpage?
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Web Interaction Week 1 - Introduction Tutorial</p>
+    </footer>
+  </body>
+</html>

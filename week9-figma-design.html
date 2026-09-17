@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Interaction Week 9 - Designing Websites in Figma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-9/banner.jpg"
+        alt="Week 9 - Designing Websites in Figma"
+        class="hero-image"
+      />
+      <h1>Web Interaction - Week 9<br />Designing Websites in Figma</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          This week we'll learn how to use <strong>Figma</strong> to transform
+          your wireframes into professional website designs for your
+          <strong>Silverlake Theme Park</strong> project.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>In this tutorial</h2>
+        <ul>
+          <li>Where you should aim to be</li>
+          <li>Structure diagrams</li>
+          <li>Designing usable websites - Don't Make Me Think!</li>
+          <li>Introduction to Figma</li>
+          <li>Creating your first Figma project</li>
+          <li>Figma basics - Tools and interface</li>
+          <li>Designing mobile and desktop layouts</li>
+          <li>Color schemes and typography</li>
+          <li>Homework - Complete your Silverlake design</li>
+        </ul>
+      </section>
+
+      <!-- Progress Check -->
+      <section id="progress">
+        <h2>Where You Should Aim to Be</h2>
+
+        <div class="subsection">
+          <p>
+            There's quite a bit to do in these last few weeks so to keep things
+            on track, here's a quick overview of where you should be by the end
+            of this week:
+          </p>
+
+          <div
+            style="
+              display: flex;
+              gap: 20px;
+              margin: 30px 0;
+              flex-wrap: wrap;
+              justify-content: center;
+            "
+          >
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                1. Research
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Competitor analysis of 3 other websites
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                2. Initial Planning
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Mindmaps, decide on theme, moodboards, decide on pages,
+                structure diagram
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #e91e63;
+                  color: white;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                3. Wireframes
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Sketch out how each of your 4 pages will look on mobile, tablet
+                and desktop (12 sketches in all)
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #ffc0cb;
+                  color: #333;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                4. Design
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                Use Figma to create finished designs. Export graphics out.
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                min-width: 170px;
+                max-width: 220px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  background: #ffc0cb;
+                  color: #333;
+                  border-radius: 50%;
+                  width: 120px;
+                  height: 120px;
+                  margin: 0 auto 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                "
+              >
+                5. Build
+              </div>
+              <p style="font-size: 0.95em; line-height: 1.5; padding: 0 10px">
+                The easy bit - Build your pages!
+              </p>
+            </div>
+          </div>
+
+          <div class="important-note">
+            <h3>This Week's Focus</h3>
+            <p>
+              By the end of this week, you should have completed steps 1-3
+              (Research, Initial Planning, and Wireframes). This week we'll also
+              start step 4 by learning Figma and beginning your designs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Structure Diagrams -->
+      <section id="structure-diagrams">
+        <h2>Structure Diagrams</h2>
+
+        <div class="subsection">
+          <p>
+            Structure diagrams are really simple diagrams and, as the name
+            suggests, a way of visually showing the structure of your website.
+            These are simple diagrams that can quickly convey to a client how
+            many pages your website contains and how it is possible to link
+            between those pages.
+          </p>
+
+          <div class="side-note">
+            <h4>What is a Structure Diagram?</h4>
+            <p>A structure diagram shows:</p>
+            <ul>
+              <li>All the pages in your website</li>
+              <li>How pages link to each other (navigation hierarchy)</li>
+              <li>The home page (usually at the top)</li>
+              <li>Secondary pages beneath it</li>
+            </ul>
+          </div>
+
+          <h3>Example Structure Diagram</h3>
+          <p>A typical website structure diagram might look like this:</p>
+
+          <img
+            src="img/week-9/structure-diagram.svg"
+            alt="Website structure diagram showing home page with multiple sub-pages"
+            style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 20px auto; background: #f5f5f5; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"
+          />
+
+          <div style="display: none">
+            <div style="position: relative; padding-top: 30px">
+              <!-- Horizontal line connecting all child pages -->
+              <div
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 10%;
+                  right: 10%;
+                  height: 2px;
+                  background: #666;
+                "
+              ></div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  gap: 20px;
+                  flex-wrap: wrap;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 120px;
+                    max-width: 150px;
+                    position: relative;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 50%;
+                      width: 2px;
+                      height: 30px;
+                      background: #666;
+                      transform: translateX(-50%);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #666;
+                      padding: 10px 20px;
+                      text-align: center;
+                    "
+                  >
+                    About Us
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 120px;
+                    max-width: 150px;
+                    position: relative;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 50%;
+                      width: 2px;
+                      height: 30px;
+                      background: #666;
+                      transform: translateX(-50%);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #666;
+                      padding: 10px 20px;
+                      text-align: center;
+                    "
+                  >
+                    Services
+                  </div>
+                  <div style="text-align: center; margin: 5px 0">|</div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #999;
+                      padding: 8px 15px;
+                      text-align: center;
+                      font-size: 0.9em;
+                      margin: 5px 0;
+                    "
+                  >
+                    Web Design
+                  </div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #999;
+                      padding: 8px 15px;
+                      text-align: center;
+                      font-size: 0.9em;
+                      margin: 5px 0;
+                    "
+                  >
+                    Technical Writing
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 120px;
+                    max-width: 150px;
+                    position: relative;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 50%;
+                      width: 2px;
+                      height: 30px;
+                      background: #666;
+                      transform: translateX(-50%);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #666;
+                      padding: 10px 20px;
+                      text-align: center;
+                    "
+                  >
+                    Documents
+                  </div>
+                  <div style="text-align: center; margin: 5px 0">|</div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #999;
+                      padding: 8px 15px;
+                      text-align: center;
+                      font-size: 0.9em;
+                      margin: 5px 0;
+                    "
+                  >
+                    Document 1
+                  </div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #999;
+                      padding: 8px 15px;
+                      text-align: center;
+                      font-size: 0.9em;
+                      margin: 5px 0;
+                    "
+                  >
+                    Document 2
+                  </div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #999;
+                      padding: 8px 15px;
+                      text-align: center;
+                      font-size: 0.9em;
+                      margin: 5px 0;
+                    "
+                  >
+                    Document 3
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 120px;
+                    max-width: 150px;
+                    position: relative;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 50%;
+                      width: 2px;
+                      height: 30px;
+                      background: #666;
+                      transform: translateX(-50%);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #666;
+                      padding: 10px 20px;
+                      text-align: center;
+                    "
+                  >
+                    Contact
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 120px;
+                    max-width: 150px;
+                    position: relative;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 50%;
+                      width: 2px;
+                      height: 30px;
+                      background: #666;
+                      transform: translateX(-50%);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background: white;
+                      border: 2px solid #666;
+                      padding: 10px 20px;
+                      text-align: center;
+                    "
+                  >
+                    Tips
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="important-note">
+            <h4>For Your Silverlake Site</h4>
+            <p>
+              Since you're only creating <strong>4 pages</strong> for your
+              Silverlake site, your structure diagram will be very simple: just
+              a home page linking to 3 other pages.
+            </p>
+            <p>Example:</p>
+            <ul>
+              <li><strong>Home</strong> (main page)</li>
+              <li><strong>Rides/Attractions</strong> (linked from home)</li>
+              <li><strong>Tickets/Pricing</strong> (linked from home)</li>
+              <li><strong>Visit Information</strong> (linked from home)</li>
+            </ul>
+          </div>
+
+          <div class="side-note">
+            <h4>💡 Variations in Structure Diagrams</h4>
+            <p>
+              There are many variations in how these are drawn. Some website
+              designers use additional styles of boxes to denote particular
+              attributes of a web page:
+            </p>
+            <div
+              style="display: flex; gap: 15px; margin: 15px 0; flex-wrap: wrap"
+            >
+              <div style="text-align: center">
+                <div
+                  style="
+                    border: 2px solid #666;
+                    padding: 10px 20px;
+                    margin-bottom: 5px;
+                  "
+                >
+                  Static Page
+                </div>
+                <p style="font-size: 0.8em; margin: 0">Regular page</p>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    border: 2px solid #666;
+                    padding: 10px 20px;
+                    margin-bottom: 5px;
+                    border-radius: 10px;
+                  "
+                >
+                  Dynamic Page
+                </div>
+                <p style="font-size: 0.8em; margin: 0">Content changes</p>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    border: 2px dashed #666;
+                    padding: 10px 20px;
+                    margin-bottom: 5px;
+                  "
+                >
+                  Future Page
+                </div>
+                <p style="font-size: 0.8em; margin: 0">To be built later</p>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    border: 2px solid #666;
+                    padding: 10px 20px;
+                    margin-bottom: 5px;
+                    background: #ddd;
+                  "
+                >
+                  Page Cluster
+                </div>
+                <p style="font-size: 0.8em; margin: 0">
+                  Multiple similar pages
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Don't Make Me Think -->
+      <section id="usability">
+        <h2>Designing Usable Websites - Don't Make Me Think!</h2>
+
+        <div class="subsection">
+          <p>
+            <strong>"Don't Make Me Think"</strong> is a famous book by Steve
+            Krug about web usability. The core principle is simple: a good
+            website should be so intuitive that users don't have to think about
+            how to use it.
+          </p>
+
+          <div class="important-note">
+            <h3>Key Usability Principles</h3>
+            <ul>
+              <li>
+                <strong>Clarity is king</strong> - Don't make users guess what
+                things do or where to find information
+              </li>
+              <li>
+                <strong>Minimize cognitive load</strong> - Don't make users
+                think harder than necessary
+              </li>
+              <li>
+                <strong>Follow conventions</strong> - Users expect certain
+                things to work in certain ways (e.g., logo in top left links to
+                homepage)
+              </li>
+              <li>
+                <strong>Visual hierarchy</strong> - Important things should look
+                important
+              </li>
+              <li>
+                <strong>Clickable things should look clickable</strong> -
+                Buttons should look like buttons
+              </li>
+            </ul>
+          </div>
+
+          <h3>Mobile Design Considerations</h3>
+          <p>
+            Where many students have tended to get it wrong in the past is at
+            mobile device size. Consider these important points:
+          </p>
+
+          <div class="side-note">
+            <h4>📱 Mobile Design Checklist</h4>
+            <ul>
+              <li>
+                <strong>Text size:</strong> Imagine holding your phone with your
+                design on it. Could you read the text without moving your phone
+                3 inches away from your eyeballs? If no, increase text size
+                (minimum 16px for body text)
+              </li>
+              <li>
+                <strong>Touch targets:</strong> Buttons, navigation, and CTAs
+                (Call To Actions) should be big enough to be clicked accurately
+                with your finger (minimum 44x44 pixels)
+              </li>
+              <li>
+                <strong>No hover effects:</strong> Remember that hover/rollover
+                effects don't exist on phones - plan your interactions
+                accordingly
+              </li>
+              <li>
+                <strong>Scrolling is fine:</strong> Mobile users are comfortable
+                scrolling - don't try to cram everything above the fold
+              </li>
+              <li>
+                <strong>Simplify navigation:</strong> Use a hamburger menu for
+                mobile rather than trying to fit all navigation items
+              </li>
+            </ul>
+          </div>
+
+          <h3>Responsive Design Principles</h3>
+          <p>
+            Remember:
+            <strong
+              >everyone should get to see the same content regardless of
+              device</strong
+            >. The layout changes, but the content remains the same.
+          </p>
+
+          <div class="side-note">
+            <h4>🌐 Responsive Design Resources</h4>
+            <p>
+              Take a look at this excellent article showing how companies modify
+              their content to fit different screen sizes:
+            </p>
+            <p>
+              <a
+                href="https://www.justinmind.com/blog/examples-responsive-website-design/"
+                target="_blank"
+                >Best Responsive Website Examples and Design Best Practices</a
+              >
+            </p>
+            <p>
+              A good source of inspiration on how to rework content across
+              device sizes.
+            </p>
+          </div>
+
+          <h3>Adapting Layout to Suit Device Type</h3>
+          <p>
+            There are no hard and fast rules here - most considerations should
+            be common sense. You will definitely need to design for a
+            <strong>mobile device</strong> and a
+            <strong>desktop device</strong>. Depending on the complexity of your
+            design, you might want to do variations for tablet too.
+          </p>
+
+          <div class="important-note">
+            <h4>Example: Attractions Grid</h4>
+            <p>If you had a page showing all your rides/attractions:</p>
+            <ul>
+              <li>
+                <strong>Mobile:</strong> Images might be stacked singly (or
+                perhaps two across)
+              </li>
+              <li>
+                <strong>Tablet:</strong> You may choose to have three across
+              </li>
+              <li><strong>Desktop:</strong> Four or more across</li>
+            </ul>
+            <p>
+              The same content, just rearranged to make best use of the
+              available screen space.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction to Figma -->
+      <section id="introduction">
+        <h2>What is Figma?</h2>
+
+        <img
+          src="img/week-9/figma.jpg"
+          alt="Figma design tool interface"
+          style="
+            width: calc(100% - 40px);
+            max-width: none;
+            height: auto;
+            display: block;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          "
+        />
+
+        <div class="subsection">
+          <p>
+            <strong>Figma</strong> is a powerful, free design tool used by
+            professional designers and developers worldwide to create website
+            and app designs. Unlike traditional design software, Figma runs
+            entirely in your web browser, which means:
+          </p>
+
+          <ul>
+            <li>
+              No installation required - works on any computer with internet
+              access
+            </li>
+            <li>
+              Automatic saving - your work is saved to the cloud as you go
+            </li>
+            <li>
+              Real-time collaboration - multiple people can work on the same
+              design
+            </li>
+            <li>Access anywhere - work from university, home, or anywhere</li>
+            <li>Free for students - full access to all features</li>
+          </ul>
+
+          <h3>Why Use Figma for Your Silverlake Project?</h3>
+          <p>
+            Last week, you created wireframes showing the structure and layout
+            of your theme park website. This week, you'll use Figma to turn
+            those wireframes into a polished, professional design complete with:
+          </p>
+          <ul>
+            <li>Color schemes that match your theme park's brand</li>
+            <li>Typography choices (fonts and text styling)</li>
+            <li>Images and graphics</li>
+            <li>Spacing and layout refinements</li>
+            <li>Mobile and desktop versions of your pages</li>
+          </ul>
+          <p>
+            This design will serve as the blueprint when you code your website
+            in HTML and CSS in the coming weeks.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>🎥 Watch: Introduction to Figma</h3>
+          <p>
+            Watch this excellent beginner's guide to using Figma, produced by
+            Figma themselves. The guide consists of 13 short videos and should
+            get you up and running in no time.
+          </p>
+
+          <div
+            style="
+              position: relative;
+              width: calc(100% + 40px);
+              margin: 20px -20px;
+            "
+          >
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                "
+                src="https://www.youtube.com/embed/zzhSFobLkYw"
+                title="What's Figma? - Official Figma Beginners Guide"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <p>
+            <em>Course overview: Figma Design for beginners [1 of 13]</em>
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Official Figma Resources</h3>
+          <ul>
+            <li>
+              <a href="https://help.figma.com/hc/en-us" target="_blank"
+                >Figma Help Center</a
+              >
+              - Official documentation
+            </li>
+            <li>
+              <a href="https://www.figma.com/community" target="_blank"
+                >Figma Community</a
+              >
+              - Free templates and resources
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@Figma" target="_blank"
+                >Figma YouTube Channel</a
+              >
+              - Official tutorials
+            </li>
+          </ul>
+
+          <h3>Alternative Video Tutorials</h3>
+          <p>
+            These video tutorials provide excellent alternative perspectives on
+            learning Figma:
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 20px;
+              margin: 30px 0;
+            "
+          >
+            <div>
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.25%;
+                  height: 0;
+                  overflow: hidden;
+                  border-radius: 5px;
+                "
+              >
+                <iframe
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                  "
+                  src="https://www.youtube.com/embed/Do6HJBj984I"
+                  title="Figma Auto Layout | Getting Started with Auto Layout"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <p style="margin-top: 10px; font-size: 0.9em; text-align: center">
+                <strong
+                  >Figma Auto Layout | Getting Started with Auto Layout</strong
+                >
+              </p>
+            </div>
+
+            <div>
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.25%;
+                  height: 0;
+                  overflow: hidden;
+                  border-radius: 5px;
+                "
+              >
+                <iframe
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                  "
+                  src="https://www.youtube.com/embed/6XcDHOlBARc"
+                  title="Figma Variants"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <p style="margin-top: 10px; font-size: 0.9em; text-align: center">
+                <strong>Figma Variants</strong>
+              </p>
+            </div>
+
+            <div>
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.25%;
+                  height: 0;
+                  overflow: hidden;
+                  border-radius: 5px;
+                "
+              >
+                <iframe
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                  "
+                  src="https://www.youtube.com/embed/KVzFRDnDWjQ"
+                  title="Using Figma to design a website in 30 minutes!"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <p style="margin-top: 10px; font-size: 0.9em; text-align: center">
+                <strong>Using Figma to design a website in 30 minutes!</strong>
+              </p>
+            </div>
+          </div>
+
+          <h3>Design Inspiration</h3>
+          <ul>
+            <li>
+              <a href="https://dribbble.com" target="_blank">Dribbble</a> -
+              Design showcase and inspiration
+            </li>
+            <li>
+              <a href="https://www.behance.net" target="_blank">Behance</a> -
+              Creative portfolios
+            </li>
+            <li>
+              <a href="https://www.awwwards.com" target="_blank">Awwwards</a> -
+              Award-winning web design
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Getting Started -->
+      <section id="getting-started">
+        <h2>Getting Started with Figma</h2>
+
+        <div class="subsection">
+          <h3>Step 1: Create Your Free Figma Account</h3>
+
+          <ol>
+            <li>
+              Go to
+              <a href="https://www.figma.com/education/" target="_blank"
+                >figma.com/education/</a
+              >
+            </li>
+            <li>Click "Get Verified"</li>
+            <li>Sign up using your university email address</li>
+            <li>Verify your email</li>
+          </ol>
+
+          <div class="side-note">
+            <h4>💡 Pro Tip</h4>
+            <p>
+              Use your university email (@leedsbeckett.ac.uk) to sign up. This
+              may give you access to additional educational features and
+              resources.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Step 2: Familiarize Yourself with the Interface</h3>
+
+          <p>When you open Figma, you'll see several key areas:</p>
+
+          <ul>
+            <li>
+              <strong>Toolbar (Top)</strong> - Tools for creating shapes, text,
+              and more
+            </li>
+            <li>
+              <strong>Canvas (Center)</strong> - Your main workspace where you
+              design
+            </li>
+            <li>
+              <strong>Layers Panel (Left)</strong> - Shows all elements in your
+              design
+            </li>
+            <li>
+              <strong>Properties Panel (Right)</strong> - Adjust colors, sizes,
+              fonts, etc.
+            </li>
+            <li>
+              <strong>Pages (Bottom Left)</strong> - Organize different sections
+              of your project
+            </li>
+          </ul>
+
+          <p>
+            <em
+              >Figma UI/UX Design Tutorial - Get started in just 24 minutes
+              (covered above)</em
+            >
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Step 3: In-Class Exercise - Safari Website Design</h3>
+
+          <div class="exercise-link" style="display: block">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+              "
+            >
+              <span class="exercise-icon-large" style="flex-shrink: 0">🎨</span>
+              <span class="exercise-text" style="flex: 1"
+                >In-Class Exercise - Designing a Safari Website in Figma</span
+              >
+            </div>
+
+            <div class="exercise-content">
+              <img
+                src="img/week-9/safari-site.jpg"
+                alt="Safari website design example"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  display: block;
+                  margin: 20px 0;
+                  border-radius: 5px;
+                "
+              />
+
+              <p style="margin-top: 15px; font-size: 1rem; color: #0369a1">
+                <strong>Download the files:</strong> Go to today's tutorial
+                folder and download the
+                <strong>safari-website.zip</strong> file. Unzip it to access the
+                images and content you'll need.
+              </p>
+              <p style="font-size: 1rem; color: #0369a1">
+                Your tutor will now demonstrate how to create the design of a
+                safari-themed website in Figma. Follow along step-by-step as
+                they show you how to:
+              </p>
+              <ul style="margin-top: 10px; font-size: 1rem; color: #0369a1">
+                <li>Create frames for mobile and desktop layouts</li>
+                <li>Add and position images from the zip file</li>
+                <li>Apply typography and color schemes</li>
+                <li>Design a navigation header</li>
+                <li>Create a hero section with compelling imagery</li>
+                <li>Build content sections with proper spacing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Figma Basics -->
+      <section id="figma-basics">
+        <h2>Figma Basics - Essential Tools</h2>
+
+        <div class="subsection">
+          <h3>Key Tools You'll Use</h3>
+
+          <div class="side-note">
+            <h4>1. Move Tool (V)</h4>
+            <p>
+              Select and move objects around. This is your default tool. Click
+              any element to select it, then drag to move.
+            </p>
+
+            <h4>2. Frame Tool (F)</h4>
+            <p>
+              Create frames for different device sizes (mobile, tablet,
+              desktop). Think of frames as your canvas for each page design.
+            </p>
+
+            <h4>3. Rectangle Tool (R)</h4>
+            <p>
+              Draw rectangles and squares. Use this for creating boxes, buttons,
+              image placeholders, and layout sections. Hold
+              <kbd>Shift</kbd> while dragging to create perfect squares.
+            </p>
+
+            <h4>4. Text Tool (T)</h4>
+            <p>
+              Add text to your design. Click anywhere to start typing. Use the
+              properties panel on the right to change font, size, color, and
+              alignment.
+            </p>
+
+            <h4>5. Pen Tool (P)</h4>
+            <p>
+              Draw custom shapes and paths. More advanced - you probably won't
+              need this for basic website designs.
+            </p>
+
+            <h4>6. Color Fill</h4>
+            <p>
+              Select any shape, then use the Fill section in the properties
+              panel (right side) to change its color. You can use:
+            </p>
+            <ul>
+              <li>Solid colors</li>
+              <li>Gradients</li>
+              <li>Images (drag and drop)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Essential Keyboard Shortcuts</h3>
+
+          <table style="width: 100%; border-collapse: collapse; margin: 20px 0">
+            <thead>
+              <tr style="background-color: #f0f0f0">
+                <th
+                  style="
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    text-align: left;
+                  "
+                >
+                  Action
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    text-align: left;
+                  "
+                >
+                  Shortcut
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Move Tool</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>V</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Frame Tool
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>F</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Rectangle</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>R</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Text</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>T</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Zoom In/Out
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>Ctrl/Cmd</kbd> + <kbd>+</kbd> or <kbd>-</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Zoom to Fit
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>Shift</kbd> + <kbd>1</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Duplicate</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>Ctrl/Cmd</kbd> + <kbd>D</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  Group Selection
+                </td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>Ctrl/Cmd</kbd> + <kbd>G</kbd>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd">Undo</td>
+                <td style="padding: 10px; border: 1px solid #ddd">
+                  <kbd>Ctrl/Cmd</kbd> + <kbd>Z</kbd>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Designing Your Site -->
+      <section id="designing-silverlake">
+        <h2>Designing Your Silverlake Theme Park Site</h2>
+
+        <div class="subsection">
+          <h3>Start with Your Wireframes</h3>
+
+          <p>
+            Your wireframes from last week show the structure and layout. Now
+            you'll add the visual design:
+          </p>
+
+          <div class="important-note">
+            <h4>Converting Wireframes to Figma Designs</h4>
+            <ol>
+              <li>
+                <strong>Import your wireframes:</strong> Take photos of your
+                hand-drawn wireframes and drag them into Figma as reference
+                images. Lock the layer so you don't accidentally move them.
+              </li>
+              <li>
+                <strong>Create frames:</strong> Create a mobile frame and
+                desktop frame for your homepage
+              </li>
+              <li>
+                <strong>Build the layout:</strong> Use rectangles to create the
+                main sections (header, hero, attractions grid, footer)
+              </li>
+              <li>
+                <strong>Add content:</strong> Insert text, placeholder images,
+                and buttons
+              </li>
+              <li>
+                <strong>Apply styling:</strong> Add colors, fonts, spacing, and
+                visual polish
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Choosing Colors for Your Theme Park</h3>
+
+          <p>
+            Your color scheme should match the theme and mood of your park.
+            Consider:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Fantasy/Magical:</strong> Purples, golds, deep blues
+            </li>
+            <li>
+              <strong>Adventure/Jungle:</strong> Greens, browns, earthy tones
+            </li>
+            <li>
+              <strong>Futuristic/Sci-fi:</strong> Blues, silvers, neon accents
+            </li>
+            <li><strong>Water Park:</strong> Blues, aquas, sandy yellows</li>
+            <li>
+              <strong>Historical:</strong> Muted tones, browns, aged colors
+            </li>
+          </ul>
+
+          <div class="side-note">
+            <h4>🎨 Color Palette Tools</h4>
+            <p>Use these free tools to create color schemes:</p>
+            <ul>
+              <li>
+                <a href="https://coolors.co" target="_blank">Coolors.co</a> -
+                Generate color palettes
+              </li>
+              <li>
+                <a href="https://color.adobe.com" target="_blank"
+                  >Adobe Color</a
+                >
+                - Create and explore color schemes
+              </li>
+              <li>
+                <a href="https://paletton.com" target="_blank">Paletton</a> -
+                Color scheme designer
+              </li>
+            </ul>
+            <p>
+              <strong>Tip:</strong> Choose 2-3 main colors plus neutral colors
+              (white, gray, black)
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Typography - Choosing Fonts</h3>
+
+          <p>
+            Fonts communicate personality. For your theme park website, you'll
+            need:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Heading Font:</strong> Bold, attention-grabbing (for
+              titles and headers)
+            </li>
+            <li>
+              <strong>Body Font:</strong> Readable, clean (for paragraphs and
+              descriptions)
+            </li>
+          </ul>
+
+          <div class="side-note">
+            <h4>Finding Fonts</h4>
+            <p>Figma includes Google Fonts. Popular combinations:</p>
+            <ul>
+              <li>
+                <strong>Modern & Clean:</strong> Montserrat (headings) + Open
+                Sans (body)
+              </li>
+              <li>
+                <strong>Elegant:</strong> Playfair Display (headings) + Lato
+                (body)
+              </li>
+              <li>
+                <strong>Fun & Friendly:</strong> Poppins (headings) + Roboto
+                (body)
+              </li>
+              <li>
+                <strong>Bold & Impactful:</strong> Bebas Neue (headings) +
+                Raleway (body)
+              </li>
+            </ul>
+            <p>
+              <strong>Rule:</strong> Don't use more than 2-3 different fonts in
+              your design
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Adding Images</h3>
+
+          <p>You can add images to your Figma design in several ways:</p>
+
+          <ol>
+            <li>
+              <strong>Drag and drop:</strong> Drag image files directly onto
+              your frames
+            </li>
+            <li>
+              <strong>Fill images:</strong> Create a rectangle, then in the Fill
+              section, click the image icon and select an image
+            </li>
+            <li>
+              <strong>Placeholder images:</strong> Use rectangles with an X
+              through them (just like wireframes) until you have final images
+            </li>
+          </ol>
+
+          <div class="side-note">
+            <h4>📸 Free Stock Photo Sources</h4>
+            <ul>
+              <li>
+                <a href="https://unsplash.com" target="_blank">Unsplash</a>
+              </li>
+              <li><a href="https://pexels.com" target="_blank">Pexels</a></li>
+              <li><a href="https://pixabay.com" target="_blank">Pixabay</a></li>
+            </ul>
+            <p>
+              Search for: "roller coaster", "theme park", "amusement park",
+              "adventure", etc.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Mobile-First Design in Figma</h3>
+
+          <p>
+            Remember the mobile-first philosophy from last week? Apply it in
+            Figma:
+          </p>
+
+          <ol>
+            <li>
+              <strong>Start with mobile:</strong> Design your mobile layout
+              first
+            </li>
+            <li>
+              <strong>Simplify:</strong> Use single columns, larger touch
+              targets, hamburger menu
+            </li>
+            <li>
+              <strong>Then expand:</strong> Create your desktop version by
+              duplicating and adapting the mobile design
+            </li>
+            <li>
+              <strong>Add complexity:</strong> Desktop can have multi-column
+              layouts, more visible navigation, etc.
+            </li>
+          </ol>
+
+          <div class="important-note">
+            <h4>Responsive Design Tips</h4>
+            <ul>
+              <li>Keep the same color scheme and fonts across both versions</li>
+              <li>Content should be the same, just arranged differently</li>
+              <li>Mobile: Stack vertically, Desktop: Use columns and grids</li>
+              <li>
+                Make sure text is readable on both (minimum 16px for body text)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Homework Section -->
+      <section id="homework" class="homework-section">
+        <h2>Homework - Design Your Silverlake Site in Figma</h2>
+
+        <div class="homework-content subsection">
+          <p>
+            This week's homework is to create a complete design for your
+            Silverlake Theme Park website in Figma.
+          </p>
+
+          <h3 style="margin-top: 40px">Task 1: Set Up Your Figma Project</h3>
+
+          <ul>
+            <li>Create a free Figma account (if you haven't already)</li>
+            <li>
+              Create a new design file called "Silverlake Theme Park Design"
+            </li>
+            <li>
+              Create at least 2 frames:
+              <ul>
+                <li>Mobile frame (e.g., iPhone 14 Pro - 393 x 852)</li>
+                <li>Desktop frame (e.g., Desktop - 1440 x 1024)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 60px">Task 2: Design Your Homepage</h3>
+
+          <p>
+            Using your wireframes as a guide, create polished designs for both
+            mobile and desktop versions of your homepage:
+          </p>
+
+          <h4>Required Elements:</h4>
+          <ul>
+            <li>Header with logo/site name and navigation</li>
+            <li>Hero section with eye-catching image and headline</li>
+            <li>Featured attractions section (grid of attraction cards)</li>
+            <li>About/welcome section</li>
+            <li>Footer with contact info and links</li>
+          </ul>
+
+          <h4>Design Requirements:</h4>
+          <ul>
+            <li>
+              Choose and apply a color scheme (2-3 main colors + neutrals)
+            </li>
+            <li>Select appropriate fonts (1 for headings, 1 for body text)</li>
+            <li>Add placeholder images or stock photos</li>
+            <li>Ensure consistent spacing and alignment</li>
+            <li>
+              Make the design match your theme park's theme and personality
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 60px">Task 3: Export Your Design</h3>
+
+          <p>Once your design is complete:</p>
+
+          <ol>
+            <li>Take screenshots of your mobile and desktop designs</li>
+            <li>Export them as PNG or JPG files (File → Export)</li>
+            <li>Save them for your Planning Document</li>
+            <li>
+              Get the shareable link to your Figma file (Share button,
+              top-right)
+            </li>
+          </ol>
+
+          <div class="important-note">
+            <h4>💡 Tips for Success</h4>
+            <ul>
+              <li>
+                Start simple - don't try to make everything perfect on the first
+                try
+              </li>
+              <li>Look at real theme park websites for inspiration</li>
+              <li>Use the video tutorials linked above if you get stuck</li>
+              <li>
+                Save your work regularly (Figma auto-saves, but check
+                occasionally)
+              </li>
+              <li>Ask for feedback from classmates or tutors</li>
+              <li>
+                Remember: This design will guide you when you code the actual
+                website
+              </li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>Remember:</h4>
+            <p>
+              Your Figma designs will be included in your Planning Document PDF
+              (along with wireframes, research, mood boards, etc.) that you'll
+              submit in Week 13. Keep everything organized!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Web Interaction - Week 9 Tutorial | Leeds Beckett University</p>
+    </footer>
+  </body>
+</html>

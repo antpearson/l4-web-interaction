@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Interaction Week 2 - Styling and Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-2/week2-header.jpg"
+        alt="Web development folder structure and HTML organization"
+        class="hero-image"
+      />
+      <h1>Web Interaction Week 2 - Styling and Links</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          This week we'll transform your plain HTML into
+          <strong>visually appealing websites</strong> using
+          <strong>CSS</strong>, and learn how to connect pages together with
+          <strong>links</strong> to create proper <strong>navigation</strong>.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>3-Hour Session Structure</h2>
+        <div class="subsection">
+          <h3>🕐 Part 1: Introduction to CSS (1 hour 20 mins)</h3>
+          <ul>
+            <li>What is CSS and how it transforms websites</li>
+            <li>Three ways to add CSS to your pages</li>
+            <li>Basic selectors and targeting elements</li>
+            <li>Colors and typography fundamentals</li>
+            <li><strong>Hands-on:</strong> Style your "All About Me" page</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>☕ Break (15 mins)</h3>
+        </div>
+
+        <div class="subsection">
+          <h3>🕑 Part 2: Links and Navigation (1 hour 25 mins)</h3>
+          <ul>
+            <li>Creating links to external websites</li>
+            <li>Email and phone links for contact information</li>
+            <li>Basic link styling and hover effects</li>
+            <li>Planning simple navigation structure</li>
+            <li><strong>Exercise:</strong> Add navigation and styled links</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="css-introduction">
+        <h2>🎨 Part 1: Introduction to CSS</h2>
+
+        <div class="subsection">
+          <h3>What is CSS?</h3>
+          <p>
+            <strong>CSS</strong> stands for
+            <strong>Cascading Style Sheets</strong>. While HTML provides the
+            structure and content of your webpage, CSS is what makes it look
+            good. Think of HTML as the skeleton of a house, and CSS as the
+            paint, wallpaper, and interior design.
+          </p>
+
+          <figure>
+            <!-- <img
+              src="img/week-2/html-vs-css-comparison.jpg"
+              alt="Side by side comparison: left shows plain HTML text, right shows the same content with professional CSS styling including colors, fonts, and spacing"
+              class="content-image"
+            /> -->
+            <figcaption>
+              The same content with HTML only (left) vs HTML with CSS styling
+              (right)
+            </figcaption>
+          </figure>
+
+          <div class="side-note">
+            <h4>The Power of CSS: CSS Zen Garden</h4>
+            <p>
+              Visit
+              <strong
+                ><a href="http://www.csszengarden.com" target="_blank"
+                  >CSS Zen Garden</a
+                ></strong
+              >
+              to see the true power of CSS. This site shows the exact same HTML
+              content styled in hundreds of completely different ways - from
+              elegant and minimal to bold and artistic.
+            </p>
+            <p>
+              Click through different designs and notice how the content stays
+              identical, but CSS creates entirely different visual experiences.
+              This demonstrates what you'll be able to achieve as your CSS
+              skills develop!
+            </p>
+          </div>
+
+          <p>CSS allows you to control:</p>
+          <ul>
+            <li><strong>Colours</strong> - text colour, background colours</li>
+            <li><strong>Typography</strong> - fonts, sizes, spacing</li>
+            <li>
+              <strong>Layout</strong> - positioning and spacing of elements
+            </li>
+            <li>
+              <strong>Visual effects</strong> - shadows, borders, gradients
+            </li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>Three Ways to Add CSS</h3>
+          <p>
+            There are three different ways to add CSS to your HTML documents.
+            Each has its own use case:
+          </p>
+
+          <h4>1. Inline CSS</h4>
+          <p>
+            CSS can be added directly to individual HTML elements using the
+            <strong>style</strong> attribute:
+          </p>
+
+          <pre><code class="code-example">&lt;h1 style="color: blue; font-size: 36px;"&gt;This heading is blue&lt;/h1&gt;
+&lt;p style="color: red; background-color: yellow;"&gt;This paragraph has custom styling&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <h1 style="color: blue; font-size: 36px">This heading is blue</h1>
+            <p style="color: red; background-color: yellow">
+              This paragraph has custom styling
+            </p>
+          </div>
+
+          <h4>2. Internal CSS</h4>
+          <p>
+            CSS can be placed in the <strong>&lt;head&gt;</strong> section of
+            your HTML document inside <strong>&lt;style&gt;</strong> tags:
+          </p>
+
+          <pre><code class="code-example">&lt;head&gt;
+  &lt;style&gt;
+    h1 {
+      color: blue;
+      font-size: 36px;
+    }
+    
+    p {
+      color: red;
+      background-color: yellow;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+          <h4>3. External CSS</h4>
+          <p>
+            CSS can be written in a separate <strong>.css file</strong> and
+            linked to your HTML:
+          </p>
+
+          <pre><code class="code-example">&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+
+          <div class="side-note">
+            <h4>Which Method Should You Use?</h4>
+            <p>
+              For this week, we'll focus on <strong>internal CSS</strong> using
+              the &lt;style&gt; tag. It's perfect for learning and keeps
+              everything in one file. Later in the course, we'll move to
+              external CSS files for better organization.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>CSS Selectors - Targeting Elements</h3>
+          <p>
+            CSS selectors tell the browser which HTML elements you want to
+            style. The most basic selector is the
+            <strong>element selector</strong>:
+          </p>
+
+          <pre><code class="code-example">h1 {
+  color: red;
+}
+
+p {
+  color: blue;
+  font-size: 18px;
+}
+
+strong {
+  color: orange;
+}</code></pre>
+
+          <p>This CSS will:</p>
+          <ul>
+            <li>Make all <strong>&lt;h1&gt;</strong> headings red</li>
+            <li>
+              Make all <strong>&lt;p&gt;</strong> paragraphs blue and 18px in
+              size
+            </li>
+            <li>Make all <strong>&lt;strong&gt;</strong> text orange</li>
+          </ul>
+
+          <figure>
+            <img
+              src="img/week-2/element-selector.png"
+              alt="Diagram showing CSS element selector syntax with examples targeting h1, p, and strong elements"
+              class="content-image"
+            />
+            <figcaption>
+              Element selectors target all instances of a specific HTML tag
+            </figcaption>
+          </figure>
+
+          <div class="quiz-question">
+            <strong>Quick Check:</strong> If you wanted to make all &lt;h2&gt;
+            headings green, what CSS would you write?
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Adding Comments to Style Sheets</h3>
+          <p>
+            Comments are extremely helpful as an organisational tool. Style
+            sheets can quickly get long, so organising them is critical to
+            making your CSS easy to evolve and maintain. It's common practice to
+            group related rules together and precede each with a descriptive
+            comment.
+          </p>
+
+          <h4>To add comments to style rules</h4>
+          <ol>
+            <li>
+              In your style sheet, type <strong>/*</strong> to begin your
+              comment.
+            </li>
+            <li>
+              Type the comment. It doesn't matter if this spans multiple lines.
+            </li>
+            <li>Type <strong>*/</strong> to signal the end of the comment.</li>
+          </ol>
+
+          <p>
+            For big sections in my CSS, e.g. for all the CSS rules to style text
+            I tend to make comments that are easy to see using a lot of hyphens
+            to make it obvious where these start and end.
+          </p>
+
+          <pre><code class="code-example">/* ==========================================
+   GLOBAL NAVIGATION
+   ========================================== */
+
+nav {
+  /* CSS rules for global nav would go here */
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+h1 {
+  /* CSS rules for content headings */
+}</code></pre>
+
+          <div class="side-note">
+            <h4>Professional Practice</h4>
+            <p>
+              Adding comments to your CSS makes it easier to find and update
+              styles later, especially as your stylesheets grow. Get into the
+              habit of commenting your code early - it's a sign of a
+              professional developer!
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Working with Colours</h3>
+          <p>
+            CSS offers several ways to specify colours. Let's start with the
+            most common methods:
+          </p>
+
+          <h4>Named Colours</h4>
+          <p>CSS has 140 named colours you can use directly:</p>
+
+          <figure>
+            <img
+              src="img/week-2/css-colours.jpg"
+              alt="Chart displaying the 140 named CSS colours organized by colour family with their names"
+              class="content-image"
+            />
+            <figcaption>
+              CSS provides 140 named colours you can use - from basic colours
+              like 'red' to creative names like 'papayawhip'
+            </figcaption>
+          </figure>
+
+          <pre><code class="code-example">h1 {
+  color: red;
+  background-color: lightblue;
+}
+
+p {
+  color: darkgreen;
+  background-color: lightyellow;
+}</code></pre>
+
+          <div class="output-example">
+            <h1 style="color: red; background-color: lightblue; padding: 10px">
+              This heading uses named colours
+            </h1>
+            <p
+              style="
+                color: darkgreen;
+                background-color: lightyellow;
+                padding: 10px;
+              "
+            >
+              This paragraph also uses named colours
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>CSS Spelling</h4>
+            <p>
+              Annoyingly for British web developers we have to adopt the
+              American spelling of some words for CSS. The most common ones are
+              <strong>color</strong> for colour and using
+              <strong>z's</strong> instead of our traditional
+              <strong>s's</strong> for words like "capitalize".
+            </p>
+          </div>
+
+          <h4>Hex Colours</h4>
+          <p>
+            Hex colours give you precise control over colours using a 6-digit
+            code:
+          </p>
+
+          <pre><code class="code-example">h1 {
+  color: #ff6600;  /* Orange */
+  background-color: #f0f8ff;  /* Light blue */
+}
+
+p {
+  color: #333333;  /* Dark gray */
+  background-color: #ffffff;  /* White */
+}</code></pre>
+
+          <div class="output-example">
+            <h1
+              style="color: #ff6600; background-color: #f0f8ff; padding: 10px"
+            >
+              This heading uses hex colours
+            </h1>
+            <p
+              style="
+                color: #333333;
+                background-color: #ffffff;
+                padding: 10px;
+                border: 1px solid #ccc;
+              "
+            >
+              This paragraph uses hex colours
+            </p>
+          </div>
+
+          <figure>
+            <img
+              src="img/week-2/hex.jpg"
+              alt="Diagram explaining hexadecimal colour codes showing how the 6-digit codes represent red, green, and blue values"
+              class="content-image"
+            />
+            <figcaption>
+              Hex colour codes use 6 characters to define colours - the first
+              two for red, middle two for green, and last two for blue
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="img/week-2/hex-values.png"
+              alt="Visual guide showing common hex values and their corresponding colours from 00 (darkest) to FF (brightest)"
+              class="content-image"
+            />
+            <figcaption>
+              Understanding hex values: 00 is no colour (black), FF is maximum
+              colour (255), helping you predict colour results
+            </figcaption>
+          </figure>
+
+          <div class="side-note">
+            <h4>Colour Picker Tools</h4>
+            <p>
+              Use online colour pickers to find the perfect hex codes for your
+              designs:
+            </p>
+            <ul>
+              <li>
+                <a href="https://color.adobe.com" target="_blank"
+                  >Adobe Color</a
+                >
+              </li>
+              <li><a href="https://coolors.co" target="_blank">Coolors</a></li>
+              <li>
+                <a href="https://htmlcolorcodes.com" target="_blank"
+                  >HTML Color Codes</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <figure>
+            <img
+              src="img/week-2/picker.jpg"
+              alt="Screenshot of an online colour picker tool showing how to select colours and get their hex codes"
+              class="content-image"
+            />
+            <figcaption>
+              Online colour picker tools make it easy to explore colours and get
+              their exact hex codes
+            </figcaption>
+          </figure>
+
+          <h4>Changing the Background Colour of Your Entire Page</h4>
+          <p>
+            To change the colour of the page background we still use the
+            <strong>background-color</strong> property. We just need to target
+            this rule at the <strong>body</strong> element of the HTML.
+          </p>
+
+          <p>The CSS code below shows this in action:</p>
+
+          <pre><code class="code-example">body {
+  background-color: #eee;
+}</code></pre>
+
+          <div
+            class="output-example"
+            style="background-color: #eee; padding: 20px"
+          >
+            <p style="margin: 0">
+              This demonstrates how the body background-color affects the entire
+              page
+            </p>
+          </div>
+
+          <figure>
+            <img
+              src="img/week-2/greys.png"
+              alt="Chart showing different shades of grey with their hex codes from white to black"
+              class="content-image"
+            />
+            <figcaption>
+              Shades of grey are created when red, green, and blue values are
+              equal - useful for backgrounds and subtle design elements
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="img/week-2/text-in-color.png"
+              alt="Example of coloured text demonstrating the colour property applied to different headings and paragraphs"
+              class="content-image"
+            />
+            <figcaption>
+              The colour property changes text colour - combine with
+              background-color for effective contrast
+            </figcaption>
+          </figure>
+
+          <h4>RGB and RGBA Colours</h4>
+          <p>
+            RGB colours work like hex codes but use decimal numbers (0-255) for
+            red, green, and blue values. RGBA adds an alpha channel for
+            transparency, where 0 is fully transparent and 1 is fully opaque.
+          </p>
+
+          <pre><code class="code-example">h1 {
+  color: rgb(255, 102, 0);  /* Orange */
+  background-color: rgb(240, 248, 255);  /* Light blue */
+}
+
+p {
+  color: rgba(0, 0, 0, 0.8);  /* Black with 80% opacity */
+  background-color: rgba(255, 255, 255, 0.5);  /* White with 50% transparency */
+}</code></pre>
+
+          <figure>
+            <img
+              src="img/week-2/rgb.png"
+              alt="Diagram explaining RGB colour values showing how numbers 0-255 define red, green, and blue intensities"
+              class="content-image"
+            />
+            <figcaption>
+              RGB uses three numbers (0-255) for red, green, and blue - easier
+              to understand than hex codes
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="img/week-2/rgba.jpg"
+              alt="Visual demonstration of RGBA transparency showing the same colour at different alpha values"
+              class="content-image"
+            />
+            <figcaption>
+              RGBA adds transparency control - perfect for overlays,
+              backgrounds, and modern design effects
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="subsection">
+          <h3>Typography with CSS</h3>
+          <p>
+            Typography is crucial for making your websites readable and
+            attractive. Here are the essential CSS properties for text styling:
+          </p>
+
+          <h4>Font Family</h4>
+          <p>
+            The <strong>font-family</strong> property controls which typeface is
+            used for your text. You can specify multiple fonts as fallbacks in
+            case the first choice isn't available on the user's device. Always
+            end with a generic font family (like sans-serif or serif) as a final
+            fallback.
+          </p>
+          <pre><code class="code-example">h1 {
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-family: Georgia, serif;
+}</code></pre>
+
+          <h4>Font Size - Flexible Measurements</h4>
+          <p>
+            While you can use pixels (px) for font sizes, it's better to use
+            <strong>elastic measurements</strong> that can scale with user
+            preferences. There are three main units to choose from:
+          </p>
+
+          <h5>Pixels (px) - Fixed Size</h5>
+          <p>
+            Pixels give you exact control but don't scale. If a user has vision
+            difficulties and increases their browser's base font size,
+            pixel-based text won't grow to accommodate them.
+          </p>
+
+          <pre><code class="code-example">h1 {
+  font-size: 36px;  /* Always 36 pixels, never changes */
+}</code></pre>
+
+          <h5>Em - Relative to Parent Element</h5>
+          <p>
+            The <strong>em</strong> unit is relative to the font size of its
+            parent element. This means <code>2em</code> will be twice the size
+            of whatever the parent element's font size is. While flexible, this
+            can get complicated because ems compound - an element inside an
+            element can multiply the sizing unexpectedly.
+          </p>
+
+          <pre><code class="code-example">/* If parent has font-size: 16px */
+h1 {
+  font-size: 2em;  /* 2 × 16px = 32px */
+}
+
+/* Problem: Nested ems multiply */
+div {
+  font-size: 1.5em;  /* 24px if parent is 16px */
+}
+
+div p {
+  font-size: 1.2em;  /* 1.2 × 24px = 28.8px (not 1.2 × 16px!) */
+}</code></pre>
+
+          <h5>Rem - Relative to Root Element (Recommended!)</h5>
+          <p>
+            The <strong>rem</strong> unit (root em) is relative to the root
+            element (<code>&lt;html&gt;</code>), typically 16px by default. This
+            means <code>2rem</code> is always 2 times the root font size,
+            regardless of parent elements. This makes sizing more predictable
+            and manageable.
+          </p>
+
+          <pre><code class="code-example">/* Root element (html) default is 16px */
+h1 {
+  font-size: 2rem;    /* 2 × 16px = 32px */
+}
+
+h2 {
+  font-size: 1.5rem;  /* 1.5 × 16px = 24px */
+}
+
+p {
+  font-size: 1rem;    /* 1 × 16px = 16px */
+}
+
+/* Rem doesn't compound - always relative to root */
+div p {
+  font-size: 1.2rem;  /* 1.2 × 16px = 19.2px (predictable!) */
+}</code></pre>
+
+          <div class="side-note">
+            <h4>Why Rem is Better Than Em</h4>
+            <p>
+              <strong>Predictability:</strong> Rem always calculates from the
+              same base (the root element), while em can compound and become
+              difficult to track through nested elements.
+            </p>
+            <p>
+              <strong>Accessibility:</strong> Both em and rem scale when users
+              adjust browser settings, but rem is easier to maintain because you
+              always know what the base size is.
+            </p>
+            <p>
+              <strong>Consistency:</strong> Using rem throughout your site
+              ensures all sizing is relative to one consistent base, making it
+              easier to create harmonious typography scales.
+            </p>
+            <p>
+              <strong>Best Practice:</strong> Modern web development favours rem
+              for most sizing, reserving em for specific cases where you want
+              sizing relative to the parent (like padding/margin within a
+              component).
+            </p>
+          </div>
+
+          <!-- <figure>
+            <img
+              src="img/week-2/font-size-comparison.jpg"
+              alt="Screenshot showing three text examples: one with px that stays fixed, one with em that scales with parent, and one with rem that scales with browser default"
+              class="content-image"
+            />
+            <figcaption>
+              Visual comparison of px vs em vs rem units - notice how rem scales
+              consistently while maintaining readability
+            </figcaption>
+          </figure> -->
+
+          <h4>Font Size Guidelines</h4>
+          <pre><code class="code-example">h1 {
+  font-size: 2.5rem;  /* Large main heading */
+}
+
+h2 {
+  font-size: 2rem;    /* Section headings */
+}
+
+h3 {
+  font-size: 1.5rem;  /* Sub-section headings */
+}
+
+p {
+  font-size: 1rem;    /* Body text (browser default) */
+}</code></pre>
+
+          <h4>Font Weight</h4>
+          <pre><code class="code-example">h1 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: normal;
+}
+
+.light-text {
+  font-weight: 300;
+}</code></pre>
+
+          <h4>Complete Typography Example</h4>
+          <pre><code class="code-example">h1 {
+  font-family: Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+p {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding: 20px;
+}</code></pre>
+
+          <div class="output-example">
+            <h1
+              style="
+                font-family: Arial, sans-serif;
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #2c3e50;
+              "
+            >
+              Professional Heading Style
+            </h1>
+            <p
+              style="
+                font-family: Georgia, serif;
+                font-size: 1rem;
+                font-weight: normal;
+                color: #34495e;
+                line-height: 1.6;
+              "
+            >
+              This paragraph demonstrates professional typography with scalable
+              measurements. The text will grow or shrink if users adjust their
+              browser's font size, making it more accessible.
+            </p>
+          </div>
+
+          <div class="side-note">
+            <h4>Building a Complete Design</h4>
+            <p>
+              Notice how combining colors, scalable typography, and spacing
+              creates a cohesive, professional look that adapts to user
+              preferences. Next, we'll learn about links and how to style them
+              to match your design.
+            </p>
+          </div>
+
+          <div class="subsection">
+            <h4>Adding Google Fonts</h4>
+            <p>
+              If you don't want to be restricted to using the default fonts
+              installed on someone's computer you can link to an online font
+              service like <strong>Google Fonts</strong>. This links to fonts
+              hosted online and downloads them so the page can use them when it
+              is browsed.
+            </p>
+
+            <p>This video explains how:</p>
+
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/iIqgW-stZmE?si=pNuUqOoozulX000N"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+            <!-- <figure>
+              <img
+                src="img/week-2/google-fonts-tutorial.jpg"
+                alt="Screenshot of Google Fonts interface on a laptop showing various font options and preview text"
+                class="content-image"
+              />
+              <figcaption>
+                Google Fonts provides thousands of free fonts you can use on
+                your websites
+              </figcaption>
+            </figure> -->
+
+            <div class="side-note">
+              <h4>Key Steps for Using Google Fonts</h4>
+              <p>After watching the video:</p>
+              <ul>
+                <li>
+                  Browse and select fonts from
+                  <a href="https://fonts.google.com" target="_blank"
+                    >fonts.google.com</a
+                  >
+                </li>
+                <li>
+                  Copy the &lt;link&gt; code to add to your HTML &lt;head&gt;
+                </li>
+                <li>Use the font-family name in your CSS</li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/RNraxxm"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">🎨</span>
+            <span class="exercise-text"
+              >Exercise 1 - Style Your About Me Page</span
+            >
+          </a>
+
+          <div class="subsection">
+            <h4>CodePen Exercise 1: Style Your About Me Page</h4>
+            <p>
+              <strong>Purpose:</strong> Practice basic CSS styling with colors
+              and typography
+            </p>
+
+            <p>
+              <strong
+                >In CodePen, you'll see the HTML already provided. Add your CSS
+                in the CSS panel:</strong
+              >
+            </p>
+            <pre><code class="code-example">/* Add your CSS in the CSS panel */
+
+h1 {
+  /* Change the h1 color to blue */
+}
+
+h2 {
+  /* Make h2 headings orange (#ff6600) */
+}
+
+p {
+  /* Change font family to Georgia, serif */
+}</code></pre>
+
+            <!-- <figure>
+              <img
+                src="img/week-2/codepen-css-exercise.jpg"
+                alt="Screenshot of CodePen interface showing the starter HTML code and empty CSS panel ready for student styling"
+                class="code-image"
+              />
+              <figcaption>
+                CodePen interface for Exercise 1 - students will add CSS styling
+                to transform the plain HTML
+              </figcaption>
+            </figure> -->
+
+            <p><strong>Your Tasks:</strong></p>
+            <ul>
+              <li>Change the colour of the h1 heading to blue</li>
+              <li>Make the h2 headings orange (#ff6600)</li>
+              <li>Change the font family for paragraphs to Georgia, serif</li>
+              <li>Add a light gray background colour to the page (#f5f5f5)</li>
+              <li>
+                Make the contact text bold using font-weight (but don't worry
+                about making it a link yet!)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="module-break">
+        <h2>☕ 15 Minute Break</h2>
+        <div class="side-note">
+          <h4>Halfway There!</h4>
+          <p>
+            Take a break and get ready for Part 2 where we'll learn about
+            creating links and navigation!
+          </p>
+        </div>
+      </section>
+
+      <section class="links-navigation">
+        <h2>🔗 Part 2: Creating Links and Navigation</h2>
+
+        <div class="subsection">
+          <h3>Introduction to Links</h3>
+          <p>
+            Links are what make the web "web-like" - they connect pages together
+            and allow users to navigate between different websites and sections.
+            The <strong>&lt;a&gt;</strong> element (anchor) is used to create
+            all types of links.
+          </p>
+
+          <!-- <figure>
+            <img
+              src="img/week-2/web-connections-diagram.jpg"
+              alt="Network diagram showing interconnected web pages with arrows representing links between them"
+              class="content-image"
+            />
+            <figcaption>
+              Links create the interconnected web - each connection allows users
+              to navigate between pages and sites
+            </figcaption>
+          </figure> -->
+
+          <p>The basic structure of a link is:</p>
+
+          <pre><code class="code-example">&lt;a href="destination"&gt;Link text that users see&lt;/a&gt;</code></pre>
+
+          <ul>
+            <li>
+              <strong>href</strong> - the destination (where the link goes)
+            </li>
+            <li><strong>Link text</strong> - what users see and click on</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>External Links</h3>
+          <p>
+            External links connect to other websites. You need to include the
+            full URL starting with <strong>http://</strong> or
+            <strong>https://</strong>:
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;Check out &lt;a href="https://www.bbc.co.uk"&gt;BBC News&lt;/a&gt; for the latest headlines.&lt;/p&gt;
+
+&lt;p&gt;I love shopping on &lt;a href="https://www.amazon.co.uk"&gt;Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Follow me on &lt;a href="https://www.instagram.com"&gt;Instagram&lt;/a&gt;!&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>
+              Check out <a href="https://www.bbc.co.uk">BBC News</a> for the
+              latest headlines.
+            </p>
+            <p>
+              I love shopping on <a href="https://www.amazon.co.uk">Amazon</a>.
+            </p>
+            <p>
+              Follow me on <a href="https://www.instagram.com">Instagram</a>!
+            </p>
+          </div>
+
+          <div class="side-note">
+            <h4>Opening Links in New Windows</h4>
+            <p>
+              Add <strong>target="_blank"</strong> to make links open in a new
+              tab:
+              <br />
+              <code
+                >&lt;a href="https://www.bbc.co.uk" target="_blank"&gt;BBC
+                News&lt;/a&gt;</code
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Email and Phone Links</h3>
+          <p>
+            You can create links that open the user's email program or phone
+            dialer:
+          </p>
+
+          <h4>Email Links</h4>
+          <pre><code class="code-example">&lt;p&gt;Contact me: &lt;a href="mailto:your.name@email.com"&gt;your.name@email.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Send feedback: &lt;a href="mailto:feedback@company.com?subject=Website Feedback"&gt;Give Feedback&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>
+              Contact me:
+              <a href="mailto:your.name@email.com">your.name@email.com</a>
+            </p>
+            <p>
+              Send feedback:
+              <a href="mailto:feedback@company.com?subject=Website Feedback"
+                >Give Feedback</a
+              >
+            </p>
+          </div>
+
+          <h4>Phone Links</h4>
+          <pre><code class="code-example">&lt;p&gt;Call us: &lt;a href="tel:+441134567890"&gt;0113 456 7890&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Emergency: &lt;a href="tel:999"&gt;999&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+          <div class="output-example">
+            <p>Call us: <a href="tel:+441134567890">0113 456 7890</a></p>
+            <p>Emergency: <a href="tel:999">999</a></p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Linking on the Same Page</h3>
+          <p>
+            You can create links that jump to different sections of the same
+            page. This is useful for long pages where you want to help users
+            navigate quickly to specific content, or to create a "Back to Top"
+            link at the bottom of your page.
+          </p>
+          <p>
+            To create same-page links, you need two parts: the
+            <strong>link</strong> that users click, and the
+            <strong>target</strong> (the destination they jump to). The target
+            uses an <strong>id</strong> attribute, and the link uses a
+            <strong>#</strong> (hash) followed by that id in the href.
+          </p>
+
+          <pre><code class="code-example">&lt;!-- Link at the bottom of the page --&gt;
+&lt;a href="#top"&gt;Back to Top&lt;/a&gt;
+
+&lt;!-- Target at the top of the page --&gt;
+&lt;div id="top"&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- You can also jump to specific sections --&gt;
+&lt;a href="#about"&gt;Jump to About Section&lt;/a&gt;
+&lt;a href="#contact"&gt;Jump to Contact Section&lt;/a&gt;
+
+&lt;section id="about"&gt;
+  &lt;h2&gt;About Me&lt;/h2&gt;
+  &lt;p&gt;Content here...&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="contact"&gt;
+  &lt;h2&gt;Contact&lt;/h2&gt;
+  &lt;p&gt;Contact information here...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+          <div class="side-note">
+            <h4>How Same-Page Links Work</h4>
+            <p>
+              When a user clicks a link with a # in the href (like
+              <code>href="#about"</code>), the browser looks for an element with
+              that id (<code>id="about"</code>) and smoothly scrolls to it. The
+              id must be unique on the page - you can't use the same id twice!
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Styling Links with CSS</h3>
+          <p>
+            By default, links appear blue and underlined. You can customize
+            their appearance with CSS:
+          </p>
+
+          <h4>Basic Link Styling</h4>
+          <pre><code class="code-example">a {
+  color: #0066cc;           /* Blue color */
+  text-decoration: none;    /* Remove underline */
+  font-weight: bold;        /* Make text bold */
+}</code></pre>
+
+          <h4>Hover Effects</h4>
+          <p>
+            Use the <strong>:hover</strong> pseudo-class to change link
+            appearance when users hover over them:
+          </p>
+
+          <pre><code class="code-example">a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+  background-color: #fff4e6;
+}</code></pre>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/raxeYoM"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">✨</span>
+            <span class="exercise-text"
+              >Try this hover effect live in CodePen</span
+            >
+          </a>
+
+          <h4>Different Link States</h4>
+          <pre><code class="code-example">a {
+  color: #0066cc;          /* Normal link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6600;          /* Color when hovering */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #800080;          /* Color for visited links */
+}</code></pre>
+        </div>
+
+        <div class="subsection">
+          <h3>Creating Simple Navigation</h3>
+          <p>
+            Navigation is simply a collection of links that help users move
+            around your website. For now, we'll create basic navigation using
+            simple HTML and CSS:
+          </p>
+
+          <h4>Basic Navigation Structure</h4>
+          <pre><code class="code-example">&lt;nav&gt;
+  &lt;a href="#home"&gt;Home&lt;/a&gt;
+  &lt;a href="#about"&gt;About Me&lt;/a&gt;
+  &lt;a href="#interests"&gt;My Interests&lt;/a&gt;
+  &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+          <h4>Styling the Navigation</h4>
+          <pre><code class="code-example">nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  background-color: #ff6600;
+  color: white;
+}</code></pre>
+
+          <!-- <figure>
+            <img
+              src="img/week-2/navigation-examples.jpg"
+              alt="Screenshots of different professional website navigation menus showing various styles and hover effects"
+              class="content-image"
+            />
+            <figcaption>
+              Examples of professional navigation design - notice how styling
+              makes links look intentional and organized
+            </figcaption>
+          </figure> -->
+
+          <div class="output-example">
+            <nav
+              style="background-color: #333; padding: 10px; border-radius: 5px"
+            >
+              <a
+                href="#"
+                style="
+                  color: white;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  margin-right: 10px;
+                "
+                >Home</a
+              >
+              <a
+                href="#"
+                style="
+                  color: white;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  margin-right: 10px;
+                "
+                >About Me</a
+              >
+              <a
+                href="#"
+                style="
+                  color: white;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  margin-right: 10px;
+                "
+                >My Interests</a
+              >
+              <a
+                href="#"
+                style="color: white; text-decoration: none; padding: 10px 15px"
+                >Contact</a
+              >
+            </nav>
+          </div>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/gbProeY"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">🔗</span>
+            <span class="exercise-text"
+              >Exercise 2 - Add Navigation and Links</span
+            >
+          </a>
+
+          <p>
+            <strong>Purpose:</strong> Practice creating links and basic
+            navigation styling
+          </p>
+
+          <p><strong>Your Tasks:</strong></p>
+          <ul>
+            <li>Create a navigation menu with links to Home, About, Contact</li>
+            <li>
+              Add working external links in the paragraph (BBC News, YouTube,
+              Leeds Beckett University)
+            </li>
+            <li>Create working email and phone links in the contact section</li>
+            <li>
+              Style the navigation with background colour and hover effects
+            </li>
+            <li>Remove underlines from navigation links</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bonus-exercises">
+        <h2>Additional Practice Exercise</h2>
+
+        <div class="subsection">
+          <h3>Exercise 3 - Styling Vancouver</h3>
+          <p>
+            <strong>Purpose:</strong> Practice creating an external stylesheet
+            and applying comprehensive CSS styling
+          </p>
+
+          <img
+            src="img/week-2/styling-vancouver.png"
+            alt="Web page about Vancouver styled up"
+            class="content-image"
+          />
+
+          <div class="important-note">
+            <h4>Getting Started</h4>
+            <p>
+              <strong
+                >Download the zip file in today's tutorial folder and open this
+                in VS Code.</strong
+              >
+            </p>
+            <p>
+              This task is going to draw upon the new CSS we have just covered.
+              Open the folder "Exercise 3 - Styling Vancouver" from today's
+              tutorial files.
+            </p>
+            <p>
+              The markup is done in the HTML and the images are present in the
+              images folder.
+            </p>
+          </div>
+
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>
+              Create a new <strong>external stylesheet</strong> in the same
+              folder as the html file and link to it from your HTML.
+            </li>
+            <li>
+              To check the link is correct create a new rule to change the
+              <strong>background colour</strong> of your HTML page to
+              <strong>#323746</strong>.
+            </li>
+            <li>
+              Set all the fonts on the page to be <strong>Arial</strong> with
+              the CSS
+              <strong>font-family: Arial, Verdana, sans-serif;</strong> Where
+              would you put this rule so that you only ever had to type it once?
+            </li>
+            <li>
+              Set the <strong>colour</strong> of all paragraph text to be
+              <strong>#c8cddc;</strong>
+            </li>
+            <li>
+              Make the <strong>h1</strong> and <strong>h2</strong> headings a
+              pale grey (<strong>R:232, G:238, B:255</strong>, or
+              <strong>#e8eeff</strong>) by adding new rules (declarations) for
+              these elements.
+            </li>
+            <li>
+              Add a new style rule to change <strong>h3</strong> titles to the
+              colour <strong>#ff9900</strong>. Note that because this value has
+              all double digits, you can (and should) use the condensed version
+              (<strong>#f90</strong>) and save a few bytes in the style sheet.
+            </li>
+            <li>
+              Add the rules to the <strong>body</strong> declaration block of
+              <strong>font-size: 100%; margin: 60px;</strong>
+            </li>
+            <li>
+              Set the <strong>font size</strong> of the
+              <strong>h1, h2 and h3</strong> elements respectively to be
+              <strong>2.25em, 1.8em and 1.5em</strong>.
+            </li>
+            <li>
+              Set the <strong>line height</strong> of paragraphs to be
+              <strong>2em</strong>.
+            </li>
+            <li>
+              Add the following CSS to style the list of links
+              <strong
+                >ul{ list-style-type: none; margin: 0; padding: 0; }</strong
+              >
+            </li>
+            <li>
+              Add some more CSS to turn off the underline of the links
+              <strong>a{ padding: 5px; text-decoration: none; }</strong>
+            </li>
+            <li>
+              Add a declaration to set the <strong>background colour</strong> of
+              the links to be semi-transparent using the
+              <strong>rgba property</strong>. Make the background colour black
+              but give it a <strong>transparency of 0.3</strong>
+            </li>
+            <li>
+              Set the <strong>link colour</strong> (text colour) to be
+              <strong>white</strong> and the size of the links to be
+              <strong>0.8em</strong>.
+            </li>
+            <li>
+              Add a <strong>pseudo-class</strong> to make the background colour
+              of the links go fully black when the mouse cursor rolls over them.
+            </li>
+            <li>
+              Add another <strong>pseudo-class</strong> to turn the text colour
+              of the links the same colour as the h3 elements when they are
+              <strong>pressed</strong>. Add one more
+              <strong>pseudo-class</strong> to turn the text colour of the links
+              <strong>gray</strong> when they have been
+              <strong>visited</strong>.
+            </li>
+            <li>
+              Finally write a couple of <strong>comments</strong> in your CSS
+              code to organise the code, e.g. highlight which is the code for
+              text, and which for links.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="portfolio-task">
+        <h2>Continue Your Portfolio Task</h2>
+
+        <div class="side-note">
+          <h4>Building on Week 1</h4>
+          <p>
+            This week, you'll enhance your "All About Me" webpage from Week 1 by
+            adding CSS styling and navigation links.
+          </p>
+        </div>
+
+        <h3>Week 2 Additions:</h3>
+        <ol>
+          <li>
+            <strong>Add Internal CSS:</strong> Include a &lt;style&gt; section
+            in your &lt;head&gt; to style your page
+          </li>
+          <li>
+            <strong>Colour Scheme:</strong> Choose a consistent colour palette
+            for your text and backgrounds
+          </li>
+          <li>
+            <strong>Typography:</strong> Apply professional fonts and sizing
+            using rem units to your headings and paragraphs
+          </li>
+          <li>
+            <strong>External Links:</strong> Add links to your social media,
+            favorite websites, or interests
+          </li>
+          <li>
+            <strong>Contact Information:</strong> Include email and/or phone
+            links
+          </li>
+          <li>
+            <strong>Basic Navigation:</strong> Create a simple navigation menu
+            for your page sections
+          </li>
+        </ol>
+
+        <h3>Styling Suggestions:</h3>
+        <ul>
+          <li>Choose 2-3 colors that work well together</li>
+          <li>Use one font family consistently throughout your page</li>
+          <li>
+            Make sure text is readable (good contrast between text and
+            background)
+          </li>
+          <li>Style your links to match your colour scheme</li>
+          <li>Add hover effects to make your links interactive</li>
+          <li>Use rem units for font sizes to make your typography scalable</li>
+        </ul>
+
+        <h3>Content Ideas for Links:</h3>
+        <ul>
+          <li>Your university or college website</li>
+          <li>Social media profiles (Instagram, Twitter, LinkedIn)</li>
+          <li>Favorite YouTube channels or podcasts</li>
+          <li>Online portfolios or blogs you admire</li>
+          <li>Organizations or clubs you're part of</li>
+          <li>Your email address for contact</li>
+        </ul>
+
+        <div class="quiz-question">
+          <strong>Self-Assessment:</strong> Does your styled page look
+          professional and reflect your personal brand? Are all your links
+          working correctly and using scalable typography?
+        </div>
+      </section>
+
+      <section class="next-week-preview">
+        <h2>Next Week Preview</h2>
+        <div class="subsection">
+          <h3>Week 3: Creative Business Website, Lists and Animated Banners</h3>
+          <p>
+            Next week, we'll start a brand new project where you'll create a
+            website for an imaginary creative business. You'll learn about:
+          </p>
+          <ul>
+            <li>Semantic HTML structure for professional websites</li>
+            <li>Creating lists</li>
+            <li>Planning website structure for businesses</li>
+            <li>Creating animated banners in Photoshop</li>
+          </ul>
+
+          <p>
+            Start thinking about what kind of creative business you'd like to
+            build a website for - food truck, pet photography, handmade crafts,
+            or something else entirely!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Web Interaction Week 2 - CSS Styling and Links Tutorial</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#4a148c;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#006064;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#01579b;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Pattern for subtle texture -->
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#2c3e50" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bgGradient)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+
+  <!-- Top left: Horizontal flexbox layout (row) -->
+  <g transform="translate(80, 100)">
+    <rect x="0" y="0" width="320" height="160" rx="10" fill="#2c3e50" opacity="0.3" stroke="#5dade2" stroke-width="3"/>
+    <rect x="15" y="15" width="80" height="130" rx="5" fill="#2980b9" opacity="0.7"/>
+    <rect x="110" y="15" width="80" height="130" rx="5" fill="#21618c" opacity="0.7"/>
+    <rect x="205" y="15" width="100" height="130" rx="5" fill="#1a5276" opacity="0.7"/>
+  </g>
+
+  <!-- Top center-left: Vertical flexbox layout (column) -->
+  <g transform="translate(470, 80)">
+    <rect x="0" y="0" width="150" height="240" rx="10" fill="#2c3e50" opacity="0.3" stroke="#9b59b6" stroke-width="3"/>
+    <rect x="15" y="15" width="120" height="55" rx="5" fill="#8e44ad" opacity="0.7"/>
+    <rect x="15" y="85" width="120" height="55" rx="5" fill="#7d3c98" opacity="0.7"/>
+    <rect x="15" y="155" width="120" height="70" rx="5" fill="#6c3483" opacity="0.7"/>
+  </g>
+
+  <!-- Top right: Grid-like flexbox with wrap -->
+  <g transform="translate(1190, 100)">
+    <rect x="0" y="0" width="330" height="160" rx="10" fill="#2c3e50" opacity="0.3" stroke="#e67e22" stroke-width="3"/>
+    <rect x="15" y="15" width="90" height="50" rx="5" fill="#d68910" opacity="0.7"/>
+    <rect x="120" y="15" width="90" height="50" rx="5" fill="#ca6f1e" opacity="0.7"/>
+    <rect x="225" y="15" width="90" height="50" rx="5" fill="#ba4a00" opacity="0.7"/>
+    <rect x="15" y="80" width="90" height="50" rx="5" fill="#a04000" opacity="0.7"/>
+    <rect x="120" y="80" width="90" height="50" rx="5" fill="#873600" opacity="0.7"/>
+    <rect x="225" y="80" width="90" height="50" rx="5" fill="#6e2c00" opacity="0.7"/>
+  </g>
+
+  <!-- Bottom left: Another row layout -->
+  <g transform="translate(80, 640)">
+    <rect x="0" y="0" width="280" height="140" rx="10" fill="#2c3e50" opacity="0.3" stroke="#5dade2" stroke-width="3"/>
+    <rect x="15" y="15" width="75" height="110" rx="5" fill="#2980b9" opacity="0.7"/>
+    <rect x="105" y="15" width="75" height="110" rx="5" fill="#21618c" opacity="0.7"/>
+    <rect x="195" y="15" width="70" height="110" rx="5" fill="#1a5276" opacity="0.7"/>
+  </g>
+
+  <!-- Bottom center-right: Centered flexbox layout -->
+  <g transform="translate(1000, 620)">
+    <rect x="0" y="0" width="280" height="160" rx="10" fill="#2c3e50" opacity="0.3" stroke="#16a085" stroke-width="3"/>
+    <rect x="75" y="50" width="130" height="60" rx="5" fill="#148f77" opacity="0.8"/>
+  </g>
+
+  <!-- Bottom center-left: Small column layout -->
+  <g transform="translate(450, 580)">
+    <rect x="0" y="0" width="130" height="200" rx="10" fill="#2c3e50" opacity="0.3" stroke="#9b59b6" stroke-width="3"/>
+    <rect x="15" y="15" width="100" height="50" rx="5" fill="#8e44ad" opacity="0.7"/>
+    <rect x="15" y="80" width="100" height="50" rx="5" fill="#7d3c98" opacity="0.7"/>
+    <rect x="15" y="145" width="100" height="40" rx="5" fill="#6c3483" opacity="0.7"/>
+  </g>
+
+  <!-- Decorative elements in corners -->
+  <g opacity="0.15">
+    <circle cx="1480" cy="800" r="80" fill="none" stroke="#16a085" stroke-width="2"/>
+    <circle cx="120" cy="380" r="60" fill="none" stroke="#5dade2" stroke-width="2"/>
+    <rect x="1420" y="340" width="140" height="140" fill="none" stroke="#9b59b6" stroke-width="2" rx="8"/>
+    <polygon points="650,760 720,860 580,860" fill="#e67e22"/>
+    <polygon points="1550,40 1600,120 1500,120" fill="#e67e22"/>
+  </g>
+
+  <!-- Subtle arrows showing flex direction -->
+  <g opacity="0.4">
+    <!-- Top horizontal arrow -->
+    <path d="M 90 300 L 380 300" stroke="#5dade2" stroke-width="2" fill="none"/>
+    <polygon points="380,300 368,295 368,305" fill="#5dade2"/>
+
+    <!-- Top vertical arrow -->
+    <path d="M 545 90 L 545 310" stroke="#9b59b6" stroke-width="2" fill="none"/>
+    <polygon points="545,310 540,298 550,298" fill="#9b59b6"/>
+
+    <!-- Bottom wrap indicator -->
+    <path d="M 1000 815 L 1260 815" stroke="#e67e22" stroke-width="2" fill="none"/>
+  </g>
+</svg>

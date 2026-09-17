@@ -1,0 +1,35 @@
+<svg width="300" height="260" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clock face background -->
+  <circle cx="150" cy="130" r="90" fill="#f8f9fa" stroke="#2c3e50" stroke-width="3"/>
+
+  <!-- Hour marks -->
+  <line x1="150" y1="45" x2="150" y2="55" stroke="#2c3e50" stroke-width="3"/>
+  <line x1="235" y1="130" x2="225" y2="130" stroke="#2c3e50" stroke-width="3"/>
+  <line x1="150" y1="215" x2="150" y2="205" stroke="#2c3e50" stroke-width="3"/>
+  <line x1="65" y1="130" x2="75" y2="130" stroke="#2c3e50" stroke-width="3"/>
+
+  <!-- Clock hands -->
+  <line x1="150" y1="130" x2="150" y2="80" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="150" y1="130" x2="190" y2="130" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Center dot -->
+  <circle cx="150" cy="130" r="6" fill="#2c3e50"/>
+
+  <!-- Labels -->
+  <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e74c3c">TOP</text>
+  <text x="265" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e74c3c">RIGHT</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e74c3c">BOTTOM</text>
+  <text x="35" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e74c3c">LEFT</text>
+
+  <!-- Curved arrow - arc from same center, 10 to 60 degrees -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#27ae60" />
+    </marker>
+  </defs>
+
+  <!-- Arc: radius 110, from 20 degrees to 60 degrees clockwise, center (150, 130) -->
+  <!-- 20° point: (150 + 110*sin(20°), 130 - 110*cos(20°)) = (187.6, 26.6) -->
+  <!-- 60° point: (150 + 110*sin(60°), 130 - 110*cos(60°)) = (245.3, 75) -->
+  <path d="M 187.6 26.6 A 110 110 0 0 1 245.3 75" fill="none" stroke="#27ae60" stroke-width="4" marker-end="url(#arrowhead)"/>
+</svg>
