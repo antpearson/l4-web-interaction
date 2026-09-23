@@ -39,7 +39,7 @@
           <li><a href="#about-module">About the module, the assessment, and using AI tools honestly</a></li>
           <li><a href="#how-internet-works">How the internet works, and the three languages of the web</a></li>
           <li><a href="#tools-setup">Getting set up: VS Code, CodePen and your portfolio folder</a></li>
-          <li><a href="#html-first-steps">Your first HTML document</a></li>
+          <li><a href="#html-first-steps">Your first HTML document: elements, tags and attributes</a></li>
           <li><a href="#html-elements">Headings, paragraphs and line breaks</a></li>
           <li class="run-sheet__break">Break</li>
           <li><a href="#text-formatting">Emphasis, quotes and comments</a></li>
@@ -426,54 +426,112 @@
           </p>
         </div>
 
-        <div class="subsection">
-          <h3>Tags</h3>
+        <div class="subsection" id="elements">
+          <h3>Elements and tags</h3>
           <p>
-            HTML uses <strong>tags</strong> to markup content. Most content is
-            marked up with an opening tag and a closing tag. This opening tag,
-            the content and then the closing tag is known as an
-            <strong>HTML element</strong>.
+            Two words you will hear in every session from now on, so let's be
+            precise about them.
           </p>
           <p>
-            There are some HTML elements that don't have a closing tag though.
-            We will cover a handful of these below and more in the weeks to
-            come.
+            A <strong>tag</strong> is the bit in angle brackets:
+            <code>&lt;p&gt;</code> is an opening tag, <code>&lt;/p&gt;</code>
+            is a closing tag. An <strong>element</strong> is the whole thing:
+            the opening tag, the content, and the closing tag together.
           </p>
+
+          <pre><code class="code-example">&lt;p&gt;This whole line is one paragraph element.&lt;/p&gt;
+ ^                                             ^
+ opening tag                                   closing tag</code></pre>
 
           <img
             src="img/week-1/opening-tag.png"
-            alt="HTML tag structure diagram"
+            alt="Diagram labelling the opening tag of an HTML element"
             class="diagram-image"
           />
           <img
             src="img/week-1/closing-tag.png"
-            alt="HTML element examples"
+            alt="Diagram labelling the closing tag and the complete element"
             class="diagram-image"
           />
+
+          <p>
+            So when someone says "the heading element" they mean everything
+            from <code>&lt;h1&gt;</code> to <code>&lt;/h1&gt;</code>, and when
+            they say "the h1 tag" they mean just the marker. People are sloppy
+            about this in conversation; you don't have to be.
+          </p>
+
+          <p>
+            A few elements have no content and so no closing tag. The image
+            element is one, and you'll meet the line break in a moment. These
+            are called <strong>empty elements</strong>: a single tag is the
+            whole element.
+          </p>
+
+          <div class="quiz-question">
+            <strong>Quick check:</strong> In
+            <code>&lt;h2&gt;My hobbies&lt;/h2&gt;</code>, which part is the
+            element and which parts are tags?
+          </div>
         </div>
 
-        <div class="subsection">
-          <h3>Additional information</h3>
+        <div class="subsection" id="attributes">
+          <h3>Attributes</h3>
           <p>
-            Occasionally some extra information is added to a tag to help
-            explain the content better. This information consists of a name and
-            value separated by an equals sign. An example of this is below.
+            An opening tag can carry extra information about the element.
+            Each piece is called an <strong>attribute</strong>, and it is
+            always written the same way: a <strong>name</strong>, an equals
+            sign, and a <strong>value</strong> in quotes, inside the opening
+            tag and separated from the tag name by a space.
           </p>
+
+          <pre><code class="code-example">&lt;html lang="en"&gt;
+      ^    ^
+      name value</code></pre>
 
           <img
             src="img/week-1/attribute.png"
-            alt="HTML attributes example"
-            class="diagram-image"
-          />
-          <img
-            src="img/week-1/imagef.jpg"
-            alt="HTML attributes structure"
+            alt="Diagram labelling the name and value of an attribute inside an opening tag"
             class="diagram-image"
           />
 
+          <p>
+            You have already used three without noticing. In the template at
+            the top of this section, <code>lang="en"</code> tells the browser
+            (and a screen reader) that the page is in English,
+            <code>charset="UTF-8"</code> tells it how the text is encoded, and
+            the <code>name</code> and <code>content</code> attributes on the
+            viewport <code>meta</code> element tell a phone how to scale the
+            page.
+          </p>
+
+          <p>
+            Some attributes are optional extras; some are essential. An image
+            with no <code>src</code> attribute has nothing to show. A link with
+            no <code>href</code> goes nowhere. You'll see both later today and
+            next week, and by week 3 you'll be adding a
+            <code>class</code> attribute to almost everything so CSS can find
+            it.
+          </p>
+
+          <img
+            src="img/week-1/imagef.jpg"
+            alt="An image element with its src and alt attributes labelled"
+            class="diagram-image"
+          />
+
+          <div class="important-note">
+            <h4>Three rules for attributes</h4>
+            <ul>
+              <li>They go in the <strong>opening</strong> tag only, never the closing tag.</li>
+              <li>The value goes in <strong>double quotes</strong>. Browsers tolerate missing quotes; the validator doesn't, and it bites you the first time a value has a space in it.</li>
+              <li>Several attributes on one tag are separated by a <strong>space</strong>, in any order.</li>
+            </ul>
+          </div>
+
           <div class="quiz-question">
             <strong>Quick quiz question:</strong> How many elements can you see
-            in the code below?
+            in the code below, and how many attributes?
             <pre><code class="code-example">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -820,8 +878,7 @@ AB1 2CD</code></pre>
         </p>
 
         <div class="quiz-question">
-          <strong>Quick check:</strong> Which landmark would the copyright
-          line go in? Which one would the page's main heading go in?
+          <strong>Quick check:</strong> Which landmark element would the copyright line go in? Which one would the page's main heading go in? And does any landmark element in the example above carry an attribute?
         </div>
       </section>
 
@@ -835,11 +892,7 @@ AB1 2CD</code></pre>
         <div class="subsection">
           <h3>The img element</h3>
           <p>
-            Like the <strong>&lt;br&gt;</strong> tag, the image tag is another
-            self-closing element. It has no closing tag. It does have 2
-            attributes that it must be given though - these are the
-            <strong>src</strong> attribute and the
-            <strong>alt</strong> attribute.
+            Like the line break, the image element is an <strong>empty element</strong>: one tag, no content, no closing tag. Everything the browser needs to know is carried by <strong>attributes</strong>, and two of them are required: <strong>src</strong> and <strong>alt</strong>.
           </p>
           <p>
             The <strong>src</strong> attribute is the location of the image file
