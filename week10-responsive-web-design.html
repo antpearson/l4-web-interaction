@@ -1340,38 +1340,68 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
 
           <div class="video-container" style="margin: 20px 0">
             <h4>Learn Responsive Web Design in 10 Minutes</h4>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/ZYV6dYtz4HA"
-              title="Responsive Web Design Tutorial"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-              "
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"
-              style="max-width: 100%; border-radius: 8px"
-            ></iframe>
+            <div class="video__frame">
+              <a
+                class="video__facade"
+                data-video="ZYV6dYtz4HA"
+                href="https://www.youtube.com/watch?v=ZYV6dYtz4HA"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/ZYV6dYtz4HA/hqdefault.jpg"
+                  alt=""
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                />
+                <span class="video__play">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+                <span class="visually-hidden">Play "How to Make a Website Responsive" on YouTube</span>
+              </a>
+            </div>
+            <p class="video__caption">
+              <a
+                href="https://www.youtube.com/watch?v=ZYV6dYtz4HA"
+                target="_blank"
+                rel="noopener"
+                >Watch on YouTube</a
+              >
+            </p>
           </div>
 
           <div class="video-container" style="margin: 20px 0">
             <h4>CSS Media Queries for Beginners</h4>
-            <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/yU7jJ3NbPdA"
-  title="CSS Media Queries Tutorial"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  referrerpolicy="strict-origin-when-cross-origin"
-></iframe>
+            <div class="video__frame">
+              <a
+                class="video__facade"
+                data-video="yU7jJ3NbPdA"
+                href="https://www.youtube.com/watch?v=yU7jJ3NbPdA"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/yU7jJ3NbPdA/hqdefault.jpg"
+                  alt=""
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                />
+                <span class="video__play">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+                <span class="visually-hidden">Play "Learn CSS Media Query In 7 Minutes" on YouTube</span>
+              </a>
+            </div>
+            <p class="video__caption">
+              <a
+                href="https://www.youtube.com/watch?v=yU7jJ3NbPdA"
+                target="_blank"
+                rel="noopener"
+                >Watch on YouTube</a
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -1380,5 +1410,40 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
     <footer>
       <p>&copy; Leeds Beckett University - Web Interaction Module</p>
     </footer>
+    <script>
+      (function () {
+        var canEmbed = /^https?:$/.test(location.protocol);
+        document.querySelectorAll(".video__facade").forEach(function (link) {
+          var id = link.getAttribute("data-video");
+          var img = link.querySelector("img");
+          var label = link.querySelector(".visually-hidden").textContent;
+
+          var hi = new Image();
+          hi.onload = function () {
+            if (hi.naturalWidth > 500) img.src = hi.src;
+          };
+          hi.src = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+
+          if (!canEmbed) {
+            link.target = "_blank";
+            link.rel = "noopener";
+            return;
+          }
+
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var frame = document.createElement("iframe");
+            frame.src =
+              "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+            frame.title = label;
+            frame.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            frame.allowFullscreen = true;
+            link.parentNode.replaceChild(frame, link);
+            frame.focus();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

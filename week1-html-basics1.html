@@ -97,16 +97,37 @@
         <p>
           Take some time to watch the first 4 minutes of the following video.
         </p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/42aWAAqoUfI?si=AuUFr039-dVj3sHR"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <div class="video__frame">
+          <a
+            class="video__facade"
+            data-video="42aWAAqoUfI"
+            href="https://www.youtube.com/watch?v=42aWAAqoUfI"
+          >
+            <img
+              src="https://i.ytimg.com/vi/42aWAAqoUfI/hqdefault.jpg"
+              alt=""
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <span class="video__play">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+            <span class="visually-hidden"
+              >Play "The Secrets Behind how the Internet Works" on YouTube</span
+            >
+          </a>
+        </div>
+        <p class="video__caption">
+          <a
+            href="https://www.youtube.com/watch?v=42aWAAqoUfI"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </p>
 
         <div class="questions">
           <p>
@@ -218,17 +239,42 @@
           </li>
         </ol>
         <p>
-          Watch the following video where I go over the function of each and
-          customisations that are worth making.
+          Watch the following video for a tour of VS Code and the customisations
+          that are worth making. You do not need to watch all of it in one go —
+          the first 15 minutes cover everything you need to get started.
         </p>
-        <iframe
-          src="https://player.vimeo.com/video/460379635"
-          width="640"
-          height="360"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-        ></iframe>
+        <div class="video__frame">
+          <a
+            class="video__facade"
+            data-video="lWEKiak0WVU"
+            href="https://www.youtube.com/watch?v=lWEKiak0WVU"
+          >
+            <img
+              src="https://i.ytimg.com/vi/lWEKiak0WVU/hqdefault.jpg"
+              alt=""
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <span class="video__play">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+            <span class="visually-hidden"
+              >Play "VS Code for Absolute Beginners" on YouTube</span
+            >
+          </a>
+        </div>
+        <p class="video__caption">
+          48 minutes &middot; Coder Coder.
+          <a
+            href="https://www.youtube.com/watch?v=lWEKiak0WVU"
+            target="_blank"
+            rel="noopener"
+            >Watch on YouTube</a
+          >
+        </p>
       </section>
 
       <section class="html-first-steps">
@@ -916,5 +962,40 @@ AB1 2CD</code></pre>
     <footer>
       <p>Web Interaction Week 1 - Introduction Tutorial</p>
     </footer>
+    <script>
+      (function () {
+        var canEmbed = /^https?:$/.test(location.protocol);
+        document.querySelectorAll(".video__facade").forEach(function (link) {
+          var id = link.getAttribute("data-video");
+          var img = link.querySelector("img");
+          var label = link.querySelector(".visually-hidden").textContent;
+
+          var hi = new Image();
+          hi.onload = function () {
+            if (hi.naturalWidth > 500) img.src = hi.src;
+          };
+          hi.src = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+
+          if (!canEmbed) {
+            link.target = "_blank";
+            link.rel = "noopener";
+            return;
+          }
+
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var frame = document.createElement("iframe");
+            frame.src =
+              "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+            frame.title = label;
+            frame.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            frame.allowFullscreen = true;
+            link.parentNode.replaceChild(frame, link);
+            frame.focus();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

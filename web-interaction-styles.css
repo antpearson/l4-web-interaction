@@ -689,3 +689,91 @@ footer {
     border: 1px solid #ccc;
   }
 }
+
+/* Video facade — works on file:// as well as served */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.video__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 800px;
+  margin: 20px 0;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: none;
+  margin: 0;
+}
+
+.video__facade {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: #000;
+  cursor: pointer;
+}
+
+.video__facade img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.video__facade:hover .video__play,
+.video__facade:focus-visible .video__play {
+  background: #cc0000;
+}
+
+.video__play svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.video__caption {
+  font-size: 0.9rem;
+  margin: 8px 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video__play {
+    transition: none;
+  }
+}

@@ -183,32 +183,35 @@
 
           <h4>🎥 Watch: Introduction to Wireframing</h4>
           <p>Watch this helpful video tutorial on wireframing:</p>
-          <div
-            style="
-              position: relative;
-              padding-bottom: 56.25%;
-              height: 0;
-              overflow: hidden;
-              max-width: 100%;
-              margin: 20px 0;
-            "
-          >
-            <iframe
-              style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              "
-              src="https://www.youtube.com/embed/8-vTd7GRk-w"
-              title="Wireframing Tutorial"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+          <div class="video__frame">
+            <a
+              class="video__facade"
+              data-video="8-vTd7GRk-w"
+              href="https://www.youtube.com/watch?v=8-vTd7GRk-w"
             >
-            </iframe>
+              <img
+                src="https://i.ytimg.com/vi/8-vTd7GRk-w/hqdefault.jpg"
+                alt=""
+                width="480"
+                height="360"
+                loading="lazy"
+              />
+              <span class="video__play">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span class="visually-hidden">Play "Wireframing for UX: What it is and how to get better at it" on YouTube</span>
+            </a>
           </div>
+          <p class="video__caption">
+            <a
+              href="https://www.youtube.com/watch?v=8-vTd7GRk-w"
+              target="_blank"
+              rel="noopener"
+              >Watch on YouTube</a
+            >
+          </p>
 
           <h4>Why Wireframe?</h4>
           <ul>
@@ -871,5 +874,40 @@
     <footer>
       <p>Web Interaction - Week 8 Tutorial | Leeds Beckett University</p>
     </footer>
+    <script>
+      (function () {
+        var canEmbed = /^https?:$/.test(location.protocol);
+        document.querySelectorAll(".video__facade").forEach(function (link) {
+          var id = link.getAttribute("data-video");
+          var img = link.querySelector("img");
+          var label = link.querySelector(".visually-hidden").textContent;
+
+          var hi = new Image();
+          hi.onload = function () {
+            if (hi.naturalWidth > 500) img.src = hi.src;
+          };
+          hi.src = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+
+          if (!canEmbed) {
+            link.target = "_blank";
+            link.rel = "noopener";
+            return;
+          }
+
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var frame = document.createElement("iframe");
+            frame.src =
+              "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+            frame.title = label;
+            frame.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            frame.allowFullscreen = true;
+            link.parentNode.replaceChild(frame, link);
+            frame.focus();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
