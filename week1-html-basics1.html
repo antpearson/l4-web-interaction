@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Authoring Week 1 - Introduction</title>
+    <title>Web Interaction Week 1 - HTML Basics I</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,78 +16,93 @@
     <header class="hero-section">
       <img
         src="img/week-1/web-design-header.jpg"
-        alt="Web development folder structure and HTML organization"
+        alt="Web development folder structure and HTML organisation"
         class="hero-image"
       />
-      <h1>Web Interaction Week 1 - Introduction</h1>
+      <h1>Web Interaction Week 1 - HTML Basics I</h1>
     </header>
 
     <main>
       <section class="welcome">
         <p class="lead">
-          Welcome to the <strong>Web Interaction</strong> module. This is the
-          beginning of your journey into <strong>coding websites</strong> and
-          <strong>interactive content</strong>.
+          Welcome to <strong>Web Interaction</strong>, the first of the
+          interactive modules on Content Creation. By the end of today you will
+          have written a web page by hand, opened it in a browser, checked it
+          with the same tool professionals use, and started the first piece of
+          your portfolio.
         </p>
       </section>
 
       <section class="tutorial-overview">
-        <h2>3-Hour Session Structure</h2>
-        <div class="subsection">
-          <h3>🕐 Part 1: Foundation & First Steps (45 mins)</h3>
-          <ul>
-            <li>Understanding web development basics</li>
-            <li>Setting up your tools</li>
-            <li>Your first HTML document</li>
-            <li><strong>Hands-on:</strong> Create your first webpage</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>🕑 Part 2: Core HTML Elements (45 mins)</h3>
-          <ul>
-            <li>Headings and document structure</li>
-            <li>Paragraphs and text content</li>
-            <li><strong>Practice:</strong> Building a structured document</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>☕ Break (15 mins)</h3>
-        </div>
-
-        <div class="subsection">
-          <h3>🕒 Part 3: Text Formatting & Special Elements (45 mins)</h3>
-          <ul>
-            <li>Emphasis, strong, and text styling</li>
-            <li>Special text elements and formatting</li>
-            <li>Comments and organization</li>
-            <li><strong>Exercise:</strong> Rich content creation</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>🕓 Part 4: Images & Portfolio Task (30 mins)</h3>
-          <ul>
-            <li>Adding images to your page</li>
-            <li>Bringing it all together</li>
-            <li><strong>Portfolio:</strong> Personal webpage creation</li>
-          </ul>
-        </div>
+        <h2>Run sheet</h2>
+        <ol class="run-sheet">
+          <li>About the module, the assessment, and using AI tools honestly</li>
+          <li>How the internet works, and the three languages of the web</li>
+          <li>Getting set up: VS Code, CodePen and your portfolio folder</li>
+          <li>Your first HTML document</li>
+          <li>Headings, paragraphs and line breaks</li>
+          <li class="run-sheet__break">Break</li>
+          <li>Emphasis, quotes and comments</li>
+          <li>Giving the page a skeleton: header, main, footer</li>
+          <li>Images</li>
+          <li>Checking your work: the validator and dev tools</li>
+          <li>Portfolio Task 1: a page about you</li>
+        </ol>
       </section>
 
       <section class="about-module">
-        <h2>About the Module</h2>
+        <h2>About the module</h2>
 
         <div class="subsection">
-          <h3>The Interactive Theme</h3>
-
+          <h3>The Interactive theme</h3>
           <p>
             We have <strong>5 core themes</strong> on Content Creation.
             <strong>Interactive</strong> is one of them. Your tutor will explain
-            how this module fits with the interactive modules that follow and
-            introduce the module. You will learn how the module will be assessed
-            by referencing the Module Handbook.
+            how this module fits with the interactive modules that follow. The
+            module information and the assignment brief are on MyBeckett; we'll
+            go through the assessment together now.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>How you're assessed</h3>
+          <p>
+            One <strong>Skills Portfolio</strong>, worth 100%, uploaded in
+            January and then presented online. It is made of four portfolio
+            tasks: three small pages you build in the first five weeks (one is
+            set today) and one larger website you design and build after Care
+            Week. Each task is labelled "Portfolio Task" in the week it is set.
+            All of them live in one folder on your computer, which you will
+            create in a few minutes.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Using AI tools on this module</h3>
+          <p>
+            You will use ChatGPT, Copilot, Claude or something like them at some
+            point this term. That's fine, within limits, and the limits are
+            simple:
+          </p>
+          <ul>
+            <li>
+              <strong>Fine:</strong> asking it to explain an error, to explain
+              a line of code you've been given, or to suggest why something
+              isn't working. Treat it like a patient classmate.
+            </li>
+            <li>
+              <strong>Not fine:</strong> asking it to write a portfolio task,
+              or pasting in code you can't explain. In your presentation you
+              will be asked to talk through your own code, line by line if
+              necessary. Code you didn't write and don't understand shows
+              immediately, and it counts as academic misconduct.
+            </li>
+          </ul>
+          <p>
+            The brief asks for a short Generative AI statement with your
+            upload saying what you used and what for. Keep a note as you go.
+            The honest test: if you couldn't rebuild it without the tool, you
+            haven't learnt it yet, and learning it is what you're here for.
           </p>
         </div>
       </section>
@@ -209,9 +224,7 @@
           <p>
             <strong>JavaScript</strong> adds interactivity to web pages. It acts
             on inputs from the user, it allows multimedia to work, it makes web
-            pages less static and behave more like applications. We'll cover
-            JavaScript next year although we might do a little bit towards the
-            end of this module.
+            pages less static and behave more like applications. JavaScript is a later module. This one is HTML and CSS, and you can build a great deal with just those two.
           </p>
         </div>
       </section>
@@ -240,8 +253,7 @@
         </ol>
         <p>
           Watch the following video for a tour of VS Code and the customisations
-          that are worth making. You do not need to watch all of it in one go —
-          the first 15 minutes cover everything you need to get started.
+          that are worth making. You do not need to watch all of it in one go, the first 15 minutes cover everything you need to get started.
         </p>
         <div class="video__frame">
           <a
@@ -275,10 +287,55 @@
             >Watch on YouTube</a
           >
         </p>
+
+        <div class="subsection">
+          <h3>Your portfolio folder</h3>
+          <p>
+            Before you write any HTML, make the folder it will live in. Every
+            portfolio task for the whole module goes in here, so do it properly
+            once:
+          </p>
+          <ol>
+            <li>
+              Somewhere sensible (Documents, or your OneDrive), create a folder
+              called <strong>skills-portfolio</strong>.
+            </li>
+            <li>Inside it, create a folder called <strong>images</strong>.</li>
+            <li>
+              In VS Code, choose File, then Open Folder, and open
+              <strong>skills-portfolio</strong>. Every file you make this term
+              is saved into it.
+            </li>
+          </ol>
+
+          <figure>
+            <img
+              src="img/week-3/folder-structure.png"
+              alt="Folder structure showing a root folder with about-me.html and an images folder"
+              class="content-image"
+            />
+            <figcaption>
+              The portfolio folder by the end of today. Pages in the root,
+              pictures in images.
+            </figcaption>
+          </figure>
+
+          <div class="important-note">
+            <h4>Naming rules, and they are rules</h4>
+            <p>
+              <strong>All lower case. No spaces.</strong> Use a hyphen where you
+              want a space: <code>about-me.html</code>, not
+              <code>About Me.html</code>. This goes for folders, HTML files and
+              every image you ever put on a page. Your laptop forgives
+              <code>Photo 1.JPG</code>; a web server does not, and in week 5
+              your work goes on a web server.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="html-first-steps">
-        <h2>🕐 Part 1: HTML - Your first steps</h2>
+        <h2>Your first HTML document</h2>
         <p>
           Any type of document that we come across in our everyday lives, be it
           a magazine, newspaper or bank statement has some kind of structure to
@@ -433,7 +490,7 @@
       </section>
 
       <section class="html-elements">
-        <h2>🕑 Part 2: Core HTML Elements</h2>
+        <h2>Headings, paragraphs and line breaks</h2>
 
         <div class="subsection">
           <h3>Headings</h3>
@@ -579,18 +636,18 @@ AB1 2CD</code></pre>
       </section>
 
       <section class="module-break">
-        <h2>☕ 15 Minute Break</h2>
+        <h2>Break</h2>
         <div class="side-note">
-          <h4>Stretch Time!</h4>
+          <h4>Halfway</h4>
           <p>
-            Take a break, grab a coffee, and get ready for Part 3 where we'll
-            explore text formatting and special elements!
+            After the break: a few more text elements, a skeleton for the
+            page, images, and how to check your work.
           </p>
         </div>
       </section>
 
       <section class="text-formatting">
-        <h2>🕒 Part 3: Text Formatting & Special Elements</h2>
+        <h2>Emphasis, quotes and comments</h2>
 
         <div class="subsection">
           <h3>Emphasis and Strong elements</h3>
@@ -629,54 +686,6 @@ AB1 2CD</code></pre>
         </div>
 
         <div class="subsection">
-          <h3>Underline and Strikethrough</h3>
-          <p>
-            Applying a u element around some text will <u>underline</u> it. You
-            can use this to show that some text is important or needs to be
-            remembered. It is another option to use along with strong or
-            emphasis.
-          </p>
-
-          <pre><code class="code-example">&lt;p&gt;This text is &lt;u&gt;underlined&lt;/u&gt; for emphasis.&lt;/p&gt;</code></pre>
-
-          <div class="output-example">
-            <p>This text is <u>underlined</u> for emphasis.</p>
-          </div>
-
-          <p>
-            Striking through text is where you want to show that the text was
-            previously valid but that it is no longer. It simply puts a
-            horizontal line through the centre of the text. We use the
-            <strong>s</strong> element to do this.
-          </p>
-
-          <pre><code class="code-example">&lt;p&gt;The price was &lt;s&gt;£50&lt;/s&gt; but now it's £30.&lt;/p&gt;</code></pre>
-
-          <div class="output-example">
-            <p>The price was <s>£50</s> but now it's £30.</p>
-          </div>
-        </div>
-
-        <div class="subsection">
-          <h3>Horizontal Rule</h3>
-          <p>
-            Horizontal rules are one way to separate groups of information and
-            break up a page. This is another empty element in that it only has
-            one tag. Using it just adds a horizontal line on the page.
-          </p>
-
-          <pre><code class="code-example">&lt;p&gt;This is the first section.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;This is the second section.&lt;/p&gt;</code></pre>
-
-          <div class="output-example">
-            <p>This is the first section.</p>
-            <hr />
-            <p>This is the second section.</p>
-          </div>
-        </div>
-
-        <div class="subsection">
           <h3>Quotations and Block Quotes</h3>
           <p>
             There are two tags associated with quotations. The
@@ -703,47 +712,6 @@ AB1 2CD</code></pre>
                 haven't found it yet, keep looking. Don't settle.
               </p>
             </blockquote>
-          </div>
-        </div>
-
-        <div class="subsection">
-          <h3>Abbreviations</h3>
-          <p>
-            The <strong>abbr</strong> element is used for abbreviations. You add
-            an attribute to the opening tag to say what the abbreviation is.
-          </p>
-          <p>
-            When you leave the cursor over the abbreviated word in the browser a
-            tooltip will appear with the full version of what it is short for.
-          </p>
-
-          <pre><code class="code-example">&lt;p&gt;I study at &lt;abbr title="Leeds Beckett University"&gt;LBU&lt;/abbr&gt;.&lt;/p&gt;</code></pre>
-
-          <div class="output-example">
-            <p>I study at <abbr title="Leeds Beckett University">LBU</abbr>.</p>
-            <p style="font-size: 0.9em; color: #666; margin-top: 10px">
-              <em>Hover over "LBU" to see the tooltip</em>
-            </p>
-          </div>
-        </div>
-
-        <div class="subsection">
-          <h3>Superscript and Subscript</h3>
-          <p>
-            The superscript element <strong>sup</strong> is useful if you have
-            to write dates or mathematical formulas. The subscript element
-            <strong>sub</strong> is often used for footnotes or chemical formula
-            such as H<sub>2</sub>O.
-          </p>
-
-          <pre><code class="code-example">&lt;p&gt;Today is the 4&lt;sup&gt;th&lt;/sup&gt; of July.&lt;/p&gt;
-&lt;p&gt;The chemical formula for water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
-&lt;p&gt;Einstein's famous equation: E=mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
-
-          <div class="output-example">
-            <p>Today is the 4<sup>th</sup> of July.</p>
-            <p>The chemical formula for water is H<sub>2</sub>O.</p>
-            <p>Einstein's famous equation: E=mc<sup>2</sup></p>
           </div>
         </div>
 
@@ -794,20 +762,80 @@ AB1 2CD</code></pre>
         </div>
       </section>
 
+      <section class="landmarks-section">
+        <h2>Giving the page a skeleton</h2>
+
+        <p>
+          Most web pages have the same broad shape: something at the top with
+          the site's name and menu, the actual content, and something at the
+          bottom with the small print. HTML has elements for each of these.
+          They are called <strong>landmarks</strong>, and they go inside
+          <code>&lt;body&gt;</code>:
+        </p>
+
+        <pre><code class="code-example">&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Sam Patel&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;!-- links to other pages will go here next week --&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;h2&gt;About me&lt;/h2&gt;
+    &lt;p&gt;All of the page's real content goes in main.&lt;/p&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;Made by Sam Patel, September 2026&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+        <ul>
+          <li>
+            <strong>&lt;header&gt;</strong> is the top of the page: the site
+            name, a logo, and the navigation.
+          </li>
+          <li>
+            <strong>&lt;nav&gt;</strong> holds the main menu of links. It's
+            empty today; next week it fills up.
+          </li>
+          <li>
+            <strong>&lt;main&gt;</strong> holds the content that is unique to
+            this page. One per page.
+          </li>
+          <li>
+            <strong>&lt;footer&gt;</strong> is the bottom: credits, copyright,
+            contact details.
+          </li>
+        </ul>
+
+        <p>
+          On screen, right now, these make no visible difference. They matter
+          for two reasons. A screen reader lets a blind user jump straight to
+          <code>main</code> instead of listening to the menu on every page. And
+          when we start CSS, "make the header dark blue" is one line if there
+          is a header element and a mess if there isn't. Use them from your
+          very first page and they become automatic.
+        </p>
+
+        <div class="quiz-question">
+          <strong>Quick check:</strong> Which landmark would the copyright
+          line go in? Which one would the page's main heading go in?
+        </div>
+      </section>
+
       <section class="images-section">
-        <h2>🕓 Part 4: Adding Images & Bringing It Together</h2>
+        <h2>Images</h2>
         <p>
           Now you know how to mark-up text we can add some images. We do this in
-          HTML by using the <strong>&lt;img&gt;</strong> element. We will cover
-          images again next week in a bit more depth but for now we'll start by
-          looking at the element.
+          HTML by using the <strong>&lt;img&gt;</strong> element. We will cover images again next week in a bit more depth; for now, the element itself.
         </p>
 
         <div class="subsection">
           <h3>The img element</h3>
           <p>
-            Like the <strong>&lt;br&gt;</strong> and
-            <strong>&lt;hr&gt;</strong> tags, the image tag is another
+            Like the <strong>&lt;br&gt;</strong> tag, the image tag is another
             self-closing element. It has no closing tag. It does have 2
             attributes that it must be given though - these are the
             <strong>src</strong> attribute and the
@@ -848,119 +876,138 @@ AB1 2CD</code></pre>
         </div>
 
         <div class="subsection">
-          <h3>Troubleshooting Your HTML</h3>
+          <h3>Checking your work</h3>
           <p>
-            When things don't work as expected, here's how to debug your HTML:
+            Browsers are forgiving. Leave a tag open and the page usually still
+            appears, which sounds kind but means you don't find out about the
+            mistake until it breaks something three weeks later. Two tools tell
+            you the truth.
+          </p>
+
+          <h4>The validator</h4>
+          <p>
+            The <a href="https://validator.w3.org/" target="_blank">W3C Markup
+            Validator</a> reads your HTML and lists everything that is wrong
+            with it, with line numbers. Choose the "Validate by direct input"
+            tab, paste in your whole file, and press Check. Green means clean.
+            Do this before you call any page finished, every week, for the
+            rest of the module. Your tutor will.
+          </p>
+
+          <h4>Dev tools</h4>
+          <p>
+            Every browser has developer tools built in. Right-click anything on
+            a page and choose <strong>Inspect</strong>. The panel that opens
+            shows the HTML the browser actually built from your file, so if you
+            forgot a closing tag you can see what the browser guessed. Try it
+            on this page now; next week we'll spend proper time in there.
           </p>
 
           <div class="side-note">
-            <h4>Common HTML Mistakes</h4>
+            <h4>Common mistakes</h4>
             <p>
-              <strong>Missing closing tags:</strong> Every opening tag needs a
-              closing tag (except self-closing ones like &lt;br&gt; and
-              &lt;img&gt;)
+              <strong>Missing closing tags:</strong> every opening tag needs a
+              closing tag, except the empty ones like &lt;br&gt; and &lt;img&gt;.
             </p>
             <p>
-              <strong>Nested tags incorrectly:</strong> Tags should be closed in
-              the reverse order they were opened
+              <strong>Tags closed in the wrong order:</strong> close them in
+              reverse order to how you opened them.
             </p>
             <p>
-              <strong>Typos in tag names:</strong> &lt;pragraph&gt; won't work -
-              it should be &lt;paragraph&gt;
+              <strong>Typos in tag names:</strong> &lt;pargraph&gt; isn't an
+              element. It's &lt;p&gt;.
+            </p>
+            <p>
+              <strong>Capital letters or spaces in file names:</strong> see the
+              rules above. The validator won't catch these; the web server
+              will.
             </p>
           </div>
 
-          <p><strong>How to check your HTML:</strong></p>
-          <ul>
-            <li>
-              Use your browser's "View Source" (right-click → View Page Source)
-            </li>
-            <li>Check the browser's Developer Tools (F12 key)</li>
-            <li>
-              Use an HTML validator like
-              <a href="https://validator.w3.org/" target="_blank"
-                >W3C Markup Validator</a
-              >
-            </li>
-          </ul>
-
           <div class="quiz-question">
-            <strong>Quick Debug Challenge:</strong> What's wrong with this
+            <strong>Quick debug challenge:</strong> What's wrong with this
             code?<br />
-            <code
-              >&lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;</code
-            >
+            <code>&lt;p&gt;&lt;strong&gt;Bold text&lt;/p&gt;&lt;/strong&gt;</code>
           </div>
         </div>
       </section>
 
       <section class="portfolio-task">
-        <h2>Portfolio Task: Your Personal Webpage</h2>
+        <h2>Portfolio Task 1: a page about you</h2>
 
-        <div class="side-note">
-          <h4>Challenge Time!</h4>
-          <p>
-            Put everything you've learned today into practice by creating a
-            webpage all about you!
-          </p>
-        </div>
+        <p>
+          Put everything from today into a web page about yourself. This is the
+          first piece of your skills portfolio. It doesn't need to be long, and
+          it doesn't need to look pretty yet: nothing does until week 3. It
+          needs to be correct.
+        </p>
 
-        <h3>Requirements Checklist:</h3>
+        <h3>Requirements</h3>
         <ol>
           <li>
-            <strong>Document Structure:</strong> Use the complete HTML document
-            template from Part 1
+            <strong>File:</strong> saved as <code>about-me.html</code> in your
+            skills-portfolio folder, with any pictures in the images folder.
           </li>
           <li>
-            <strong>Headings:</strong> Include at least 3 different heading
-            levels (h1, h2, h3)
+            <strong>Document structure:</strong> the complete template from
+            earlier, including the <code>title</code>, and inside the body a
+            <code>header</code>, <code>main</code> and <code>footer</code>.
           </li>
           <li>
-            <strong>Content:</strong> Add paragraphs about yourself, hobbies,
-            interests, family, etc.
+            <strong>Headings:</strong> one <code>h1</code> with your name, and
+            at least two <code>h2</code> sections.
           </li>
           <li>
-            <strong>Formatting:</strong> Use emphasis, strong, and other text
-            formatting elements
+            <strong>Content:</strong> paragraphs about you, using
+            <code>em</code>, <code>strong</code> and a
+            <code>blockquote</code> where they mean something.
           </li>
           <li>
-            <strong>Special Elements:</strong> Include some of the special
-            elements we covered (abbreviations, superscript, etc.)
+            <strong>An image:</strong> at least one, with an <code>alt</code>
+            that describes it.
           </li>
           <li>
-            <strong>Images:</strong> Add at least one image (we'll learn more
-            about this next week)
+            <strong>A comment</strong> in the code saying what the page is and
+            when you made it.
+          </li>
+          <li>
+            <strong>Validated.</strong> Paste it into the validator and fix
+            what it finds.
           </li>
         </ol>
 
-        <h3>Content Ideas:</h3>
+        <h3>Content ideas</h3>
         <ul>
-          <li>Your background and where you come from</li>
-          <li>Your studies and career goals</li>
-          <li>Hobbies and interests</li>
-          <li>Favorite music, movies, or sports teams</li>
-          <li>Places you've visited or want to visit</li>
+          <li>Where you're from and what brought you to this course</li>
+          <li>Things you make, play, watch or collect</li>
+          <li>Places you've been or want to go</li>
+          <li>What you'd like to be doing in five years</li>
           <li>Skills you're learning or want to learn</li>
         </ul>
 
-        <h3>Getting Started:</h3>
-        <ol>
-          <li>Author your webpage using Visual Studio Code</li>
-          <li>Start with the complete HTML document structure</li>
-          <li>Add your content section by section</li>
-          <li>Test and validate your HTML as you go</li>
-          <li>Save your work and bring any questions to the next class</li>
-        </ol>
-
         <div class="quiz-question">
-          <strong>Self-Assessment:</strong> Can you identify and explain the
-          purpose of each HTML element you've used in your webpage?
+          <strong>Self-check:</strong> Can you say what every element on your
+          page is for? Does it validate? Does the image appear when you
+          double-click the file from Finder or Explorer?
+        </div>
+      </section>
+
+      <section class="next-week-preview">
+        <h2>Next week</h2>
+        <div class="subsection">
+          <h3>Week 2: HTML Basics II</h3>
+          <p>
+            Links, lists, better images, embedded video and an animated banner.
+            You'll link your about-me page to a home page, and start Portfolio
+            Task 2: a page for a small business of your choosing. Start
+            thinking about what the business is.
+          </p>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Web Interaction Week 1 - Introduction Tutorial</p>
+      <p>Web Interaction Week 1 - HTML Basics I</p>
     </footer>
     <script>
       (function () {
