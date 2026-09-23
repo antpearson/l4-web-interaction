@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Interaction Week 4 - CSS Basics II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="web-interaction-styles.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <img
+        src="img/week-5/box_model_dark.png"
+        alt="CSS Box Model diagram showing content, padding, border and margin"
+        class="hero-image"
+      />
+      <h1>Web Interaction Week 4 - CSS Basics II</h1>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="lead">
+          Last week was colour and type. This week is <strong>space</strong>:
+          the box model, which is most of what separates a page that looks
+          designed from one that looks typed. Then a short, practical look at
+          forms, and your attractions page gets a contact form that actually
+          sends you an email.
+        </p>
+      </section>
+
+      <section class="tutorial-overview">
+        <h2>Run sheet</h2>
+        <ol class="run-sheet">
+          <li>A few more selectors, and which rule wins</li>
+          <li>Block and inline elements, div and span</li>
+          <li>The box model: padding, border, margin</li>
+          <li>Exercises: the music playlist</li>
+          <li class="run-sheet__break">Break</li>
+          <li>Centring a page</li>
+          <li>Backgrounds, briefly</li>
+          <li>Forms that send</li>
+          <li>Portfolio Task 3 continues: spacing and a contact section</li>
+        </ol>
+      </section>
+
+      <section class="intro-section">
+        <h2>Where we got to</h2>
+
+        <div class="subsection">
+          <p>
+            In the tutorial that introduced CSS we covered a lot of ground. You
+            learnt what a CSS rule looked like, what a selector and declaration
+            were, how to add CSS to your HTML and how to style text. We also looked at colour and many
+            of the important styles that we can apply to text. This week builds on that, starting with a few more ways of selecting things.
+          </p>
+
+          <p>
+            From the last tutorial on CSS we know that a style rule looks like:
+          </p>
+
+          <pre><code class="code-example">p {
+    color: blue;
+    font-weight: bold;
+}</code></pre>
+
+          <figure>
+            <img
+              src="img/week-5/element-selector.png"
+              alt="Diagram showing parts of a CSS rule: selector, declaration block, property and value"
+              class="content-image"
+            />
+            <figcaption>
+              Anatomy of a CSS rule - the selector targets elements,
+              declarations style them
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="selectors-section">
+        <h2>A few more selectors</h2>
+
+        <div class="subsection">
+          <h3>Element Selectors</h3>
+          <p>
+            An <strong>element selector</strong> is what we see in the example
+            above. The selector selects <strong>elements</strong> in your HTML.
+            We can also select many different types of elements all at once by
+            typing commas between them, e.g.
+          </p>
+
+          <pre><code class="code-example">h1,
+h2,
+h3,
+p,
+ul {
+    color: #FFCC00;
+}</code></pre>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/jEWZWVo"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Element Selector Example on CodePen</span
+            >
+          </a>
+
+          <p>
+            This is great but there are limitations. For instance what if you
+            wanted to change one particular paragraph to a different colour?
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Class selectors, recap</h3>
+          <p>
+            You met these last week: a <code>class</code> attribute in the
+            HTML, a full stop in the CSS. Two things worth adding.
+          </p>
+
+          <h4>Multiple Classes</h4>
+          <p>
+            It is possible to attach several classes to a single item so that
+            they inherit a number of different styles. To write this in your
+            html you would create a space between them like so:
+          </p>
+
+          <pre><code class="code-example">&lt;!-- HTML --&gt;
+&lt;div class="button"&gt;Normal Button&lt;/div&gt;
+&lt;div class="button red-button"&gt;Red Button&lt;/div&gt;
+&lt;div class="button blue-button"&gt;Blue Button&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.red-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.blue-button {
+    background-color: #3498db;
+    color: white;
+}</code></pre>
+
+          <p><strong>Live Example:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-button {
+                padding: 10px 20px;
+                border: 2px solid #95a5a6;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                display: inline-block;
+                margin: 5px;
+                background-color: #ecf0f1;
+                color: #2c3e50;
+              }
+
+              .demo-red-button {
+                background-color: #e74c3c;
+                color: white;
+                border-color: #c0392b;
+              }
+
+              .demo-blue-button {
+                background-color: #3498db;
+                color: white;
+                border-color: #2980b9;
+              }
+            </style>
+            <div class="demo-button">Normal Button</div>
+            <div class="demo-button demo-red-button">Red Button</div>
+            <div class="demo-button demo-blue-button">Blue Button</div>
+          </div>
+
+          <p>
+            Notice how the red and blue buttons inherit the padding,
+            border-radius, and font-weight from the
+            <strong>.button</strong> class, but add their own background color
+            and text color.
+          </p>
+
+          <div class="side-note">
+            <h4>Modular CSS</h4>
+            <p>
+              This is good coding as it makes your code very modular. You create
+              a library of styles and add certain ones depending on what
+              appearance you are wanting. This approach is called "composition"
+              and is used heavily in modern CSS frameworks.
+            </p>
+          </div>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/ByjYjpq"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Class Selector Example on CodePen</span
+            >
+          </a>
+        </div>
+
+        <div class="subsection">
+          <h3>Descendant Selectors</h3>
+          <p>
+            <strong>Descendant selectors</strong> target elements that are
+            contained within other elements. These elements are
+            <strong>descendants</strong> of the containing element. For instance
+            we could target all list items in only unordered lists by applying a
+            style rule of:
+          </p>
+
+          <pre><code class="code-example">ul li {
+    color: #FFCC00;
+}</code></pre>
+
+          <p>
+            Only the list items in unordered lists would be effected. Those in
+            ordered lists or definition lists would not. To show an item is a
+            descendant we just leave a space between the parent and child
+            element.
+          </p>
+
+          <p>
+            The following rule would target any text that was emphasized in an
+            h1, h2 or h3 tag:
+          </p>
+
+          <pre><code class="code-example">h1 em,
+h2 em,
+h3 em {
+    color: red;
+}</code></pre>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/MYKQKmW"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Descendant Selector Example on CodePen</span
+            >
+          </a>
+
+          <p><strong>Live Example - Descendant Selectors:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-descendant {
+                padding: 15px;
+                background-color: #f5f5f5;
+              }
+
+              .demo-descendant ul li {
+                color: #e74c3c;
+                font-weight: bold;
+              }
+
+              .demo-descendant ol li {
+                color: #3498db;
+                font-style: italic;
+              }
+
+              .demo-descendant h3 em {
+                color: #f39c12;
+                background-color: #fff3cd;
+                padding: 2px 5px;
+              }
+            </style>
+            <div class="demo-descendant">
+              <h3>Heading with <em>emphasized text</em> inside</h3>
+              <p>This paragraph has normal styling</p>
+              <ul>
+                <li>Unordered list item 1 (red and bold)</li>
+                <li>Unordered list item 2 (red and bold)</li>
+              </ul>
+              <ol>
+                <li>Ordered list item 1 (blue and italic)</li>
+                <li>Ordered list item 2 (blue and italic)</li>
+              </ol>
+            </div>
+          </div>
+
+          <p>
+            Notice how <code>ul li</code> only styles the unordered list items,
+            <code>ol li</code> only styles the ordered list items, and
+            <code>h3 em</code> only styles emphasized text inside h3 headings!
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Attribute Selectors</h3>
+          <p>
+            <strong>Attribute selectors</strong> allow you to target elements
+            based on their attributes and attribute values. These are incredibly
+            useful for styling forms and selecting elements with specific HTML
+            attributes.
+          </p>
+
+          <h4>Basic Attribute Selectors</h4>
+
+          <pre><code class="code-example">/* Select all input elements with a type attribute */
+input[type] {
+    border: 2px solid blue;
+}
+
+/* Select input elements where type is exactly "text" */
+input[type="text"] {
+    background-color: #f0f0f0;
+}
+
+/* Select input elements where type is exactly "email" */
+input[type="email"] {
+    background-color: #e8f4f8;
+}
+
+/* Select links that have a target attribute */
+a[target] {
+    font-weight: bold;
+}
+
+/* Select links where target is exactly "_blank" */
+a[target="_blank"] {
+    color: #e74c3c;
+}</code></pre>
+
+          <p><strong>Live Example - Attribute Selectors with Forms:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-form {
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+              }
+
+              .demo-form input[type="text"] {
+                background-color: #fff3cd;
+                border: 2px solid #f39c12;
+                padding: 8px;
+                margin: 5px 0;
+                border-radius: 3px;
+                width: 100%;
+                max-width: 200px;
+                box-sizing: border-box;
+              }
+
+              .demo-form input[type="email"] {
+                background-color: #d1ecf1;
+                border: 2px solid #3498db;
+                padding: 8px;
+                margin: 5px 0;
+                border-radius: 3px;
+                width: 100%;
+                max-width: 200px;
+                box-sizing: border-box;
+              }
+
+              .demo-form input[type="password"] {
+                background-color: #f8d7da;
+                border: 2px solid #e74c3c;
+                padding: 8px;
+                margin: 5px 0;
+                border-radius: 3px;
+                width: 100%;
+                max-width: 200px;
+                box-sizing: border-box;
+              }
+
+              .demo-form label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                color: #2c3e50;
+              }
+            </style>
+            <form class="demo-form">
+              <label>Username (type="text"):</label>
+              <input type="text" placeholder="Enter username" />
+
+              <label>Email (type="email"):</label>
+              <input type="email" placeholder="Enter email" />
+
+              <label>Password (type="password"):</label>
+              <input type="password" placeholder="Enter password" />
+            </form>
+          </div>
+
+          <p>
+            Notice how each input type has a different background color based on
+            its <strong>type</strong> attribute. This is extremely useful for
+            styling forms where you want different input types to look
+            different.
+          </p>
+
+          <div class="important-note">
+            <h4>Common Use Cases for Attribute Selectors</h4>
+            <ul>
+              <li>
+                <strong>Form styling</strong> - Style different input types
+                differently (<code>input[type="text"]</code>,
+                <code>input[type="email"]</code>)
+              </li>
+              <li>
+                <strong>Required fields</strong> - Highlight required form
+                fields (<code>input[required]</code>)
+              </li>
+              <li>
+                <strong>Disabled elements</strong> - Style disabled inputs
+                (<code>input[disabled]</code>)
+              </li>
+              <li>
+                <strong>External links</strong> - Style links to external sites
+                differently (<code>a[target="_blank"]</code>)
+              </li>
+            </ul>
+          </div>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/QWRwaLG?editors=1100"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Attribute Selector Form Example on CodePen</span
+            >
+          </a>
+        </div>
+
+        <div class="subsection">
+          <h3>Exercise 1 - Style a Music Playlist</h3>
+          <p>
+            You've been given a music playlist page that needs styling. Use element selectors,
+            class selectors, descendant selectors, and attribute selectors to
+            make it look awesome.
+          </p>
+
+          <p>In this exercise you'll practice:</p>
+          <ul>
+            <li>
+              <strong>Element selectors</strong> - Style all headings and
+              paragraphs
+            </li>
+            <li>
+              <strong>Class selectors</strong> - Target featured songs, new
+              releases, and classics
+            </li>
+            <li>
+              <strong>Descendant selectors</strong> - Style songs only within
+              specific playlist sections (Rock, Pop, Chill)
+            </li>
+            <li>
+              <strong>Attribute selectors</strong> - Style songs based on their
+              genre and mood attributes
+            </li>
+          </ul>
+
+          <p>
+            Open the class-exercises.zip file in today's tutorial folder on
+            MyBeckett. Unzip and follow the
+            <strong>13 numbered TODO instructions</strong> in the CSS section.
+            Each task tells you exactly which selector to use and what to style.
+          </p>
+
+          <div class="side-note">
+            <h4>Hint</h4>
+            <p>
+              Don't worry about padding, margins, or layout yet - we'll cover
+              that in Exercise 2. For now, focus on
+              <strong>colours, fonts, and text styling</strong> using the
+              different types of selectors you've learned. All the TODO tasks
+              are clearly marked in the CSS - just follow them in order!
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>CSS Specificity - Which Rule Wins?</h3>
+
+          <figure>
+            <img
+              src="img/week-5/cards.png"
+              alt="CSS specificity illustrated with playing cards showing hierarchy of selectors"
+              class="content-image"
+            />
+            <figcaption>
+              CSS Specificity - understanding which rules take precedence
+            </figcaption>
+          </figure>
+
+          <p>
+            When you have multiple CSS rules targeting the same element, the
+            browser needs to decide which one to apply. This is called
+            <strong>specificity</strong>. Understanding specificity helps you
+            predict how your styles will work.
+          </p>
+
+          <h4>The Specificity Hierarchy (from weakest to strongest):</h4>
+          <ol>
+            <li><strong>Element selectors</strong> (e.g. p, h1, div)</li>
+            <li><strong>Class selectors</strong> (e.g. .button, .intro)</li>
+            <li><strong>ID selectors</strong> (e.g. #header, #main-nav)</li>
+          </ol>
+
+          <p>Here's an example to show how this works:</p>
+
+          <pre><code class="code-example">/* Element selector - weakest */
+p {
+    color: blue;
+}
+
+/* Class selector - stronger */
+.intro {
+    color: green;
+}
+
+/* ID selector - strongest */
+#special {
+    color: red;
+}</code></pre>
+
+          <p>If you have this HTML:</p>
+
+          <pre><code class="code-example">&lt;p class="intro" id="special"&gt;What colour will this be?&lt;/p&gt;</code></pre>
+
+          <p>
+            The text will be <strong style="color: red">red</strong> because the
+            ID selector (#special) has the highest specificity, even though all
+            three rules could apply to this paragraph.
+          </p>
+
+          <p><strong>Live Example:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-specificity p {
+                color: blue;
+              }
+
+              .demo-specificity .demo-intro {
+                color: green;
+              }
+
+              .demo-specificity #demo-special {
+                color: red;
+              }
+            </style>
+            <div class="demo-specificity">
+              <p>I'm styled with element selector (p) - I'm blue</p>
+              <p class="demo-intro">
+                I'm styled with class selector (.intro) - I'm green (class beats
+                element)
+              </p>
+              <p class="demo-intro" id="demo-special">
+                I'm styled with ID selector (#special) - I'm red (ID beats class
+                and element)
+              </p>
+            </div>
+          </div>
+
+          <p>
+            All three paragraphs could be styled by the <code>p</code> selector,
+            but the more specific selectors win!
+          </p>
+
+          <div class="important-note">
+            <h4>Common Mistakes with Specificity</h4>
+            <ul>
+              <li>
+                <strong>Forgetting the . before class names</strong> - .button
+                not button
+              </li>
+              <li>
+                <strong>Forgetting the # before ID names</strong> - #header not
+                header
+              </li>
+              <li>
+                <strong>Using too many IDs</strong> - IDs are very specific and
+                hard to override. Use classes instead!
+              </li>
+              <li>
+                <strong>Wondering why styles don't apply</strong> - Check if
+                another more specific rule is overriding yours
+              </li>
+            </ul>
+          </div>
+
+          <div class="side-note">
+            <h4>Best Practice for Beginners</h4>
+            <p>
+              <strong>Use classes for styling, save IDs for JavaScript.</strong>
+              Classes are flexible and reusable. IDs should be unique on a page
+              and are better suited for JavaScript interactions or anchor links.
+            </p>
+          </div>
+        </div>
+
+        <div class="side-note">
+          <h4>There are many more</h4>
+          <p>
+            CSS has dozens of other selectors (first child, direct child,
+            "the paragraph straight after a heading", and so on). You don't
+            need them yet. If you fancy a puzzle,
+            <a href="https://flukeout.github.io/" target="_blank">CSS Diner</a>
+            teaches most of them as a game; it gets tricky after level 10.
+          </p>
+        </div>
+      </section>
+
+      <section class="block-inline-section">
+        <h2>Block and inline elements</h2>
+
+        <div class="subsection">
+          <h3>The key difference</h3>
+
+          <p><strong>Block Level Elements:</strong></p>
+          <ul>
+            <li>Create a new line (stack vertically)</li>
+            <li>Take up full width available (they're "greedy")</li>
+            <li>
+              Examples: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>,
+              <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>,
+              <code>&lt;div&gt;</code>
+            </li>
+          </ul>
+
+          <p><strong>Inline Elements:</strong></p>
+          <ul>
+            <li>Flow with text on the same line</li>
+            <li>Only take up as much width as needed</li>
+            <li>
+              Examples: <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>,
+              <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>,
+              <code>&lt;img&gt;</code>
+            </li>
+          </ul>
+
+          <h4>Changing Display Behaviour with CSS</h4>
+          <p>
+            You can actually change whether an element behaves as block or
+            inline using the
+            <strong>display</strong> property in CSS:
+          </p>
+
+          <pre><code class="code-example">/* Make an inline element behave like block */
+span {
+    display: block;
+}
+
+/* Make a block element behave like inline */
+div {
+    display: inline;
+}
+
+/* inline-block: best of both worlds! */
+/* Flows inline but accepts width/height */
+.button {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+}</code></pre>
+
+          <p><strong>Live Example - Display Property:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-display-section {
+                margin: 15px 0;
+                padding: 10px;
+                background-color: #f9f9f9;
+              }
+
+              .demo-block {
+                display: block;
+                background-color: #3498db;
+                color: white;
+                padding: 10px;
+                margin: 5px 0;
+              }
+
+              .demo-inline {
+                display: inline;
+                background-color: #e74c3c;
+                color: white;
+                padding: 10px;
+                margin: 5px;
+              }
+
+              .demo-inline-block {
+                display: inline-block;
+                background-color: #2ecc71;
+                color: white;
+                padding: 10px;
+                margin: 5px;
+                width: 100%;
+                max-width: 150px;
+                text-align: center;
+                box-sizing: border-box;
+              }
+            </style>
+
+            <div class="demo-display-section">
+              <h4 style="margin-top: 0">Block Elements (each on new line):</h4>
+              <div class="demo-block">Block 1</div>
+              <div class="demo-block">Block 2</div>
+              <div class="demo-block">Block 3</div>
+            </div>
+
+            <div class="demo-display-section">
+              <h4 style="margin-top: 0">Inline Elements (flow together):</h4>
+              <span class="demo-inline">Inline 1</span>
+              <span class="demo-inline">Inline 2</span>
+              <span class="demo-inline">Inline 3</span>
+            </div>
+
+            <div class="demo-display-section">
+              <h4 style="margin-top: 0">
+                Inline-Block (flow together but accept width/padding):
+              </h4>
+              <div class="demo-inline-block">Box 1</div>
+              <div class="demo-inline-block">Box 2</div>
+              <div class="demo-inline-block">Box 3</div>
+            </div>
+          </div>
+
+          <div class="side-note">
+            <h4>Common Use Case: inline-block</h4>
+            <p>
+              <code>display: inline-block;</code> is very useful! It lets
+              elements sit side-by-side like inline elements, but you can still
+              give them width, height, padding, and margin like block elements.
+              Perfect for creating button groups or navigation items that sit
+              next to each other.
+            </p>
+          </div>
+
+          <p>
+            The following CodePen shows a page with block and inline elements:
+          </p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/xbZYZpq"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Block vs Inline Demo on CodePen</span
+            >
+          </a>
+        </div>
+
+        <figure style="margin: 30px 0; text-align: center;">
+          <img src="img/week-4/stud-wall.jpg" alt="Stud wall showing the framework structure of a building" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          <figcaption style="margin-top: 10px; font-style: italic; color: #666;">Just like a stud wall provides the framework for a building, divs provide the structural framework for styling and layout in web pages.</figcaption>
+        </figure>
+
+        <div class="subsection">
+          <h3>The &lt;div&gt; Element</h3>
+          <p>
+            The <strong>&lt;div&gt;</strong> (division) element is a
+            <strong>block-level</strong> container. It's used to group elements
+            together so you can style them or position them as a unit. Divs
+            don't have any semantic meaning - they're purely for layout and
+            styling.
+          </p>
+
+          <pre><code class="code-example">&lt;div&gt;
+  &lt;h2&gt;Product Features&lt;/h2&gt;
+  &lt;p&gt;This product includes amazing features...&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Feature 1&lt;/li&gt;
+    &lt;li&gt;Feature 2&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+          <div class="important-note">
+            <h4>When to Use Divs vs Semantic Elements</h4>
+            <ul>
+              <li>
+                <strong>Use semantic elements</strong> when the content has
+                meaning: &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, etc.
+              </li>
+              <li>
+                <strong>Use divs</strong> when you need a container purely for
+                styling or layout purposes
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>The &lt;span&gt; Element</h3>
+          <p>
+            The <strong>&lt;span&gt;</strong> element is an
+            <strong>inline</strong> container. It's used to style or manipulate
+            a small piece of text within a larger block of content.
+          </p>
+
+          <pre><code class="code-example">&lt;p&gt;
+  This product is available in
+  &lt;span style="color: red;"&gt;red&lt;/span&gt;,
+  &lt;span style="color: blue;"&gt;blue&lt;/span&gt;, and
+  &lt;span style="color: green;"&gt;green&lt;/span&gt;.
+&lt;/p&gt;</code></pre>
+
+          <h4>Block vs Inline Elements:</h4>
+          <ul>
+            <li>
+              <strong>Block elements</strong> (like &lt;div&gt;, &lt;p&gt;,
+              &lt;h1&gt;) start on a new line and take up the full width
+            </li>
+            <li>
+              <strong>Inline elements</strong> (like &lt;span&gt;, &lt;a&gt;,
+              &lt;strong&gt;) sit within the flow of text
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="box-model-section">
+        <h2>The Box Model</h2>
+
+        <img
+          src="img/week-5/box_model_dark.png"
+          alt="CSS Box Model diagram showing content, padding, border and margin"
+          class="hero-image"
+        />
+
+        <div class="subsection">
+          <p>
+            The Box Model is a set of rules that defines how elements are sized,
+            the total amount of space they take up and where they are positioned
+            in relation to each other. This is the foundation of layout on the
+            web.
+          </p>
+
+          <p>
+            Every element on a page can be considered to be a rectangular box.
+            The box is made up of the element's
+            <strong>content, padding, border and margin</strong>.
+          </p>
+
+          <p>
+            We are able to give the box a <strong>width</strong> and
+            <strong>height</strong>.
+          </p>
+
+          <figure>
+            <img
+              src="img/week-5/box-model-diagram.png"
+              alt="Box model diagram showing layers: margin (outer), border, padding, and content (inner)"
+              class="large-diagram"
+            />
+            <figcaption>
+              The CSS Box Model - every element is a box with content, padding,
+              border, and margin
+            </figcaption>
+          </figure>
+
+          <div class="side-note">
+            <h4>Pro Tip: Visualize the Box Model with Browser DevTools</h4>
+            <p>
+              The best way to understand the box model is to
+              <strong>see it in action</strong>:
+            </p>
+            <ol>
+              <li>Right-click on any element on your webpage</li>
+              <li>
+                Select <strong>"Inspect"</strong> or
+                <strong>"Inspect Element"</strong>
+              </li>
+              <li>
+                Look for the colorful box diagram at the bottom of the DevTools
+                panel
+              </li>
+            </ol>
+            <p>
+              You'll see the content (blue), padding (green), border (yellow),
+              and margin (orange) visually represented with their actual pixel
+              values. This is incredibly helpful for debugging spacing issues!
+            </p>
+            <p>
+              <strong>Try it now:</strong> Right-click on this box and inspect
+              it to see its box model!
+            </p>
+          </div>
+
+          <p><strong>Live Example - Box Model Visualization:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-box-model {
+                background-color: #ecf0f1;
+                padding: 40px;
+              }
+
+              .demo-box-outer {
+                border: 10px solid #e74c3c;
+                background-color: #2ecc71;
+                padding: 30px;
+                margin: 20px;
+                display: inline-block;
+              }
+
+              .demo-box-content {
+                background-color: #3498db;
+                color: white;
+                width: 100%;
+                max-width: 200px;
+                padding: 20px;
+                text-align: center;
+                font-weight: bold;
+                box-sizing: border-box;
+              }
+
+              .demo-box-labels {
+                margin-top: 20px;
+                font-size: 0.9em;
+              }
+
+              .demo-box-labels div {
+                margin: 5px 0;
+                padding: 5px;
+                background-color: white;
+              }
+
+              .label-content {
+                color: #3498db;
+                font-weight: bold;
+              }
+              .label-padding {
+                color: #16a085;
+                font-weight: bold;
+              }
+              .label-border {
+                color: #e74c3c;
+                font-weight: bold;
+              }
+              .label-margin {
+                color: #f39c12;
+                font-weight: bold;
+              }
+            </style>
+            <div class="demo-box-model">
+              <div class="demo-box-outer">
+                <div class="demo-box-content">Content Area<br />200px wide</div>
+              </div>
+              <div class="demo-box-labels">
+                <div class="label-content">🔵 Blue = Content (200px wide)</div>
+                <div class="label-padding">
+                  🟢 Green = Padding (30px on all sides)
+                </div>
+                <div class="label-border">
+                  🔴 Red = Border (10px on all sides)
+                </div>
+                <div class="label-margin">
+                  ⬜ White space = Margin (20px on all sides, transparent)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            The box above shows all parts of the box model correctly. The
+            <strong>blue area</strong> is the content, the
+            <strong>green area</strong> is the padding, the
+            <strong>red line</strong> is the border, and the
+            <strong>white space</strong> between the red border and gray
+            background is the margin (transparent).
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>The Four Parts of the Box Model</h3>
+
+          <h4>Content</h4>
+          <p>The content of the box, where text and images appear.</p>
+
+          <h4>Padding</h4>
+          <p>
+            Clears an area around the content. The padding is affected by the
+            background color of the box.
+          </p>
+
+          <figure>
+            <img
+              src="img/week-5/poor-padding.jpeg"
+              alt="Student website example with no padding showing text cramped against edges"
+              class="content-image"
+            />
+            <figcaption>
+              Example of past student work showing poor (no) padding
+            </figcaption>
+          </figure>
+
+          <h4>Border</h4>
+          <p>
+            A border that goes around the padding and content. The border is
+            affected by the background color of the box.
+          </p>
+
+          <h4>Margin</h4>
+          <p>
+            Clears an area around the border. The margin does not have a
+            background color, it is completely transparent.
+          </p>
+
+          <div class="important-note">
+            <h4>Common Confusion: Padding vs Margin</h4>
+            <p>
+              <strong>Padding</strong> = space INSIDE the element (between
+              content and border). Padding takes the background color.
+            </p>
+            <p>
+              <strong>Margin</strong> = space OUTSIDE the element (between
+              border and other elements). Margin is always transparent.
+            </p>
+            <p>
+              <strong>Memory trick:</strong> Think of padding as the "padding"
+              in a coat - it's inside the coat making it thicker. Margin is the
+              "personal space" around you and others.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>Important!</h4>
+            <p>
+              By default when you specify the width and height properties of an
+              element with CSS, you are just setting the width and height of the
+              content area. To know the full size of the element, you must also
+              add the padding, border and margin.
+            </p>
+
+            <p>
+              The total width of <code>.content</code> and it's surrounding
+              margin in the example below is 440px:
+            </p>
+
+            <p>
+              <strong>300px</strong> (content width) +
+              <strong>50px</strong> (padding left) +
+              <strong>50px</strong> (padding right) +
+              <strong>10px</strong> (border left) +
+              <strong>10px</strong> (border right) +
+              <strong>10px</strong> (margin left) +
+              <strong>10px</strong> (margin right) = <strong>440px</strong>
+            </p>
+          </div>
+
+          <pre><code class="code-example">.box {
+    width: 300px;
+    padding: 50px;
+    border: 10px solid black;
+    margin: 10px;
+}</code></pre>
+        </div>
+
+        <div class="subsection">
+          <h3>box-sizing property</h3>
+          <p>From what I've said above the following is the usual case:</p>
+
+          <p
+            style="
+              font-size: 1.3em;
+              font-weight: bold;
+              color: #2c3e50;
+              margin: 20px 0;
+            "
+          >
+            width + padding + border = actual visible/rendered width of an
+            element's box
+          </p>
+
+          <p>
+            However if we set the <strong>box-sizing</strong> property to
+            <strong>border-box</strong> the width that we set we actually get.
+          </p>
+
+          <pre><code class="code-example">.box {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 50px;
+    border: 10px solid black;
+    margin: 10px;
+}</code></pre>
+
+          <p>
+            In the above code the total width of the element is now 300px but we
+            still need to add on the margin to each side.
+          </p>
+
+          <p>
+            <strong>300px</strong> + <strong>10px</strong> (margin on left) +
+            <strong>10px</strong> (margin on right) = <strong>320px</strong>
+          </p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/raxJxJL"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View box-sizing Example on CodePen</span
+            >
+          </a>
+
+          <div class="side-note">
+            <h4>Professional Best Practice: Universal Box-Sizing</h4>
+            <p>
+              Most professional developers start their CSS files with this code
+              to apply <code>border-box</code> to <strong>all elements</strong>:
+            </p>
+            <pre><code class="code-example">* {
+    box-sizing: border-box;
+}</code></pre>
+            <p>
+              This makes all elements use the more intuitive
+              <code>border-box</code> sizing by default. The <code>*</code> is
+              the universal selector that targets everything on the page.
+            </p>
+            <p>
+              <strong>Why do this?</strong> It saves you from having to remember
+              to add <code>box-sizing: border-box;</code>
+              to every element individually, and makes calculating widths much
+              more predictable!
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>CSS Shorthand</h3>
+          <p>
+            CSS often allows you to write less code by putting it in shorthand.
+            Adding margins, paddings and borders is supported by shorthand in
+            this way.
+          </p>
+
+          <div class="important-note">
+            <h4>Remember: Clockwise from the Top!</h4>
+            <p>
+              When using shorthand with 4 values, the order is always:
+              <strong>Top, Right, Bottom, Left</strong> (clockwise starting from
+              the top).
+            </p>
+            <p>
+              <strong>Memory trick:</strong> Think of a clock going around: 12
+              o'clock (top), 3 o'clock (right), 6 o'clock (bottom), 9 o'clock
+              (left)
+            </p>
+            <figure style="text-align: center; margin: 20px 0">
+              <img
+                src="img/week-5/clockwise-arrow.svg"
+                alt="Clock diagram showing clockwise direction from top to right to bottom to left"
+                style="max-width: 250px; height: auto"
+              />
+              <figcaption>
+                The clockwise order: Top → Right → Bottom → Left
+              </figcaption>
+            </figure>
+          </div>
+
+          <pre><code class="code-example">.box {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    margin-left: 50px;
+}</code></pre>
+
+          <p><strong>Live Example - CSS Shorthand Padding:</strong></p>
+
+          <div class="output-example">
+            <style>
+              .demo-padding-example {
+                background-color: #ecf0f1;
+                padding: 20px;
+                margin-bottom: 20px;
+              }
+
+              .demo-padding-box {
+                background-color: #3498db;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 30px;
+                max-width: 360px;
+              }
+
+              .demo-padding-four {
+                padding: 40px 20px 10px 30px;
+              }
+
+              .demo-padding-two {
+                padding: 30px 50px;
+              }
+
+              .demo-padding-one {
+                padding: 25px;
+              }
+
+              .padding-label {
+                background-color: #2c3e50;
+                color: white;
+                padding: 8px;
+                margin-top: 5px;
+                font-size: 0.85em;
+              }
+            </style>
+            <div class="demo-padding-example">
+              <div style="margin-bottom: 30px">
+                <p style="margin-bottom: 10px">
+                  <code>padding: 40px 20px 10px 30px;</code>, Top: 40px, Right:
+                  20px, Bottom: 10px, Left: 30px (clockwise from top)
+                </p>
+                <div class="demo-padding-box demo-padding-four">
+                  Content with different padding on each side
+                </div>
+              </div>
+
+              <div style="margin-bottom: 30px">
+                <p style="margin-bottom: 10px">
+                  <code>padding: 30px 50px;</code>, Top/Bottom: 30px,
+                  Left/Right: 50px
+                </p>
+                <div class="demo-padding-box demo-padding-two">
+                  Content with top/bottom and left/right padding
+                </div>
+              </div>
+
+              <div style="margin-bottom: 30px">
+                <p style="margin-bottom: 10px">
+                  <code>padding: 25px;</code>, All sides: 25px
+                </p>
+                <div class="demo-padding-box demo-padding-one">
+                  Content with equal padding all around
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Notice how the <strong>blue background area</strong> changes size
+            based on the padding values. The first box has noticeably more space
+            at the top, the second box has more space on the sides, and the
+            third box has equal space on all sides.
+          </p>
+
+          <pre><code class="code-example">/* Can be written in shorthand: */
+/* Order: top, right, bottom, left (clockwise) */
+
+.box {
+    margin: 20px 40px 30px 50px;
+}</code></pre>
+
+          <p>
+            If there are equal values for top and bottom and then equal values
+            for each side we can write it like:
+          </p>
+
+          <pre><code class="code-example">.box {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* Can be written: */
+
+.box {
+    margin: 100px 50px;
+}</code></pre>
+
+          <p>
+            If there are equal values all the way round we can write it like:
+          </p>
+
+          <pre><code class="code-example">.box {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+/* Can be written: */
+
+.box {
+    margin: 100px;
+}</code></pre>
+        </div>
+
+        <div class="subsection quiz-section">
+          <h3>Knowledge Check: Box Model</h3>
+          <p>Test your understanding of the CSS Box Model:</p>
+
+          <div class="quiz-question">
+            <p>
+              <strong
+                >Question 1: If an element has <code>width: 200px</code>,
+                <code>padding: 20px</code>, and
+                <code>border: 5px solid black</code>, what is the actual
+                rendered width with the default box-sizing?</strong
+              >
+            </p>
+
+            <div class="quiz-options">
+              <button class="quiz-option" data-correct="false">200px</button>
+              <button class="quiz-option" data-correct="false">240px</button>
+              <button class="quiz-option" data-correct="true">250px</button>
+              <button class="quiz-option" data-correct="false">270px</button>
+            </div>
+
+            <div class="quiz-feedback" style="display: none"></div>
+            <div class="quiz-explanation" style="display: none">
+              <strong>Explanation:</strong> With default
+              <code>box-sizing: content-box</code>, the calculation is:<br />
+              200px (width) + 20px (left padding) + 20px (right padding) + 5px
+              (left border) + 5px (right border) = <strong>250px</strong>
+            </div>
+          </div>
+
+          <div class="quiz-question" style="margin-top: 30px">
+            <p>
+              <strong
+                >Question 2: In the CSS shorthand
+                <code>padding: 10px 20px 30px 40px;</code>, which value applies
+                to the LEFT side?</strong
+              >
+            </p>
+
+            <div class="quiz-options">
+              <button class="quiz-option" data-correct="false">10px</button>
+              <button class="quiz-option" data-correct="false">20px</button>
+              <button class="quiz-option" data-correct="false">30px</button>
+              <button class="quiz-option" data-correct="true">40px</button>
+            </div>
+
+            <div class="quiz-feedback" style="display: none"></div>
+            <div class="quiz-explanation" style="display: none">
+              <strong>Explanation:</strong> The order is clockwise from the top:
+              Top (10px), Right (20px), Bottom (30px), Left
+              (<strong>40px</strong>).<br />
+              Remember: <strong>T</strong>op, <strong>R</strong>ight,
+              <strong>B</strong>ottom, <strong>L</strong>eft (TRouBLe)
+            </div>
+          </div>
+
+          <div class="quiz-question" style="margin-top: 30px">
+            <p>
+              <strong
+                >Question 3: What does
+                <code>box-sizing: border-box;</code> do?</strong
+              >
+            </p>
+
+            <div class="quiz-options">
+              <button class="quiz-option" data-correct="false">
+                Removes all borders from the element
+              </button>
+              <button class="quiz-option" data-correct="true">
+                Includes padding and border in the element's width
+              </button>
+              <button class="quiz-option" data-correct="false">
+                Makes the border appear outside the padding
+              </button>
+              <button class="quiz-option" data-correct="false">
+                Doubles the size of borders
+              </button>
+            </div>
+
+            <div class="quiz-feedback" style="display: none"></div>
+            <div class="quiz-explanation" style="display: none">
+              <strong>Explanation:</strong> With <code>border-box</code>, the
+              width you set includes the content, padding, and border.<br />
+              This makes sizing more predictable because
+              <code>width: 200px</code> means the element is exactly 200px wide,
+              regardless of padding and border!
+            </div>
+          </div>
+
+          <style>
+            .quiz-section {
+              background-color: #ffffff;
+              border: 2px solid #3498db;
+              border-radius: 8px;
+              padding: 30px;
+              margin: 40px 0;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .quiz-section h3 {
+              color: #2c3e50;
+              margin-top: 0;
+              margin-bottom: 10px;
+            }
+
+            .quiz-question {
+              margin-top: 25px;
+              padding: 20px;
+              background-color: #f8f9fa;
+              border-radius: 6px;
+            }
+
+            .quiz-question p {
+              margin-top: 0;
+              color: #2c3e50;
+            }
+
+            .quiz-options {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              margin: 20px 0;
+            }
+
+            .quiz-option {
+              padding: 15px 20px;
+              background-color: #fff;
+              border: 2px solid #dee2e6;
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 1em;
+              transition: all 0.2s ease;
+              text-align: left;
+              font-family: inherit;
+              word-wrap: break-word;
+              white-space: normal;
+            }
+
+            .quiz-option:hover:not(:disabled) {
+              border-color: #3498db;
+              background-color: #f0f8ff;
+              transform: translateX(5px);
+            }
+
+            .quiz-option.correct {
+              background-color: #d4edda;
+              border-color: #28a745;
+              color: #155724;
+              font-weight: bold;
+            }
+
+            .quiz-option.incorrect {
+              background-color: #f8d7da;
+              border-color: #dc3545;
+              color: #721c24;
+            }
+
+            .quiz-option:disabled {
+              cursor: not-allowed;
+            }
+
+            .quiz-feedback {
+              padding: 15px;
+              border-radius: 6px;
+              margin: 15px 0;
+              font-weight: bold;
+              font-size: 1.05em;
+            }
+
+            .quiz-feedback.correct {
+              background-color: #d4edda;
+              color: #155724;
+              border: 2px solid #28a745;
+            }
+
+            .quiz-feedback.incorrect {
+              background-color: #f8d7da;
+              color: #721c24;
+              border: 2px solid #dc3545;
+            }
+
+            .quiz-explanation {
+              background-color: #e7f3ff;
+              padding: 20px;
+              border-radius: 6px;
+              margin-top: 15px;
+              border-left: 5px solid #3498db;
+              line-height: 1.6;
+            }
+          </style>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // Get all quiz questions
+              const quizQuestions = document.querySelectorAll(".quiz-question");
+
+              quizQuestions.forEach((question) => {
+                const options = question.querySelectorAll(".quiz-option");
+
+                options.forEach((option) => {
+                  option.addEventListener("click", function () {
+                    // Only disable options in THIS question
+                    options.forEach((opt) => (opt.disabled = true));
+
+                    const isCorrect =
+                      this.getAttribute("data-correct") === "true";
+                    const feedback = question.querySelector(".quiz-feedback");
+                    const explanation =
+                      question.querySelector(".quiz-explanation");
+
+                    // Mark selected answer
+                    if (isCorrect) {
+                      this.classList.add("correct");
+                      feedback.textContent = "✓ Correct! Well done!";
+                      feedback.className = "quiz-feedback correct";
+                    } else {
+                      this.classList.add("incorrect");
+                      feedback.textContent =
+                        "✗ Not quite right. See the explanation below.";
+                      feedback.className = "quiz-feedback incorrect";
+
+                      // Highlight the correct answer in THIS question only
+                      options.forEach((opt) => {
+                        if (opt.getAttribute("data-correct") === "true") {
+                          opt.classList.add("correct");
+                        }
+                      });
+                    }
+
+                    feedback.style.display = "block";
+                    explanation.style.display = "block";
+                  });
+                });
+              });
+            });
+          </script>
+        </div>
+
+        <div class="subsection">
+          <h3>
+            📝 Exercise 2 - Music Playlist - Applying padding, margins & borders
+          </h3>
+          <p>
+            Now that you've practiced selectors in Exercise 1, it's time to
+            apply the <strong>Box Model</strong>! You'll continue working on the
+            music playlist page from Exercise 1 and make it look more polished
+            by adding padding, margins, and borders.
+          </p>
+
+          <p>In this exercise you'll practice:</p>
+          <ul>
+            <li>
+              Adding <strong>padding</strong> to create space inside elements
+            </li>
+            <li>
+              Adding <strong>margins</strong> to create space between elements
+            </li>
+            <li>
+              Adding <strong>borders</strong> to define element boundaries
+            </li>
+            <li>
+              Using <strong>shorthand properties</strong> to write cleaner CSS
+            </li>
+          </ul>
+
+          <p>
+            Follow the instructions in the CSS file. The TODO tasks will guide
+            you through improving the spacing and layout of the playlist.
+          </p>
+
+          <div class="side-note">
+            <h4>Hint</h4>
+            <p>
+              Remember the Box Model! When adding padding and borders, they add
+              to the total width. Consider using
+              <strong>box-sizing: border-box;</strong> to make sizing more
+              predictable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="module-break">
+        <h2>Break</h2>
+        <div class="side-note">
+          <h4>Halfway</h4>
+          <p>
+            After the break: centring, backgrounds, and a form that sends.
+          </p>
+        </div>
+      </section>
+
+      <section class="centring-section">
+        <h2>Centring a page</h2>
+
+        <div class="subsection">
+          <p>
+            We are able to apply the box model in order to center our page in a
+            browser window. For this we use the
+            <strong>margin</strong> property. In order for this to work we need
+            to do 2 things:
+          </p>
+
+          <ol>
+            <li>Constrain the width (give our wrapper class a width)</li>
+            <li>Apply the CSS property <code>margin: 0 auto;</code></li>
+          </ol>
+
+          <p>The link below shows a codepen demonstrating this:</p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/raxJxvL"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text">View Centring Example on CodePen</span>
+          </a>
+
+          <h4>A variation on this idea</h4>
+          <p>
+            Many times when we design sites we want to center our content in a
+            browser window but extend the background colours of our page
+            sections to full width. We can do this by instead of using just one
+            wrapper container for the whole page, using one per page section.
+            See the link below.
+          </p>
+
+          <a
+            class="exercise-link"
+            href="https://codepen.io/antpearson/pen/pvgagKv"
+            target="_blank"
+          >
+            <span class="exercise-icon-large">💻</span>
+            <span class="exercise-text"
+              >View Multiple Wrappers Example on CodePen</span
+            >
+          </a>
+        </div>
+
+        <div class="subsection">
+          <h3>Exercise 3 - Centring the Music Playlist</h3>
+          <p>
+            Now that you've learned how to center a page using
+            <strong>max-width</strong> and <strong>margin: 0 auto</strong>,
+            apply this technique to your music playlist from Exercises 1 and 2.
+          </p>
+
+          <p>In this exercise you'll:</p>
+          <ul>
+            <li>
+              Set a <strong>max-width</strong> on your page container (try
+              600px)
+            </li>
+            <li>Use <strong>margin: 0 auto</strong> to center the content</li>
+            <li>See how your playlist looks centred on wider screens</li>
+          </ul>
+
+          <p>
+            Open your files from Exercise 2. Add the centring CSS to make the
+            playlist centred on the page.
+          </p>
+
+          <div class="side-note">
+            <h4>Tip</h4>
+            <p>
+              You can either add a wrapper div around all your content, or apply
+              the max-width and margin to the body element itself. Both
+              approaches work!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="background-images-section">
+        <h2>Backgrounds, briefly</h2>
+
+        <p>
+          You have set background colours already. You can also set a
+          background <strong>image</strong> on any element. It's worth knowing,
+          and it's worth knowing when not to: last year's portfolios had a lot
+          of background images and not much else, and the marks reflected
+          that.
+        </p>
+
+          <div class="important-note">
+            <h4>Use HTML <code>&lt;img&gt;</code> elements when:</h4>
+            <ul>
+              <li>
+                <strong>The image conveys information</strong> - Product photos,
+                diagrams, infographics, portraits
+              </li>
+              <li>
+                <strong>The image is content</strong> - Anything users need to
+                see to understand the page
+              </li>
+              <li>
+                <strong>Screen readers should describe it</strong> - Any image
+                that needs an alt text description
+              </li>
+              <li>
+                <strong>Search engines should index it</strong> - Images that
+                are relevant to your page content
+              </li>
+              <li>
+                <strong>Users might want to save/share it</strong> - Right-click
+                to download, print, etc.
+              </li>
+            </ul>
+            <pre><code class="code-example">&lt;!-- HTML image - content that matters --&gt;
+&lt;img src="product-photo.jpg" alt="Blue cotton t-shirt with round neck"&gt;</code></pre>
+          </div>
+
+          <div class="important-note">
+            <h4>Use CSS background images when:</h4>
+            <ul>
+              <li>
+                <strong>The image is purely decorative</strong> - Patterns,
+                textures, gradients
+              </li>
+              <li>
+                <strong>The image is for visual design only</strong> - Page
+                backgrounds, subtle textures
+              </li>
+              <li>
+                <strong>The image doesn't convey information</strong> - Abstract
+                patterns, color fills
+              </li>
+              <li>
+                <strong>Removing it wouldn't affect understanding</strong> - The
+                page still makes sense without it
+              </li>
+              <li>
+                <strong>It's part of the styling, not content</strong> - Design
+                elements that enhance but don't inform
+              </li>
+            </ul>
+            <pre><code class="code-example">/* CSS background - decorative only */
+body {
+    background-image: url('subtle-pattern.png');
+}</code></pre>
+          </div>
+
+          <div class="side-note">
+            <h4>⚠️ Accessibility Matters</h4>
+            <p>
+              CSS background images are
+              <strong>invisible to screen readers</strong> and cannot have alt
+              text. If a user needs to know about an image to understand your
+              content, it must be an HTML <code>&lt;img&gt;</code>
+              element with proper alt text. This isn't just good practice - it's
+              essential for making the web accessible to everyone.
+            </p>
+          </div>
+
+        <div class="subsection">
+          <h3>The properties you need</h3>
+
+          <pre><code class="code-example">.hero {
+  background-color: #1d3557;              /* always give a fallback colour */
+  background-image: url('images/skyline.jpg');
+  background-size: cover;                 /* fill the box, cropping if needed */
+  background-position: center;            /* which bit to keep when cropping */
+  background-repeat: no-repeat;
+}
+
+/* the same thing in shorthand */
+.hero {
+  background: #1d3557 url('images/skyline.jpg') center / cover no-repeat;
+}</code></pre>
+
+          <p>
+            The path in <code>url()</code> is relative to the
+            <strong>CSS file</strong>, not the HTML file. If your stylesheet and
+            your pages are in the same folder that makes no difference; if you
+            ever move the CSS into its own folder it does.
+          </p>
+
+          <div class="important-note">
+            <h4>Text on top of a photo</h4>
+            <p>
+              White text on a photograph is readable only where the photo is
+              dark. Either pick an image with a quiet area, or put a
+              semi-transparent dark layer behind the text:
+              <code>background-color: rgba(0, 0, 0, 0.5);</code> on the text's
+              container. Then check the contrast, same as any other text.
+            </p>
+          </div>
+
+          <p>
+            That is all the background CSS this module needs. A full-page
+            tiling pattern or a hero image at the top of a page, used once and
+            well, looks good. The same image behind every section does not.
+          </p>
+        </div>
+      </section>
+
+      <section class="forms-section">
+        <h2>Forms that send</h2>
+
+        <p>
+          Forms are an essential part to most websites. We use them all the time
+          to get things done. When you logged on to MyBeckett to view this
+          tutorial you used a Form to enter your username and password, if you
+          bought some items on Amazon you would have used a form element to pay
+          and at some point you would have used a form to store your address
+          details so they could be sent to you.
+        </p>
+
+        <p>
+          Forms are used to collect information from a user. This information is
+          usually sent to a program on the server for processing. They can
+          contain input elements like text fields, checkboxes, radio-buttons,
+          submit buttons and more. A form can also contain select lists,
+          textarea, fieldset, legend, and label elements. We will cover all of
+          these elements below.
+        </p>
+
+        <div class="subsection">
+          <h3>The form element</h3>
+
+          <pre><code class="code-example">&lt;form method="post" action="https://formspree.io/f/your-form-id"&gt;
+  &lt;!-- all of your form content goes here --&gt;
+&lt;/form&gt;</code></pre>
+
+          <p>
+            <strong>action</strong> is where the browser sends the answers when
+            the form is submitted: normally a program on a server.
+            <strong>method="post"</strong> sends them in the body of the
+            request rather than tacked onto the address bar.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>A side note on some new terminology</h3>
+
+          <div class="important-note">
+            <h4>Front-end vs Back-end</h4>
+            <p>
+              You might occasionally hear me talk about
+              <strong>front-end</strong> and <strong>back-end</strong>
+              development. Front-end is what we mainly cover on this course.
+              Everything you are learning on this module is front-end web
+              development. It is concerned with how sites look and the content
+              of websites.
+            </p>
+            <p>
+              Back-end web development is concerned with the things that you
+              don't see (round the back). These are the scripts that sit on the
+              server that handle data. This would be taught on a more
+              traditional computing degree although if you pick the Web
+              Development module in your final year you will learn a little
+              about PHP which is one of the main languages used in back-end
+              development.
+            </p>
+            <p>
+              In web agencies if you got a job that involves building websites
+              (coding them) you would tend to get employed as either a front-end
+              developer or a back-end developer.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>A simple form</h3>
+          <p>
+            The simplest type of form might be a basic sign-in form where
+            someone enters their username and password to access a website.
+            Let's look at what that might look like.
+          </p>
+
+          <pre><code class="code-example">&lt;form method="post" action="script-on-server.php"&gt;
+  &lt;label for="username"&gt;Username&lt;/label&gt;
+  &lt;input type="text" id="username" name="uname"&gt;
+  &lt;label for="password"&gt;Password&lt;/label&gt;
+  &lt;input type="password" id="password" name="pass"&gt;
+  &lt;button type="submit"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+          <p>
+            Notice how the <strong>type</strong> attribute in each input element
+            determines how the browser handles the input and renders its
+            display. Both of these render like text input boxes on the screen
+            but the browser replaces the password field with dots for security.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>The &lt;label&gt; element</h3>
+          <p>
+            The <strong>&lt;label&gt;</strong> element allows us to put text on
+            the screen next to the input boxes so the user knows what type of
+            information the input boxes are expecting. We can link labels to the
+            form fields by using the <strong>for</strong> attribute on the label
+            and the <strong>id</strong> attribute on the input element. If the
+            value for both is the same it associates them together. By using
+            labels the user can click on the descriptive text to highlight the
+            form field. This is good for touch devices and for accessibility.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>The inputs you'll actually use</h3>
+          <p>
+            The <strong>&lt;input&gt;</strong> element changes what it does
+            according to its <code>type</code>. There are over twenty types.
+            A contact form needs about three.
+          </p>
+
+          <pre><code class="code-example">&lt;label for="name"&gt;Your name&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required&gt;
+
+&lt;label for="email"&gt;Your email&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;label for="phone"&gt;Phone (optional)&lt;/label&gt;
+&lt;input type="tel" id="phone" name="phone"&gt;
+
+&lt;label for="message"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message" rows="6" required&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Send message&lt;/button&gt;</code></pre>
+
+          <ul>
+            <li>
+              <strong>type="email"</strong> makes the browser check the value
+              looks like an email address, and on a phone brings up a keyboard
+              with @ on it. <strong>type="tel"</strong> brings up the number
+              pad.
+            </li>
+            <li>
+              <strong>required</strong> stops the form submitting until the
+              field is filled in. No JavaScript needed.
+            </li>
+            <li>
+              <strong>name</strong> is the label the answer arrives with. Set
+              it on every field or the answer arrives without a name.
+            </li>
+            <li>
+              <strong>&lt;textarea&gt;</strong> is a multi-line text box; give
+              it <code>rows</code> to set its height.
+            </li>
+            <li>
+              <strong>&lt;button type="submit"&gt;</strong> sends the form. Put
+              the verb on it: "Send message", not "Submit".
+            </li>
+          </ul>
+
+          <div class="side-note">
+            <h4>Try it yourself</h4>
+            <form
+              onsubmit="event.preventDefault(); this.querySelector('output').textContent = 'The browser was happy with what you typed.';"
+              style="margin: 0"
+            >
+              <label for="demo-name">Your name</label>
+              <input type="text" id="demo-name" name="name" required
+                style="width: 100%; padding: 8px; border: 2px solid #ccc; border-radius: 4px; font-size: 16px; margin: 6px 0 12px" />
+              <label for="demo-email">Your email</label>
+              <input type="email" id="demo-email" name="email" required
+                style="width: 100%; padding: 8px; border: 2px solid #ccc; border-radius: 4px; font-size: 16px; margin: 6px 0 12px" />
+              <button type="submit"
+                style="background-color: #0369a1; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px">
+                Send message
+              </button>
+              <output style="display: block; margin-top: 10px; font-weight: bold"></output>
+            </form>
+            <p style="margin-top: 10px; font-size: 14px; color: #555">
+              Leave the name empty, or type "hello" as the email, and press the
+              button. The browser refuses and tells you why.
+            </p>
+          </div>
+
+          <p>
+            Radio buttons, checkboxes, drop-downs and date pickers all exist and
+            all work the same way (a <code>label</code>, an <code>input</code>
+            with a <code>type</code>, a <code>name</code>). When you need one,
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+              target="_blank"
+              >MDN's input reference</a
+            >
+            lists every type with an example.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Making it send: Formspree</h3>
+          <p>
+            A form with <code>action="#"</code> goes nowhere. Since we have no
+            server of our own, we borrow one.
+            <a href="https://formspree.io" target="_blank">Formspree</a> is a
+            free service that gives you an address to post a form to and emails
+            you whatever people type. Setting it up takes five minutes:
+          </p>
+          <ol>
+            <li>Create a free account at formspree.io with your university email.</li>
+            <li>Click New Form, give it a name and choose the email the messages should go to.</li>
+            <li>
+              Formspree shows you a form address that looks like
+              <code>https://formspree.io/f/abcdwxyz</code>. Copy it.
+            </li>
+            <li>
+              Paste it as the <code>action</code> of your form and make sure
+              the method is <code>post</code>.
+            </li>
+            <li>
+              Open your page, fill the form in and send it. The first time,
+              Formspree emails you to confirm the address. After that, every
+              submission arrives in your inbox.
+            </li>
+          </ol>
+
+          <div class="important-note">
+            <h4>Every field needs a name</h4>
+            <p>
+              Formspree can only tell you what was typed in fields that have a
+              <code>name</code> attribute. If your email arrives half empty,
+              that's why.
+            </p>
+          </div>
+
+          <p>
+            A form that does something is far more convincing in a portfolio
+            than one that doesn't, and this is the first time your page has
+            done anything on a server. Note the terminology box above: you
+            have just used somebody else's back end.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Styling the form</h3>
+          <p>
+            Form controls are ordinary boxes: give them padding, a border, a
+            width and some margin like anything else. Two rules go a long way:
+          </p>
+
+          <pre><code class="code-example">label {
+  display: block;           /* label on its own line above the field */
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;      /* textareas default to a monospace font */
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--brand);
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #333;
+}</code></pre>
+
+          <p>
+            For more,
+            <a href="https://web.dev/learn/forms/styling" target="_blank"
+              >web.dev's guide to styling forms</a
+            >
+            is the one to read.
+          </p>
+        </div>
+      </section>
+
+      <section class="portfolio-task">
+        <h2>Portfolio Task 3 continues: spacing and a contact section</h2>
+
+        <div class="subsection">
+          <p>
+            Open the <strong>attractions.html</strong> and
+            <strong>styles.css</strong> you started last week. This week's
+            additions:
+          </p>
+
+          <h3>Requirements</h3>
+          <ol>
+            <li>
+              Add <code>* { box-sizing: border-box; }</code> to the very top of
+              your stylesheet, above <code>:root</code>.
+            </li>
+            <li>
+              Set a <strong>maximum width of 600px</strong> on the page and
+              <strong>centre it</strong> with <code>margin: 0 auto</code>, as
+              shown in the centring section. On a phone nothing changes; on a
+              laptop the page stops sprawling.
+            </li>
+            <li>
+              Use <strong>padding, borders and margins</strong> to give each
+              attraction room to breathe: space inside each card, space between
+              the cards, and a border or background on the Don't Miss ones.
+              Nothing on your page should touch the edge of the screen.
+            </li>
+            <li>
+              Add a <code>section</code> at the bottom of the page with an
+              <code>id</code> of <code>contact</code> and a heading such as
+              "Plan your visit". Inside it, a form with a name, an email and a
+              message field, all labelled, the first two required, and a send
+              button.
+            </li>
+            <li>
+              Wire the form to <strong>Formspree</strong> and test that a
+              message arrives in your inbox.
+            </li>
+            <li>
+              Style the form using the rules above, adapted to your palette.
+            </li>
+            <li>
+              Add a link to <code>#contact</code> in your nav.
+            </li>
+            <li>
+              Optional: a background image on the page header, with a fallback
+              colour, and readable text on top of it.
+            </li>
+            <li>
+              Validate the HTML. Check it still works when you double-click the
+              file from Finder or Explorer.
+            </li>
+          </ol>
+
+          <div class="important-note">
+            <h4>Common mistakes</h4>
+            <ul>
+              <li>Mixing up padding (inside) with margin (outside)</li>
+              <li>Forgetting <code>box-sizing: border-box</code> and wondering why widths don't add up</li>
+              <li>Testing in a wide window. This is a phone page: make the window narrow.</li>
+              <li>A label that isn't linked to its input (the <code>for</code> must match the <code>id</code>)</li>
+              <li>Fields without a <code>name</code>, so the email arrives empty</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-week-preview">
+        <h2>Next week</h2>
+        <div class="subsection">
+          <h3>Week 5: Flexbox, and going live</h3>
+          <p>
+            Things side by side at last: a horizontal nav bar and a row of
+            attraction cards. Then your skills portfolio goes on the web with a
+            real address, which fixes the local-file YouTube problem for good.
+            Last teaching week before Care Week.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Web Interaction Week 4 - CSS Basics II</p>
+    </footer>
+    <script>
+      (function () {
+        var canEmbed = /^https?:$/.test(location.protocol);
+        document.querySelectorAll(".video__facade").forEach(function (link) {
+          var id = link.getAttribute("data-video");
+          var img = link.querySelector("img");
+          var label = link.querySelector(".visually-hidden").textContent;
+
+          var hi = new Image();
+          hi.onload = function () {
+            if (hi.naturalWidth > 500) img.src = hi.src;
+          };
+          hi.src = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+
+          if (!canEmbed) {
+            link.target = "_blank";
+            link.rel = "noopener";
+            return;
+          }
+
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var frame = document.createElement("iframe");
+            frame.src =
+              "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+            frame.title = label;
+            frame.allow =
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            frame.allowFullscreen = true;
+            link.parentNode.replaceChild(frame, link);
+            frame.focus();
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
