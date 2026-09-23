@@ -724,6 +724,30 @@ footer {
   justify-content: center;
 }
 
+.run-sheet li a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #d6d3d1;
+  text-underline-offset: 0.2em;
+}
+
+.run-sheet li a:hover,
+.run-sheet li a:focus {
+  color: #c2410c;
+  text-decoration-color: currentColor;
+}
+
+section,
+[id] {
+  scroll-margin-top: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .run-sheet li.run-sheet__break {
   counter-increment: none;
   font-weight: 700;
