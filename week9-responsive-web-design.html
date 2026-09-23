@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Interaction Week 10 - Responsive Web Design</title>
+    <title>Web Interaction Week 9 - Responsive Web Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +16,10 @@
     <header class="hero-section">
       <img
         src="img/week-10/banner.webp"
-        alt="Week 10 - Responsive Web Design"
+        alt="Week 9 - Responsive Web Design"
         class="hero-image"
       />
-      <h1>Web Interaction - Week 10<br />Responsive Web Design</h1>
+      <h1>Web Interaction - Week 9<br />Responsive Web Design</h1>
     </header>
 
     <main>
@@ -33,50 +33,18 @@
       </section>
 
       <section class="tutorial-overview">
-        <h2>3-Hour Session Structure</h2>
-
-        <div class="subsection">
-          <h3>🕐 First Half: Responsive Web Design (80 mins)</h3>
-          <ul>
-            <li>Introduction to Responsive Web Design</li>
-            <li>Mobile-First Design Strategy</li>
-            <li>Viewport Meta Tag</li>
-            <li>CSS Media Queries</li>
-            <li>Fluid Layouts and Flexible Units</li>
-            <li>Responsive Images and Breakpoints</li>
-            <li>Building a Mobile-First Layout Example</li>
-            <li>Testing Responsive Designs</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>☕ Break (15 mins)</h3>
-        </div>
-
-        <div class="subsection">
-          <h3>🎨 Second Half: Figma Design Work & Feedback (85 mins)</h3>
-          <ul>
-            <li>Continue working on Silverlake Figma designs</li>
-            <li>One-to-one feedback sessions on design work</li>
-            <li>Refine mobile, tablet, and desktop layouts</li>
-            <li>Prepare designs for implementation</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="tutorial-overview">
-        <h2>In this tutorial</h2>
-        <ul>
-          <li>What is Responsive Web Design?</li>
-          <li>Why Mobile-First Design?</li>
-          <li>The Viewport Meta Tag</li>
-          <li>CSS Media Queries</li>
-          <li>Fluid Layouts and Flexible Units</li>
-          <li>Responsive Images</li>
-          <li>Common Breakpoints</li>
-          <li>Building a Mobile-First Layout</li>
-          <li>Testing Your Responsive Design</li>
-        </ul>
+        <h2>Run sheet</h2>
+        <ol class="run-sheet">
+          <li>Where you should be with Silverlake</li>
+          <li>What responsive web design is, and why mobile first</li>
+          <li>The viewport meta tag</li>
+          <li>Media queries</li>
+          <li>Fluid layouts, flexible units and responsive images</li>
+          <li>Breakpoints, and building a mobile-first layout</li>
+          <li>Testing on real and simulated devices</li>
+          <li class="run-sheet__break">Break</li>
+          <li>Figma design work and one-to-one feedback</li>
+        </ol>
       </section>
 
       <!-- Silverlake Progress -->
@@ -761,43 +729,17 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
             This simple CSS rule should be applied to all images on your site.
           </p>
 
-          <h3>The Picture Element</h3>
-
-          <p>
-            For more control, use the <code>&lt;picture&gt;</code> element to
-            serve different images based on screen size:
-          </p>
-
-          <div class="code-block">
-            <pre><code>&lt;picture&gt;
-  &lt;!-- Large screens get the full image --&gt;
-  &lt;source media="(min-width: 1024px)" srcset="hero-large.jpg"&gt;
-
-  &lt;!-- Medium screens get a cropped version --&gt;
-  &lt;source media="(min-width: 768px)" srcset="hero-medium.jpg"&gt;
-
-  &lt;!-- Mobile gets a portrait-oriented version --&gt;
-  &lt;img src="hero-small.jpg" alt="Hero image"&gt;
-&lt;/picture&gt;</code></pre>
-          </div>
-
-          <h3>Srcset for Resolution Switching</h3>
-
-          <p>
-            Use <code>srcset</code> to provide different image sizes for
-            different screen densities:
-          </p>
-
-          <div class="code-block">
-            <pre><code>&lt;img
-  src="photo-400.jpg"
-  srcset="photo-400.jpg 400w,
-          photo-800.jpg 800w,
-          photo-1200.jpg 1200w"
-  sizes="(max-width: 600px) 100vw,
-         (max-width: 1200px) 50vw,
-         600px"
-  alt="Responsive photo"&gt;</code></pre>
+          <div class="side-note">
+            <h4>Further reading, not required</h4>
+            <p>
+              HTML can also serve <em>different</em> image files to different
+              screens with the <code>&lt;picture&gt;</code> element and the
+              <code>srcset</code> attribute. You don't need them for
+              Silverlake; one well-sized image with
+              <code>max-width: 100%</code> is fine. If you're curious,
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank">MDN's guide to responsive images</a>
+              covers both.
+            </p>
           </div>
 
           <div class="important-note">
@@ -1227,31 +1169,16 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
 
       <!-- Break Section -->
       <section id="break">
-        <h2>☕ Break Time</h2>
-        <div class="subsection">
-          <div
-            style="
-              background: #fff9e6;
-              border-left: 5px solid #ffc107;
-              padding: 30px;
-              border-radius: 8px;
-              text-align: center;
-            "
-          >
-            <p style="font-size: 1.2em; color: #666; margin-bottom: 10px">
-              Take a 15 minute break
-            </p>
-            <p style="color: #666; margin: 0">
-              Grab a coffee, stretch your legs, and we'll reconvene to work on
-              your Figma designs!
-            </p>
-          </div>
+        <h2>Break</h2>
+        <div class="side-note">
+          <h4>Halfway</h4>
+          <p>After the break: design work in Figma with one-to-one feedback.</p>
         </div>
       </section>
 
       <!-- Second Half: Figma Design Work -->
       <section id="design-work">
-        <h2>Second Half: Figma Design Work & Feedback</h2>
+        <h2>Figma design work and feedback</h2>
 
         <div class="subsection">
           <div
@@ -1279,7 +1206,7 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);</code></pre>
               the simplest, most essential version of your content
             </li>
             <li>
-              <strong>Check design consistency</strong> - Colors, fonts,
+              <strong>Check design consistency</strong> - Colours, fonts,
               spacing, and components should be consistent across all three
               layouts
             </li>
