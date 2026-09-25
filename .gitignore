@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Tool scratch output — never part of the site
+.playwright-mcp/
+*.crx
