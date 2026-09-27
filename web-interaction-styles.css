@@ -268,9 +268,16 @@ img {
   margin-bottom: 10px;
 }
 
-/* Code Examples */
-.code-example,
+/* Code in body copy: inline, bold, monospace */
 code {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+}
+
+/* Code blocks: only inside pre, or marked .code-example */
+.code-example,
+pre > code {
+  font-weight: 400;
   background: #2d3748;
   color: #e2e8f0;
   padding: 15px;
@@ -628,7 +635,7 @@ footer {
   }
 
   .code-example,
-  code {
+  pre > code {
     font-size: 0.8rem;
     padding: 10px;
   }
@@ -684,7 +691,7 @@ footer {
   }
 
   .code-example,
-  code {
+  pre > code {
     background: #f5f5f5;
     color: black;
     border: 1px solid #ccc;
