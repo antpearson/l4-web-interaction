@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Interaction Week 5 - Flexbox and Going Live</title>
+    <title>Web Interaction Week 5 - Flexbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +19,7 @@
         alt="Flexbox layout patterns showing row, column, wrap, and centred arrangements"
         class="hero-image"
       />
-      <h1>Web Interaction Week 5 - Flexbox and Going Live</h1>
+      <h1>Web Interaction Week 5 - Flexbox</h1>
     </header>
 
     <main>
@@ -27,9 +27,10 @@
         <p class="lead">
           So far everything on your pages has stacked. This week
           <strong>Flexbox</strong> puts things side by side: a proper
-          horizontal nav bar, a row of cards, a sidebar next to content. Then
-          your skills portfolio goes on the web with an address you can send to
-          anyone. Last teaching week before Care Week.
+          horizontal nav bar, a row of cards, a sidebar next to content. You
+          get more time than usual on your own pages, and your tutor will come
+          round to go through your portfolio with you. Last teaching week
+          before Care Week.
         </p>
       </section>
 
@@ -38,12 +39,13 @@
         <ol class="run-sheet">
           <li><a href="#flexbox-section">What Flexbox solves</a></li>
           <li><a href="#flex-properties">The container properties: direction, justify, align, gap</a></li>
-          <li><a href="#cards">Exercise: a card layout</a></li>
+          <li><a href="#froggy">Exercise 1: Flexbox Froggy</a></li>
+          <li><a href="#cards">Exercise 2: a card layout</a></li>
           <li><a href="#wrap">Wrapping, and two-column layouts</a></li>
-          <li><a href="#navbar">Exercise: a navigation bar</a></li>
+          <li><a href="#navbar">Exercise 3: a navigation bar</a></li>
           <li class="run-sheet__break">Break</li>
-          <li><a href="#publishing-section">Going live: putting your portfolio on the web</a></li>
-          <li><a href="#portfolio-task">Portfolio Task 3 finishes: cards, nav bar, online</a></li>
+          <li><a href="#publishing-section">Going live: a demo</a></li>
+          <li><a href="#portfolio-task">Portfolio Task 3 finishes, and your portfolio check</a></li>
         </ol>
       </section>
 
@@ -572,7 +574,30 @@
         </div>
 
         <div class="subsection">
-          <h3 id="cards">Exercise 1 - Create a card layout with Flexbox</h3>
+          <h3 id="froggy">Exercise 1 - Flexbox Froggy</h3>
+          <p>
+            Everyone does this one.
+            <a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>
+            is a game: each level has frogs and lily pads, and you get the frogs
+            home by writing the Flexbox CSS that moves them. It covers every
+            property above and a few more, and it's the quickest way to make
+            them stick.
+          </p>
+          <p>
+            <a href="https://flexboxfroggy.com/" target="_blank">
+              <img src="img/week-6/froggy.png" alt="Play Flexbox Froggy" width="240" height="240" style="max-width: 240px; height: auto; border-radius: 8px;" />
+            </a>
+          </p>
+          <ul>
+            <li>Give it at least 30 minutes, on your own.</li>
+            <li>Read the explanation beside each level before you type. Each one introduces a property or a value.</li>
+            <li>Some levels change <code>flex-direction</code>. Watch what that does to <code>justify-content</code> and <code>align-items</code>: when the direction turns to a column, they swap jobs. That's the idea that trips everyone up.</li>
+            <li>Finished? Go back to any level you guessed your way through.</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3 id="cards">Exercise 2 - Create a card layout with Flexbox</h3>
 
           <p>
             Open the <strong>exercise-2-cards</strong> folder in today's
@@ -817,7 +842,7 @@
         </div>
 
         <div class="subsection">
-          <h3 id="navbar">Exercise 2 - Build a navigation bar with Flexbox</h3>
+          <h3 id="navbar">Exercise 3 - Build a navigation bar with Flexbox</h3>
           <p>
             Create a professional navigation bar using Flexbox. You'll practice
             aligning items, spacing them appropriately, and making the
@@ -907,21 +932,11 @@
           <div class="side-note">
             <h4>Further Flexbox Resources</h4>
             <p>
-              Here are some excellent resources to help you master Flexbox:
+              A visual reference worth keeping open while you work:
             </p>
 
             <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; align-items: flex-start;">
-              <div style="flex: 1; min-width: 250px;">
-                <a href="https://flexboxfroggy.com/" target="_blank">
-                  <img src="img/week-6/froggy.png" alt="Flexbox Froggy game screenshot" style="width: 100%; border-radius: 8px; border: 2px solid #ddd;">
-                </a>
-                <h5 style="margin-top: 10px;">
-                  <a href="https://flexboxfroggy.com/" target="_blank">🎮 Flexbox Froggy</a>
-                </h5>
-                <p style="margin-top: 5px;">Help frogs reach their lily pads using Flexbox properties. A fun, interactive game to practice what you've learned!</p>
-              </div>
-
-              <div style="flex: 1; min-width: 250px;">
+              <div style="flex: 0 1 380px;">
                 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">
                   <img src="img/week-6/css-tricks.webp" alt="CSS-Tricks Flexbox guide poster" style="width: 100%; border-radius: 8px; border: 2px solid #ddd;">
                 </a>
@@ -939,117 +954,64 @@
         <h2>Break</h2>
         <div class="side-note">
           <h4>Halfway</h4>
-          <p>After the break your work goes on the internet.</p>
+          <p>After the break: a quick demo of how a site goes live, then the rest of the session is yours for Portfolio Task 3.</p>
         </div>
       </section>
 
       <section class="publishing-section" id="publishing-section">
-        <h2>Going live</h2>
+        <h2>Going live: a demo</h2>
 
         <p>
           Until now your pages have only existed on your own laptop, opened as
-          files. Nobody else can see them, and a few things (embedded YouTube
-          players, for one) don't work that way. A web page belongs on a web
-          server. Getting it there used to be fiddly; now it's drag and drop.
+          files. A website lives on a web server, where anyone with the address
+          can see it. Getting it there used to be fiddly; now it's drag and
+          drop. Your tutor will show you, using
+          <a href="https://www.netlify.com" target="_blank">Netlify</a>.
+        </p>
+
+        <p>
+          You won't publish your own portfolio on this module. Your pages use
+          photos, logos and words that belong to other people, which is fine
+          for coursework that stays between you and your tutor, and not fine
+          on the public web. You hand in your skills-portfolio folder, not a
+          web address.
         </p>
 
         <div class="subsection">
-          <h3>Option 1: Netlify Drop</h3>
+          <h3>What the demo shows about your folder rules</h3>
           <p>
-            <a href="https://www.netlify.com" target="_blank">Netlify</a> hosts
-            static sites (HTML, CSS, images: exactly what you have) for free.
-          </p>
-          <ol>
-            <li>Sign up for a free account at netlify.com.</li>
-            <li>
-              Go to <a href="https://app.netlify.com/drop" target="_blank">app.netlify.com/drop</a>.
-            </li>
-            <li>
-              Drag your whole <strong>skills-portfolio</strong> folder onto the
-              page. Netlify uploads it and gives you an address ending in
-              <code>.netlify.app</code>.
-            </li>
-            <li>
-              Open the address on your phone. That's your site, on the actual
-              internet.
-            </li>
-            <li>
-              To update it, open the site in your Netlify dashboard, go to
-              Deploys, and drag the folder again.
-            </li>
-          </ol>
-          <p>
-            You can rename the random address to something sensible in Site
-            settings.
-          </p>
-        </div>
-
-        <div class="subsection">
-          <h3>Option 2: GitHub Pages</h3>
-          <p>
-            <a href="https://github.com" target="_blank">GitHub</a> is where
-            most of the world's code lives, and it will host a static site from
-            a repository for free. It is a little more work and a lot more
-            useful to know, because you will meet GitHub again on later modules
-            and in any job that involves code.
-          </p>
-          <ol>
-            <li>Sign up at github.com.</li>
-            <li>
-              Create a new <strong>public</strong> repository called
-              <code>skills-portfolio</code>.
-            </li>
-            <li>
-              Use "Add file, then Upload files" to drag in the contents of your
-              skills-portfolio folder (the files and the images folder, not the
-              folder itself), and commit.
-            </li>
-            <li>
-              In the repository's Settings, choose Pages, set the source to
-              Deploy from a branch, pick <code>main</code> and save.
-            </li>
-            <li>
-              After a minute the address appears at the top of that page:
-              <code>https://your-username.github.io/skills-portfolio/</code>
-            </li>
-          </ol>
-          <p>
-            Uploading the files again replaces them. Later on you'll learn to
-            do this from VS Code instead of the website.
-          </p>
-        </div>
-
-        <div class="important-note">
-          <h4>Why the folder rules mattered</h4>
-          <p>
-            Your laptop doesn't care whether a file is called
-            <code>Photo 1.JPG</code> or <code>photo-1.jpg</code>. A web server
-            does. If an image or a link works on your laptop and not on the
-            live site, the name is the first thing to check. Also make sure the
-            page you want people to land on is called <code>index.html</code>:
-            that is the file a server shows when someone visits the folder.
+            A server shows <code>index.html</code> when someone visits a
+            folder, which is why your home page has that name. And a server
+            cares whether a file is called <code>Photo 1.JPG</code> or
+            <code>photo-1.jpg</code>, even though your laptop doesn't. Both
+            are why the naming rules from the first session matter.
           </p>
         </div>
 
         <div class="side-note">
-          <h4>Which should I use?</h4>
+          <h4>Seeing your pages as a server would</h4>
           <p>
-            Netlify Drop for now: it takes two minutes and you'll see your site
-            live before the session ends. Try GitHub in your own time. Either
-            one satisfies the portfolio requirement. Whichever you pick, paste
-            the live address into a comment at the top of your
-            <code>index.html</code> so your tutor can find it.
+            A few things, embedded YouTube players among them, don't work on a
+            page opened as a file. VS Code's Live Server extension (Go Live,
+            bottom right) serves your folder from your own laptop, so they work
+            without anything going online.
           </p>
         </div>
       </section>
 
       <section class="portfolio-task" id="portfolio-task">
-        <h2>Portfolio Task 3 finishes: cards, a nav bar and a live site</h2>
+        <h2>Portfolio Task 3 finishes: cards and a nav bar</h2>
 
         <div class="subsection">
           <p>
             Open <strong>attractions.html</strong> and
             <strong>styles.css</strong>. This is the last week on this page.
+          </p>
+          <p>
+            This is most of the session. While you work, your tutor will come
+            round and go through your portfolio with you, so have Portfolio
+            Tasks 1, 2 and 3 open in your browser and be ready to say what's
+            done and what isn't.
           </p>
 
           <h3>Requirements</h3>
@@ -1083,14 +1045,8 @@
               (under 500KB), with readable text on top.
             </li>
             <li>
-              <strong>Go live:</strong> publish your whole skills-portfolio
-              folder with Netlify Drop or GitHub Pages. Check every page and
-              every link on your phone. Paste the address in a comment at the
-              top of index.html.
-            </li>
-            <li>
-              Validate all three pages one more time. Fix the image names that
-              broke when you went live; there will be one.
+              Validate all three pages one more time, and click every link
+              between them to check it goes where it should.
             </li>
           </ol>
 
@@ -1099,14 +1055,12 @@
             <ul>
               <li>Putting <code>display: flex</code> on the items instead of their container</li>
               <li>Forgetting <code>flex-wrap: wrap</code>, so ten cards squash into one unreadable row</li>
-              <li>Uploading the folder inside another folder, so the site address shows a directory listing instead of index.html</li>
-              <li>Capital letters in image names that worked locally and vanish online</li>
             </ul>
           </div>
 
           <p>
             <strong>Care Week is next week</strong>, with no class. Use it to
-            finish all three tasks and get them online. The next session
+            finish all three tasks and act on the feedback from today. The next session
             opens with a quick check of Portfolio Tasks 1 to 3, and then you
             start the big one.
           </p>
@@ -1115,7 +1069,7 @@
     </main>
 
     <footer>
-      <p>Web Interaction Week 5 - Flexbox and Going Live</p>
+      <p>Web Interaction Week 5 - Flexbox</p>
     </footer>
     <script>
       (function () {
